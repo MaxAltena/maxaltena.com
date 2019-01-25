@@ -1,0 +1,8 @@
+{
+  "short_name": "React App",
+  "name": "React App from Max Altena",
+  "start_url": "./",
+  "display": "standalone",
+  "theme_color": "#215aaf",
+  "background_color": "#215aaf"
+}

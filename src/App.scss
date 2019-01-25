@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css?family=Hind:400,700|Open+Sans:400,700");
+
+$white: rgb(255, 255, 255);
+$white-hover: rgb(205, 205, 205);
+$black: rgb(0, 0, 0);
+$gray: rgba(0, 0, 0, 0.3);
+$orange: rgb(254, 205, 24);
+$blue: rgb(33, 90, 175);
+$light-blue: rgb(62, 189, 218);
+$blue-gradient: linear-gradient(to top right, $blue, $light-blue);
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  #root {
+    width: 100%;
+    height: 100%;
+
+    .App {
+      width: 100%;
+      height: 100%;
+
+      background-color: $blue;
+      background-image: $blue-gradient;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      * {
+        text-align: center;
+        color: $white;
+      }
+
+      .Content {
+        width: 100%;
+        height: 100%;
+        
+        > h1 {
+          font-family: "Hind", "Open Sans", sans-serif;
+          font-weight: 700;
+          font-size: 5em;
+          padding: 10vh;
+        }
+
+        > img {
+          width: 40vh;
+          height: 40vh;
+          animation: rotatingLogo 20s infinite linear;
+        }
+
+        @keyframes rotatingLogo {
+          from {
+            transform: rotate(0deg);
+          }
+          to {
+            transform: rotate(360deg);
+          }
+        }
+
+        > p {
+          font-size: 2em;
+          padding: 10vh;
+        }
+      }
+    }
+  }
+}
