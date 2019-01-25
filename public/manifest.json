@@ -1,8 +1,8 @@
 {
-  "short_name": "React App",
-  "name": "React App from Max Altena",
+  "short_name": "Max Altena",
+  "name": "Website of Max Altena",
   "start_url": "./",
   "display": "standalone",
-  "theme_color": "#215aaf",
-  "background_color": "#215aaf"
+  "theme_color": "#039be5  ",
+  "background_color": "#039be5  "
 }
