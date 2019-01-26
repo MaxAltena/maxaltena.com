@@ -153,13 +153,3 @@ Temporary Items
 .env.development.local
 .env.test.local
 .env.production.local
-
-
-
-
-
-### Currently do not upload to server with circleci
-
-/.circleci
-
-###
