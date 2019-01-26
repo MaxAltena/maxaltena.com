@@ -34,7 +34,7 @@ const Splash = () => {
         </p>
         <Link
           to="/contact"
-          className="btn btn-large waves-effect waves-light z-depth-1"
+          className="btn btn-large waves-effect waves-blue z-depth-0"
         >
           Get in touch
         </Link>

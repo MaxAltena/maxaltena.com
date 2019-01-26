@@ -39,22 +39,32 @@
     }
     > a {
       cursor: pointer;
-      background: $blue;
+      background: transparent;
+      color: $white;
+      // border: 2px solid $white inset;
       width: 20%;
       min-width: 200px;
       margin-top: 40px;
-      transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+      transition: transform 0.5s ease-out, box-shadow 0.5s ease-out,
+        color 0.5s ease-out, background 0.5s ease-out;
       border-radius: 50px;
       text-transform: lowercase;
+      box-shadow: inset 0 0 0px 2px $white !important;
 
       &:hover,
       &:active {
         transform: translateY(-2px);
         box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
-          0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+          0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3) !important;
+        background: $white;
+        color: $black;
+        border: none;
       }
       &:focus {
-        outline: -webkit-focus-ring-color auto 5px;
+        outline: -webkit-focus-ring-color 1px auto;
+      }
+      &.waves-effect.waves-blue .waves-ripple {
+        background-color: $blue-lighten-1;
       }
     }
   }
