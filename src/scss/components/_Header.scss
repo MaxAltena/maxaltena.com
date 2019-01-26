@@ -21,6 +21,11 @@
     opacity: 0.25;
     .react-parallax-bgimage {
       bottom: -50%;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+    .react-parallax-bgimage.loaded {
+      opacity: 1;
     }
   }
   .container {

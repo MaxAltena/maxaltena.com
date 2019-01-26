@@ -11,7 +11,7 @@ class App extends Component {
         <div className="Content ">
           <div className="container">
             <div className="row">
-              <div className="col s6">
+              <div className="col s12 m6">
                 <div className="card">
                   <div className="card-content">
                     <span className="card-title">Lorem, ipsum.</span>
@@ -24,7 +24,7 @@ class App extends Component {
                   </div>
                 </div>
               </div>
-              <div className="col s6">
+              <div className="col s12 m6">
                 <div className="card">
                   <div className="card-content">
                     <span className="card-title">Card Title</span>
@@ -32,7 +32,7 @@ class App extends Component {
                   </div>
                 </div>
               </div>
-              <div className="col s6">
+              <div className="col s12 m6">
                 <div className="card">
                   <div className="card-content">
                     <span className="card-title">Card Title</span>
@@ -40,7 +40,7 @@ class App extends Component {
                   </div>
                 </div>
               </div>
-              <div className="col s6">
+              <div className="col s12 m6">
                 <div className="card">
                   <div className="card-content">
                     <span className="card-title">Card Title</span>
@@ -48,7 +48,7 @@ class App extends Component {
                   </div>
                 </div>
               </div>
-              <div className="col s6">
+              <div className="col s12 m6">
                 <div className="card">
                   <div className="card-content">
                     <span className="card-title">Card Title</span>
@@ -56,7 +56,7 @@ class App extends Component {
                   </div>
                 </div>
               </div>
-              <div className="col s6">
+              <div className="col s12 m6">
                 <div className="card">
                   <div className="card-content">
                     <span className="card-title">Card Title</span>
@@ -66,7 +66,7 @@ class App extends Component {
               </div>
             </div>
             <div className="row">
-              <div className="col s6">
+              <div className="col s12 m6">
                 <div className="card">
                   <div className="card-content">
                     <span className="card-title">Lorem, ipsum.</span>
@@ -79,7 +79,7 @@ class App extends Component {
                   </div>
                 </div>
               </div>
-              <div className="col s6">
+              <div className="col s12 m6">
                 <div className="card">
                   <div className="card-content">
                     <span className="card-title">Card Title</span>
@@ -87,7 +87,7 @@ class App extends Component {
                   </div>
                 </div>
               </div>
-              <div className="col s6">
+              <div className="col s12 m6">
                 <div className="card">
                   <div className="card-content">
                     <span className="card-title">Card Title</span>
@@ -95,7 +95,7 @@ class App extends Component {
                   </div>
                 </div>
               </div>
-              <div className="col s6">
+              <div className="col s12 m6">
                 <div className="card">
                   <div className="card-content">
                     <span className="card-title">Card Title</span>
@@ -103,7 +103,7 @@ class App extends Component {
                   </div>
                 </div>
               </div>
-              <div className="col s6">
+              <div className="col s12 m6">
                 <div className="card">
                   <div className="card-content">
                     <span className="card-title">Card Title</span>
@@ -111,7 +111,7 @@ class App extends Component {
                   </div>
                 </div>
               </div>
-              <div className="col s6">
+              <div className="col s12 m6">
                 <div className="card">
                   <div className="card-content">
                     <span className="card-title">Card Title</span>

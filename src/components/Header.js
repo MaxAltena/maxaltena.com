@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { slide as Menu } from "react-burger-menu";
+
 import InnerHeader from "./Header/InnerHeader";
 import SidebarContent from "./Header/SidebarContent";
 import SplashImg from "../assets/img/splash.jpg";
