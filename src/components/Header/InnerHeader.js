@@ -8,7 +8,6 @@ class InnerHeader extends Component {
     let img = document.getElementsByClassName("react-parallax-bgimage")[0];
     img.onload = function() {
       img.classList.add("loaded");
-      console.log("loaded");
     };
   };
 
