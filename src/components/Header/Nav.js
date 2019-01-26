@@ -4,6 +4,10 @@ import NavbarContent from "./NavbarContent";
 import Logo from "../../assets/img/Logo";
 
 const Nav = ({ handleAnimation, handleSidebar }) => {
+  // TODO:
+  //
+  // Add projects dropdown on hover
+  //
   return (
     <nav className="transparent z-depth-0">
       <div className="nav-wrapper">

@@ -9,9 +9,15 @@ const SidebarContent = ({ handleSidebar }) => {
       </button>
     </li>,
     <li key="title">
-      <h5>Where to captain?</h5>
+      <h5>Menu</h5>
     </li>
   ];
+
+  // TODO:
+  //
+  // Add Social icons to the sidebar
+  // Add projects to the sidebar
+  //
 
   return <NavigationItems classes="SidebarContent" additionalItems={elems} />;
 };
