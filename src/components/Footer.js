@@ -9,7 +9,9 @@ const Footer = () => {
       <div className="slant" />
       <div className="container white-text">
         <Goodbye />
-        <div className="divider white" />
+        <div className="divider">
+          <div className="innerDivider white" />
+        </div>
         <Copyright />
       </div>
       {Logo()}

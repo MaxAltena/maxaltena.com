@@ -1,7 +1,7 @@
 .Footer {
   position: relative;
   min-height: 700px;
-  height: 50vh;
+  height: auto;
   background: $blue;
   background: linear-gradient(to top right, $blue-darken-1, $blue-lighten-1);
   background-size: cover;
@@ -10,10 +10,21 @@
   z-index: 0;
 
   .container {
-    padding-top: 35vh;
+    padding-top: 40vh;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
     .divider {
-      margin: 2.5vh 0;
-      opacity: 0.3;
+      background: transparent !important;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      .innerDivider {
+        height: 1px;
+        width: 100%;
+        opacity: 0.3;
+      }
     }
   }
   .slant {

@@ -54,7 +54,8 @@ class Header extends Component {
     }
   };
 
-  handleSidebar = isOpen => {
+  isMenuOpen = state => {
+    const { isOpen } = state;
     if (isOpen) {
       this.setState({
         ...this.state,
@@ -87,6 +88,27 @@ class Header extends Component {
         }
       });
     }
+    return state.isOpen;
+  };
+
+  handleSidebar = isOpen => {
+    if (isOpen) {
+      this.setState({
+        ...this.state,
+        sidebar: {
+          ...this.state.sidebar,
+          isOpen
+        }
+      });
+    } else {
+      this.setState({
+        ...this.state,
+        sidebar: {
+          ...this.state.sidebar,
+          isOpen
+        }
+      });
+    }
   };
 
   render() {
@@ -110,6 +132,7 @@ class Header extends Component {
           customBurgerIcon={customBurgerIcon}
           customCrossIcon={customCrossIcon}
           styles={styles}
+          onStateChange={this.isMenuOpen}
         >
           <SidebarContent handleSidebar={this.handleSidebar} />
         </Menu>

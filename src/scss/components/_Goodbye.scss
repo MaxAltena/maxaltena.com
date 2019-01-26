@@ -1,7 +1,45 @@
 .Goodbye {
-  height: 27vh;
+  height: auto;
 
-  .row > div > p {
-    font-size: 1.2em;
+  .row {
+    .section {
+      height: 30vh;
+      p {
+        font-size: 1.4em;
+        margin-bottom: 15px;
+      }
+      ul {
+        li {
+          a {
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 20px;
+            i {
+              margin-right: 15px;
+              transition: color 0.3s ease-in-out !important;
+            }
+            &.margin-left-10 {
+              margin-left: 10px;
+            }
+            &:hover,
+            &:active,
+            &:focus {
+              i {
+                color: $white !important;
+              }
+              .inner {
+                .default,
+                .hover {
+                  color: $white !important;
+                }
+              }
+            }
+          }
+        }
+      }
+      &.hide-on-med-and-up {
+        height: 50vh;
+      }
+    }
   }
 }
