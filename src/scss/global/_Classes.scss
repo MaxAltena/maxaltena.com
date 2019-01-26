@@ -13,40 +13,12 @@
 .underline {
   text-decoration: underline !important;
 }
-
-a.link {
-  display: inline-block;
-  height: 1.4em;
-  line-height: 1.4em;
-  cursor: pointer;
-  text-decoration: none;
-  .inner {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    display: block;
-    overflow: hidden;
-    .default {
-      display: block;
-      height: 100%;
-    }
-    .hover {
-      position: absolute;
-      bottom: 100%;
-    }
-    .default,
-    .hover {
-      transition: transform 0.3s ease-in-out;
-    }
-  }
-  &:hover,
-  &:active,
-  &:focus {
-    .inner {
-      .default,
-      .hover {
-        transform: translateY(100%);
-      }
-    }
-  }
+.overline {
+  text-decoration: overline !important;
+}
+.uppercase {
+  text-transform: uppercase !important;
+}
+.lowercase {
+  text-transform: lowercase !important;
 }

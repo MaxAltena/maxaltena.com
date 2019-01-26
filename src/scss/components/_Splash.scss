@@ -1,0 +1,61 @@
+.Header > .InnerHeader > .container > header {
+  margin-top: 80px;
+  div {
+    > h1 {
+      font-size: 2.2rem;
+      a {
+        color: $white;
+        cursor: pointer;
+        transition: color 0.3s ease-in-out;
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: $grey-lighten-2;
+        }
+      }
+      &.hide-on-med-and-down {
+        > span {
+          margin-bottom: 10px;
+          display: block;
+          &:last-child() {
+            margin: 0;
+          }
+        }
+      }
+    }
+    > p {
+      font-size: 1.1rem;
+      color: $grey-lighten-2;
+      &.hide-on-med-and-down {
+        > span {
+          margin-bottom: 5px;
+          display: block;
+          &:last-child() {
+            margin: 0;
+          }
+        }
+      }
+    }
+    > a {
+      cursor: pointer;
+      background: $blue;
+      width: 20%;
+      min-width: 200px;
+      margin-top: 40px;
+      transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+      border-radius: 50px;
+      text-transform: lowercase;
+
+      &:hover,
+      &:active {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+          0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+      }
+      &:focus {
+        outline: -webkit-focus-ring-color auto 5px;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.Copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 2vw);
+  padding: 0 1vw;
+  height: 5vh;
+
+  > div {
+    height: 21px;
+    > a {
+      margin-left: 25px;
+    }
+  }
+}
