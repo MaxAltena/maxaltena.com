@@ -1,3 +1,7 @@
 .Goodbye {
-  height: 32vh;
+  height: 27vh;
+
+  .row > div > p {
+    font-size: 1.2em;
+  }
 }
