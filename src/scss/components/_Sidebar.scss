@@ -1,59 +1,107 @@
 .Sidebar {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
 
-  li {
-    display: block;
-    height: 5%;
-    margin: 0 0 0 10px;
+  ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    li {
+      display: block;
+      height: auto;
+      margin: 0 0 0 10px;
 
-    &.close {
-      position: absolute;
-      right: 0;
-    }
-    h5 {
-      font-size: 1.7em;
-      color: $white;
-    }
-    button,
-    button:active,
-    button:hover,
-    button:focus {
-      cursor: pointer;
-      margin: 18px 0;
-      border: none;
-      background: transparent;
-      color: $white;
-      width: 64px;
-      position: relative;
-      top: -15px;
-    }
-    a {
-      color: $grey-lighten-2;
-      font-size: 1.3em;
-      background: transparent;
-
-      &.active,
-      &.hover,
-      &.focus {
-        color: $white;
+      &.subItem {
+        margin: -5px 0 -10px 25px;
+        &:nth-of-type(6) {
+          margin-top: -20px;
+        }
+        &:nth-of-type(8) {
+          margin-bottom: 0px;
+        }
       }
-    }
-    &:nth-child(2) {
-      margin-bottom: 25px;
+      &:nth-child(11) {
+        margin-top: 10px;
+      }
+      &.linkExternal {
+        a {
+          display: inline-flex;
+          align-items: center;
+
+          i {
+            margin-right: 15px;
+            transition: color 0.3s ease-in-out !important;
+          }
+          &.margin-left-10 {
+            margin-left: 10px;
+          }
+          &:hover,
+          &:active,
+          &:focus,
+          &.active {
+            i {
+              color: $white !important;
+            }
+            .inner {
+              .default,
+              .hover {
+                color: $white !important;
+              }
+            }
+          }
+        }
+      }
+      &.close {
+        position: absolute;
+        right: 0;
+      }
+      h5 {
+        font-size: 1.7em;
+        color: $white;
+        padding: 5px 0 15px 0px;
+      }
+      button {
+        cursor: pointer;
+        margin: 18px 0;
+        border: none;
+        background: transparent;
+        color: $white;
+        width: 64px;
+        position: relative;
+        top: -15px;
+        transition: color 0.3s ease-in-out;
+
+        &:active,
+        &:hover,
+        &:focus {
+          color: $grey-lighten-3;
+        }
+      }
+      a {
+        color: $grey-lighten-2;
+        font-size: 1.3em;
+        background: transparent;
+
+        &.active,
+        &:hover,
+        &:active,
+        &:focus {
+          color: $white;
+        }
+      }
     }
   }
 }
 .bm-menu-wrap {
-  position: absolute;
+  position: fixed;
   height: 100%;
   top: 0;
-  min-width: 250px;
-  width: 25vw;
-  z-index: 100000;
-  background: $blue-lighten-1;
+  min-width: 300px !important;
+  width: 40vw !important;
+  z-index: 100;
+  background: $blue;
+  background: linear-gradient(to top right, $blue-darken-1, $blue-lighten-1);
 }
 .bm-menu {
   z-index: 10;

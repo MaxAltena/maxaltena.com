@@ -99,6 +99,50 @@ class App extends Component {
               name: "Contact",
               classes: "lowercase"
             }
+          ],
+          socials: [
+            {
+              type: "other",
+              to: "https://github.com/MaxAltena/",
+              name: "GitHub",
+              icon: <i className="fab fa-github" />,
+              classes: "Alink grey-text text-lighten-2"
+            },
+            {
+              type: "other",
+              to: "https://codepen.io/MaxAltena/",
+              name: "CodePen",
+              icon: <i className="fab fa-codepen" />,
+              classes: "Alink grey-text text-lighten-2"
+            },
+            {
+              type: "other",
+              to: "https://linkedin.com/in/MaxAltena/",
+              name: "LinkedIn",
+              icon: <i className="fab fa-linkedin" />,
+              classes: "Alink grey-text text-lighten-2"
+            },
+            {
+              type: "other",
+              to: "https://flickr.com/people/MaxAltena/",
+              name: "Flickr",
+              icon: <i className="fab fa-flickr" />,
+              classes: "Alink grey-text text-lighten-2"
+            },
+            {
+              type: "other",
+              to: "tel: +31 6 39105742",
+              name: "+31 6 39105742",
+              icon: <i className="material-icons">phone</i>,
+              classes: "Alink grey-text text-lighten-2 lowercase"
+            },
+            {
+              type: "other",
+              to: "mailto:Max@MaxAltena.com",
+              name: "Max@MaxAltena.com",
+              icon: <i className="material-icons">email</i>,
+              classes: "Alink grey-text text-lighten-2 lowercase"
+            }
           ]
         },
         splash: {

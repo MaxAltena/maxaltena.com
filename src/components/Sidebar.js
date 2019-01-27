@@ -1,14 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Alink from "./common/Alink";
 
 const Sidebar = ({ nav, handleSidebar }) => {
-  const { items } = nav;
-  console.log(items);
-  // TODO:
-  //
-  // Add Social icons to the sidebar
-  // Add projects to the sidebar
-  //
+  const { items, socials } = nav;
   return (
     <div className="Sidebar">
       <ul>
@@ -20,21 +15,75 @@ const Sidebar = ({ nav, handleSidebar }) => {
         <li key="title">
           <h5>Menu</h5>
         </li>
-        <li>
-          <Alink type="NavLink" to="/" name="Home" />
-        </li>
-        <li>
-          <Alink type="NavLink" to="/about" name="About" />
-        </li>
-        <li>
-          <Alink type="NavLink" to="/projects" name="Projects" />
-        </li>
-        <li>
-          <Alink type="NavLink" to="/skills" name="Skills" />
-        </li>
-        <li>
-          <Alink type="NavLink" to="/contact" name="Contact" />
-        </li>
+        {items &&
+          items.map(item => {
+            let elements = [];
+            if (item.subItems) {
+              elements.push(
+                <li key={item.name}>
+                  <Alink
+                    type={item.type}
+                    to={item.to}
+                    name={item.name}
+                    classes={item.classes}
+                  />
+                </li>
+              );
+              item.subItems.forEach(subItem => {
+                elements.push(
+                  <li key={subItem.name} className="subItem">
+                    <Alink
+                      type={subItem.type}
+                      to={subItem.to}
+                      name={subItem.name}
+                      classes={subItem.classes}
+                    />
+                  </li>
+                );
+              });
+            } else {
+              elements.push(
+                <li key={item.name}>
+                  <Alink
+                    type={item.type}
+                    to={item.to}
+                    name={item.name}
+                    classes={item.classes}
+                  />
+                </li>
+              );
+            }
+            return elements;
+          })}
+        {socials &&
+          socials.map(social => {
+            return (
+              <li key={social.name} className="linkExternal">
+                {social.type === "other" ? (
+                  <a
+                    href={social.to}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={social.classes}
+                  >
+                    {social.icon}
+                    <span className="inner">
+                      <span className="default">{social.name}</span>
+                      <span className="hover">{social.name}</span>
+                    </span>
+                  </a>
+                ) : (
+                  <Link to={social.to} className={social.classes}>
+                    {social.icon}
+                    <span className="inner">
+                      <span className="default">{social.name}</span>
+                      <span className="hover">{social.name}</span>
+                    </span>
+                  </Link>
+                )}
+              </li>
+            );
+          })}
       </ul>
     </div>
   );
