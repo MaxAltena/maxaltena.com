@@ -1,0 +1,72 @@
+ul.SidebarContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  li {
+    display: block;
+    height: 5%;
+    margin: 0 0 0 10px;
+
+    &.close {
+      position: absolute;
+      right: 0;
+    }
+    h5 {
+      font-size: 1.7em;
+      color: $white;
+    }
+    button,
+    button:active,
+    button:hover,
+    button:focus {
+      cursor: pointer;
+      margin: 18px 0;
+      border: none;
+      background: transparent;
+      color: $white;
+      width: 64px;
+      position: relative;
+      top: -15px;
+    }
+    a {
+      color: $grey-lighten-2;
+      font-size: 1.3em;
+      background: transparent;
+
+      &.active,
+      &.hover,
+      &.focus {
+        color: $white;
+      }
+    }
+    &:nth-child(2) {
+      margin-bottom: 25px;
+    }
+  }
+}
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+  top: 0;
+  min-width: 250px;
+  width: 25vw;
+  z-index: 10;
+  background: $blue-lighten-1;
+}
+.bm-menu {
+  z-index: 10;
+  transition: box-shadow 0.3s ease-in-out;
+}
+.bm-item-list {
+  padding: 0.5em;
+  box-shadow: none;
+  background: transparent;
+}
+.bm-overlay {
+  position: fixed;
+  height: 100%;
+  top: 0;
+  background: rgba(0, 0, 0, 0.3);
+}

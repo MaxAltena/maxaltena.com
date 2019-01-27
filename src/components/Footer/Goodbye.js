@@ -1,91 +1,19 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
-import Alink from "../common/Alink";
+import { Link } from "react-router-dom";
+import Sitemap from "./Sitemap";
 
-const Goodbye = () => {
+const Goodbye = ({ sitemap, other }) => {
   return (
     <div className="Goodbye">
       <div className="row hide-on-small-only">
-        <div className="section col m12 l6">
-          <p className="lowercase">Sitemap</p>
-          <div className="row">
-            <div className="col s6 m6 l4">
-              <ul>
-                <li>
-                  <Alink
-                    type="NavLink"
-                    to="/"
-                    name="Home"
-                    classes="grey-text text-lighten-2 lowercase"
-                  />
-                </li>
-                <li>
-                  <Alink
-                    type="NavLink"
-                    to="/about"
-                    name="About"
-                    classes="grey-text text-lighten-2 lowercase"
-                  />
-                </li>
-                <li>
-                  <Alink
-                    type="NavLink"
-                    to="/skills"
-                    name="Skills"
-                    classes="grey-text text-lighten-2 lowercase"
-                  />
-                </li>
-                <li>
-                  <Alink
-                    type="NavLink"
-                    to="/contact"
-                    name="Contact"
-                    classes="grey-text text-lighten-2 lowercase"
-                  />
-                </li>
-              </ul>
-            </div>
-            <div className="col s6 m6 l8">
-              <ul>
-                <li>
-                  <Alink
-                    type="NavLink"
-                    to="/projects"
-                    name="Projects"
-                    classes="grey-text text-lighten-2 lowercase"
-                  />
-                </li>
-                <li>
-                  <NavLink
-                    to="/projects/LamecoDashboard"
-                    className="Alink grey-text text-lighten-2 margin-left-10"
-                  >
-                    <span className="inner">
-                      <span className="default">LamécoDashboard</span>
-                      <span className="hover">LamécoDashboard</span>
-                    </span>
-                  </NavLink>
-                </li>
-                <li>
-                  <Alink
-                    type="NavLink"
-                    to="/projects/resume.maxaltena.com"
-                    name="resume.maxaltena.com"
-                    classes="grey-text text-lighten-2 lowercase margin-left-10"
-                  />
-                </li>
-                <li>
-                  <Alink
-                    type="NavLink"
-                    to="/projects/time.maxaltena.com"
-                    name="time.maxaltena.com"
-                    classes="grey-text text-lighten-2 lowercase margin-left-10"
-                  />
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        {sitemap ? (
+          <Sitemap
+            title={sitemap.title}
+            links={sitemap.links}
+            projects={sitemap.projects}
+            size="med-up"
+          />
+        ) : null}
         <div className="section col m6 l3">
           <p className="lowercase">Social</p>
           <ul>
@@ -190,82 +118,14 @@ const Goodbye = () => {
         </div>
       </div>
       <div className="row hide-on-med-and-up">
-        <div className="section col s12">
-          <p className="lowercase">Sitemap</p>
-          <div className="row">
-            <div className="col s12">
-              <ul>
-                <li>
-                  <Alink
-                    type="NavLink"
-                    to="/"
-                    name="Home"
-                    classes="grey-text text-lighten-2 lowercase"
-                  />
-                </li>
-                <li>
-                  <Alink
-                    type="NavLink"
-                    to="/about"
-                    name="About"
-                    classes="grey-text text-lighten-2 lowercase"
-                  />
-                </li>
-                <li>
-                  <Alink
-                    type="NavLink"
-                    to="/skills"
-                    name="Skills"
-                    classes="grey-text text-lighten-2 lowercase"
-                  />
-                </li>
-                <li>
-                  <Alink
-                    type="NavLink"
-                    to="/projects"
-                    name="Projects"
-                    classes="grey-text text-lighten-2 lowercase"
-                  />
-                </li>
-                <li>
-                  <NavLink
-                    to="/projects/LamecoDashboard"
-                    className="Alink grey-text text-lighten-2 margin-left-10"
-                  >
-                    <span className="inner">
-                      <span className="default">LamécoDashboard</span>
-                      <span className="hover">LamécoDashboard</span>
-                    </span>
-                  </NavLink>
-                </li>
-                <li>
-                  <Alink
-                    type="NavLink"
-                    to="/projects/resume.maxaltena.com"
-                    name="resume.maxaltena.com"
-                    classes="grey-text text-lighten-2 lowercase margin-left-10"
-                  />
-                </li>
-                <li>
-                  <Alink
-                    type="NavLink"
-                    to="/projects/time.maxaltena.com"
-                    name="time.maxaltena.com"
-                    classes="grey-text text-lighten-2 lowercase margin-left-10"
-                  />
-                </li>
-                <li>
-                  <Alink
-                    type="NavLink"
-                    to="/contact"
-                    name="Contact"
-                    classes="grey-text text-lighten-2 lowercase"
-                  />
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        {sitemap ? (
+          <Sitemap
+            title={sitemap.title}
+            links={sitemap.links}
+            projects={sitemap.projects}
+            size="small"
+          />
+        ) : null}
         <div className="section col s12">
           <p className="lowercase">Social</p>
           <ul>

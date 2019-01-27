@@ -5,7 +5,7 @@ const Alink = ({ type, to, name, classes }) => {
   switch (type) {
     case "Link":
       return (
-        <Link to={to} className={"Alink lowercase " + classes}>
+        <Link to={to} className={"Alink " + classes}>
           <span className="inner">
             <span className="default">{name}</span>
             <span className="hover">{name}</span>
@@ -14,7 +14,7 @@ const Alink = ({ type, to, name, classes }) => {
       );
     case "NavLink":
       return (
-        <NavLink exact to={to} className={"Alink lowercase " + classes}>
+        <NavLink exact to={to} className={"Alink " + classes}>
           <span className="inner">
             <span className="default">{name}</span>
             <span className="hover">{name}</span>
@@ -23,7 +23,7 @@ const Alink = ({ type, to, name, classes }) => {
       );
     default:
       return (
-        <a href={to} className={"Alink lowercase " + classes}>
+        <a href={to} className={"Alink " + classes}>
           <span className="inner">
             <span className="default">{name}</span>
             <span className="hover">{name}</span>
