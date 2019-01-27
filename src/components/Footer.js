@@ -151,6 +151,7 @@ class Footer extends Component {
     return (
       <div className="Footer">
         <div className="slant" />
+        <div className="background" />
         <div className="container white-text">
           <Goodbye sitemap={goodbye.sitemap} other={goodbye.other} />
           <div className="divider">

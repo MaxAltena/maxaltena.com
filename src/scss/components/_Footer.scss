@@ -5,12 +5,7 @@
   position: relative;
   min-height: 700px;
   height: auto;
-  background: $blue;
-  background: linear-gradient(to top right, $blue-darken-1, $blue-lighten-1);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: 0;
+  z-index: -1;
 
   .container {
     padding-top: 25vh;
@@ -40,7 +35,18 @@
     background: $grey-lighten-3;
     transform: skewY(4deg) translateY(0);
   }
-
+  .background {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+    background: $blue;
+    background: linear-gradient(to top right, $blue-darken-1, $blue-lighten-1);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -3;
+  }
   .Logo {
     position: fixed;
     left: -2.2vw;
