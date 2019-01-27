@@ -1,5 +1,5 @@
 import React from "react";
-import Alink from "../common/Alink";
+import Alink from "../../common/Alink";
 
 const Sitemap = ({ title, links, projects, size }) => {
   switch (size) {

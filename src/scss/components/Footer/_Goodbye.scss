@@ -34,7 +34,8 @@
             }
             &:hover,
             &:active,
-            &:focus {
+            &:focus,
+            &.active {
               i {
                 color: $white !important;
               }

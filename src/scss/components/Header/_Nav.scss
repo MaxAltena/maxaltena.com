@@ -1,0 +1,121 @@
+.Nav {
+  height: $nav-height;
+  .nav-wrapper {
+    .brand-logo {
+      height: $nav-height;
+      .Logo {
+        width: $nav-height;
+        height: $nav-height;
+        g {
+          fill: $white;
+
+          &.X.animated > path {
+            animation: onHoverLogo 1s;
+            @keyframes onHoverLogo {
+              0% {
+                transform: translate(0, 0);
+              }
+              50% {
+                transform: translate(4px, -8px);
+              }
+              100% {
+                transform: translate(0, 0);
+              }
+            }
+          }
+        }
+      }
+    }
+    button {
+      cursor: pointer;
+      margin: 18px 0;
+      border: none;
+      background: transparent;
+      color: $white;
+      width: 64px;
+      transition: color 0.3s ease-in-out;
+      &:active,
+      &:hover,
+      &:focus {
+        color: $grey-lighten-3;
+      }
+    }
+    ul#nav-mobile {
+      height: $nav-height;
+      display: flex;
+      justify-content: center;
+      > li {
+        height: auto;
+        margin: calc(#{$nav-height} / 3) 1.2vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a {
+          padding: 0;
+          font-size: 1.05em;
+          background: transparent;
+          z-index: 2;
+          .inner {
+            .default,
+            .hover {
+              color: $grey-lighten-2;
+              transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+            }
+          }
+          &.active,
+          &:hover,
+          &:active {
+            .inner {
+              .default,
+              .hover {
+                color: $white;
+              }
+            }
+          }
+        }
+        &.dropdown {
+          position: relative;
+
+          i {
+            width: 100%;
+            text-align: center;
+            height: 48px;
+            color: $grey-lighten-2;
+            position: absolute;
+            bottom: -50%;
+
+            z-index: 1;
+            transition: color 0.3s ease-in-out;
+          }
+          &:hover,
+          &:active,
+          &:focus {
+            .dropdownContent {
+              visibility: visible;
+              opacity: 1;
+              transition: opacity 0.3s ease-in-out;
+            }
+            > i {
+              color: $white;
+            }
+          }
+          .dropdownContent {
+            visibility: hidden;
+            position: absolute;
+            left: calc(50% - 90px);
+            top: 100%;
+            z-index: 3;
+
+            width: 200px;
+            padding: 0 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+            > li {
+              height: 50px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
