@@ -6,12 +6,6 @@
   background: $grey-lighten-3;
   margin-top: -50px !important;
   margin-bottom: -20px !important;
-
-  a:hover,
-  a:active,
-  a:focus {
-    text-decoration: underline;
-  }
 }
 
 .Terms {
@@ -20,6 +14,11 @@
   }
   p {
     text-align: justify;
+  }
+  a:hover,
+  a:active,
+  a:focus {
+    text-decoration: underline;
   }
 }
 
@@ -34,5 +33,10 @@
   li {
     list-style-type: disc !important;
     margin-left: 25px;
+  }
+  a:hover,
+  a:active,
+  a:focus {
+    text-decoration: underline;
   }
 }

@@ -6,13 +6,26 @@ import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-import Content from "./components/pages/Content";
+import Home from "./components/pages/Home";
+import About from "./components/pages/About";
+import Projects from "./components/pages/Projects";
+import LamecoDashoard from "./components/pages/Projects/LamecoDashboard";
+import ResumeMaxaltenaCom from "./components/pages/Projects/ResumeMaxaltenaCom";
+import TimeMaxaltenaCom from "./components/pages/Projects/TimeMaxaltenaCom";
+import Skills from "./components/pages/Skills";
+import Contact from "./components/pages/Contact";
 import Terms from "./components/pages/Terms";
 import Credits from "./components/pages/Credits";
 
 import imgHome from "./assets/img/splash/home.jpg";
 import imgAbout from "./assets/img/splash/about.jpg";
-import imgTerms from "./assets/img/splash/terms.jpeg";
+import imgProjects from "./assets/img/splash/projects.jpg";
+import imgLamecoDashboard from "./assets/img/splash/lamecodashboard.jpg";
+import imgResumeMaxaltenaCom from "./assets/img/splash/resume.maxaltena.com.jpg";
+import imgTimeMaxaltenaCom from "./assets/img/splash/time.maxaltena.com.jpg";
+import imgSkills from "./assets/img/splash/skills.jpg";
+import imgContact from "./assets/img/splash/contact.jpg";
+import imgTerms from "./assets/img/splash/terms.jpg";
 import imgCredits from "./assets/img/splash/credits.jpg";
 import Logo from "./assets/img/Logo";
 import "./App.css";
@@ -457,10 +470,10 @@ class App extends Component {
             )
           }
         };
-        pageContent = <Content />;
+        pageContent = <About />;
         break;
       case "/projects":
-        splashImage = imgHome;
+        splashImage = imgProjects;
         splashContent = {
           title: {
             all: <h1 className="hind bold white-text big">Projects</h1>
@@ -474,10 +487,10 @@ class App extends Component {
             )
           }
         };
-        pageContent = <Content />;
+        pageContent = <Projects />;
         break;
       case "/projects/LamecoDashboard":
-        splashImage = imgHome;
+        splashImage = imgLamecoDashboard;
         splashContent = {
           title: {
             all: <h1 className="hind bold white-text big">Laméco Dashboard</h1>
@@ -489,12 +502,19 @@ class App extends Component {
                 with the MERN-stack.
               </p>
             )
+          },
+          action: {
+            type: "a",
+            to: "https://lameco-dashboard.herokuapp.com",
+            classes:
+              "btn btn-large waves-effect waves-blue z-depth-0 lowercase",
+            name: "Visit website"
           }
         };
-        pageContent = <Content />;
+        pageContent = <LamecoDashoard />;
         break;
       case "/projects/resume.maxaltena.com":
-        splashImage = imgHome;
+        splashImage = imgResumeMaxaltenaCom;
         splashContent = {
           title: {
             all: (
@@ -510,17 +530,17 @@ class App extends Component {
             )
           },
           action: {
-            type: "Link",
+            type: "a",
             to: "https://resume.maxaltena.com/",
             classes:
               "btn btn-large waves-effect waves-blue z-depth-0 lowercase",
-            name: "View résumé"
+            name: "Visit website"
           }
         };
-        pageContent = <Content />;
+        pageContent = <ResumeMaxaltenaCom />;
         break;
       case "/projects/time.maxaltena.com":
-        splashImage = imgHome;
+        splashImage = imgTimeMaxaltenaCom;
         splashContent = {
           title: {
             all: (
@@ -535,17 +555,17 @@ class App extends Component {
             )
           },
           action: {
-            type: "Link",
+            type: "a",
             to: "https://time.maxaltena.com/",
             classes:
               "btn btn-large waves-effect waves-blue z-depth-0 lowercase",
             name: "Visit website"
           }
         };
-        pageContent = <Content />;
+        pageContent = <TimeMaxaltenaCom />;
         break;
       case "/skills":
-        splashImage = imgHome;
+        splashImage = imgSkills;
         splashContent = {
           title: {
             all: <h1 className="hind bold white-text big">Skills</h1>
@@ -559,10 +579,10 @@ class App extends Component {
             )
           }
         };
-        pageContent = <Content />;
+        pageContent = <Skills />;
         break;
       case "/contact":
-        splashImage = imgHome;
+        splashImage = imgContact;
         splashContent = {
           title: {
             all: <h1 className="hind bold white-text big">Contact</h1>
@@ -575,7 +595,7 @@ class App extends Component {
             )
           }
         };
-        pageContent = <Content />;
+        pageContent = <Contact />;
         break;
       case "/terms":
         scroll.scrollToTop({ duration: 300, delay: 200, smooth: "easeInOut" });
@@ -619,7 +639,7 @@ class App extends Component {
       default:
         splashImage = parallax.bgImage;
         splashContent = splash;
-        pageContent = <Content />;
+        pageContent = <Home />;
         break;
     }
 

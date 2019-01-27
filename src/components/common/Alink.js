@@ -23,6 +23,7 @@ const Alink = ({ type, to, name, classes }) => {
           </span>
         </NavLink>
       );
+    case "a":
     default:
       return (
         <a href={to} className={addClass}>

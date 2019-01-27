@@ -20,7 +20,16 @@ const Splash = ({ splash }) => {
             <Link to={action.to} className={action.classes}>
               {action.name}
             </Link>
-          ) : null
+          ) : (
+            <a
+              href={action.to}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={action.classes}
+            >
+              {action.name}
+            </a>
+          )
         ) : null}
       </div>
     </header>
