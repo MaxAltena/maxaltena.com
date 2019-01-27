@@ -10,8 +10,9 @@
   z-index: 0;
 
   .container {
-    padding-top: 35vh;
+    padding-top: 20vh;
     min-height: 700px;
+    height: auto;
     display: flex;
     flex-direction: column;
     .divider {
