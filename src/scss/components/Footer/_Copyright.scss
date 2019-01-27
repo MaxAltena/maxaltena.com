@@ -13,6 +13,27 @@
         height: 21px;
         > a {
           margin-left: 25px;
+
+          align-items: center;
+          transition: color 0.3s ease-in-out;
+          .inner {
+            .default,
+            .hover {
+              color: $grey-lighten-2 !important;
+            }
+          }
+
+          &:hover,
+          &:active,
+          &:focus,
+          &.active {
+            .inner {
+              .default,
+              .hover {
+                color: $white !important;
+              }
+            }
+          }
         }
       }
     }

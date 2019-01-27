@@ -1,7 +1,38 @@
-.Content {
+.App > :nth-child(3) {
   position: relative;
   z-index: 4;
   height: auto;
+  min-height: 250px;
   background: $grey-lighten-3;
-  margin: -80px 0 -100px 0;
+  margin-top: -50px !important;
+  margin-bottom: -20px !important;
+
+  a:hover,
+  a:active,
+  a:focus {
+    text-decoration: underline;
+  }
+}
+
+.Terms {
+  h2 {
+    font-size: 2.7rem;
+  }
+  p {
+    text-align: justify;
+  }
+}
+
+.Credits {
+  h2 {
+    font-size: 2.7rem;
+    margin-top: 80px;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  li {
+    list-style-type: disc !important;
+    margin-left: 25px;
+  }
 }

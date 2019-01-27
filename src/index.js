@@ -7,7 +7,16 @@ import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route path="/" component={App} />
+      <Route exact path="/about" component={App} />
+      <Route exact path="/projects" component={App} />
+      <Route exact path="/projects/LamecoDashboard" component={App} />
+      <Route exact path="/projects/resume.maxaltena.com" component={App} />
+      <Route exact path="/projects/time.maxaltena.com" component={App} />
+      <Route exact path="/skills" component={App} />
+      <Route exact path="/contact" component={App} />
+      <Route exact path="/terms" component={App} />
+      <Route exact path="/credits" component={App} />
+      <Route exact path="/" component={App} />
       <Route render={() => <Redirect to="/" />} />
     </Switch>
   </BrowserRouter>,

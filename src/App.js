@@ -1,10 +1,19 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { slide as Menu } from "react-burger-menu";
+import { animateScroll as scroll } from "react-scroll";
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import SplashImg from "./assets/img/splash.jpg";
+
+import Content from "./components/pages/Content";
+import Terms from "./components/pages/Terms";
+import Credits from "./components/pages/Credits";
+
+import imgHome from "./assets/img/splash/home.jpg";
+import imgAbout from "./assets/img/splash/about.jpg";
+import imgTerms from "./assets/img/splash/terms.jpeg";
+import imgCredits from "./assets/img/splash/credits.jpg";
 import Logo from "./assets/img/Logo";
 import "./App.css";
 
@@ -26,8 +35,7 @@ class App extends Component {
       header: {
         parallax: {
           blur: { min: -16, max: 30 },
-          bgImage: SplashImg,
-          bgImageAlt: "Macbook Pro in front of window",
+          bgImage: imgHome,
           strength: 800
         },
         nav: {
@@ -348,6 +356,11 @@ class App extends Component {
         }
       }
     });
+    this.img = document.getElementsByClassName("react-parallax-bgimage")[0];
+  };
+
+  componentDidUpdate = () => {
+    this.img = document.getElementsByClassName("react-parallax-bgimage")[0];
   };
 
   handleAnimation = action => {
@@ -425,6 +438,197 @@ class App extends Component {
     const { isOpen, customBurgerIcon, customCrossIcon, styles } = sidebar;
     const { parallax, nav, splash, logo } = header;
     const { goodbye, copyright } = footer;
+
+    let splashImage = null;
+    let splashContent = null;
+    let pageContent = null;
+    switch (this.props.match.path) {
+      case "/about":
+        splashImage = imgAbout;
+        splashContent = {
+          title: {
+            all: <h1 className="hind bold white-text big">About</h1>
+          },
+          subtitle: {
+            all: (
+              <p className="big">
+                Some information about me, because you were looking for it!
+              </p>
+            )
+          }
+        };
+        pageContent = <Content />;
+        break;
+      case "/projects":
+        splashImage = imgHome;
+        splashContent = {
+          title: {
+            all: <h1 className="hind bold white-text big">Projects</h1>
+          },
+          subtitle: {
+            all: (
+              <p className="big">
+                Here are the latest projects I've been working on, with or
+                without a group.
+              </p>
+            )
+          }
+        };
+        pageContent = <Content />;
+        break;
+      case "/projects/LamecoDashboard":
+        splashImage = imgHome;
+        splashContent = {
+          title: {
+            all: <h1 className="hind bold white-text big">Laméco Dashboard</h1>
+          },
+          subtitle: {
+            all: (
+              <p className="big">
+                Created with a group, we built a dashboard management system
+                with the MERN-stack.
+              </p>
+            )
+          }
+        };
+        pageContent = <Content />;
+        break;
+      case "/projects/resume.maxaltena.com":
+        splashImage = imgHome;
+        splashContent = {
+          title: {
+            all: (
+              <h1 className="hind bold white-text big">resume.maxaltena.com</h1>
+            )
+          },
+          subtitle: {
+            all: (
+              <p className="big">
+                I created a (interactive) website of my personal résumé that is
+                fully dynamic and responsive.
+              </p>
+            )
+          },
+          action: {
+            type: "Link",
+            to: "https://resume.maxaltena.com/",
+            classes:
+              "btn btn-large waves-effect waves-blue z-depth-0 lowercase",
+            name: "View résumé"
+          }
+        };
+        pageContent = <Content />;
+        break;
+      case "/projects/time.maxaltena.com":
+        splashImage = imgHome;
+        splashContent = {
+          title: {
+            all: (
+              <h1 className="hind bold white-text big">time.maxaltena.com</h1>
+            )
+          },
+          subtitle: {
+            all: (
+              <p className="big">
+                I created a fun little website to countdown to a certain time.
+              </p>
+            )
+          },
+          action: {
+            type: "Link",
+            to: "https://time.maxaltena.com/",
+            classes:
+              "btn btn-large waves-effect waves-blue z-depth-0 lowercase",
+            name: "Visit website"
+          }
+        };
+        pageContent = <Content />;
+        break;
+      case "/skills":
+        splashImage = imgHome;
+        splashContent = {
+          title: {
+            all: <h1 className="hind bold white-text big">Skills</h1>
+          },
+          subtitle: {
+            all: (
+              <p className="big">
+                This is the place where I show which skills I currently have and
+                the ones I want to learn in the future.
+              </p>
+            )
+          }
+        };
+        pageContent = <Content />;
+        break;
+      case "/contact":
+        splashImage = imgHome;
+        splashContent = {
+          title: {
+            all: <h1 className="hind bold white-text big">Contact</h1>
+          },
+          subtitle: {
+            all: (
+              <p className="big">
+                Trying to contact me? This is the place to be!
+              </p>
+            )
+          }
+        };
+        pageContent = <Content />;
+        break;
+      case "/terms":
+        scroll.scrollToTop({ duration: 300, delay: 200, smooth: "easeInOut" });
+        splashImage = imgTerms;
+        splashContent = {
+          title: {
+            all: (
+              <h1 className="hind bold white-text big">Terms & conditions</h1>
+            )
+          },
+          subtitle: {
+            all: (
+              <p className="big">
+                This seems to be the best part of the website, some legal jargon
+                to keep me safe from random things.
+              </p>
+            )
+          }
+        };
+        pageContent = <Terms />;
+        break;
+      case "/credits":
+        scroll.scrollToTop({ duration: 300, delay: 200, smooth: "easeInOut" });
+        splashImage = imgCredits;
+        splashContent = {
+          title: {
+            all: <h1 className="hind bold white-text big">Credits</h1>
+          },
+          subtitle: {
+            all: (
+              <p className="big">
+                Giving credits to other creators is important, so don't mind if
+                I do.
+              </p>
+            )
+          }
+        };
+        pageContent = <Credits />;
+        break;
+      case "/":
+      default:
+        splashImage = parallax.bgImage;
+        splashContent = splash;
+        pageContent = <Content />;
+        break;
+    }
+
+    if (this.img && !this.img.src.endsWith(splashImage)) {
+      this.img.classList.remove("loaded");
+      this.img.style["transition"] = "opacity 0s linear";
+      this.img.style.opacity = 0;
+    }
+
     return (
       <div className="App">
         <Menu
@@ -439,167 +643,13 @@ class App extends Component {
         </Menu>
         <Header
           parallax={parallax}
+          splashImage={splashImage}
           nav={nav}
-          splash={splash}
+          splash={splashContent}
           logo={logo}
           handleSidebar={this.handleSidebar}
         />
-        <div className="Content">
-          <div className="container">
-            <div className="row">
-              <div className="col s12 l6">
-                <div className="card">
-                  <div className="card-content">
-                    <span className="card-title">Lorem, ipsum.</span>
-                    <p>
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      Harum ipsum libero ab aspernatur eius unde delectus minus
-                      ullam doloribus quam porro, dolor placeat, laudantium
-                      modi. Ut incidunt minima eaque explicabo?
-                    </p>
-                  </div>
-                  <div className="card-action">
-                    <Link to="/" className="btn waves-effect waves-light blue">
-                      Home
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="col s12 l6">
-                <div className="card">
-                  <div className="card-content">
-                    <span className="card-title">Card Title</span>
-                    <p>About me</p>
-                  </div>
-                  <div className="card-action">
-                    <Link
-                      to="/about"
-                      className="btn waves-effect waves-light blue"
-                    >
-                      About
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="col s12 l6">
-                <div className="card">
-                  <div className="card-content">
-                    <span className="card-title">Card Title</span>
-                    <p>Show stuff with github?</p>
-                  </div>
-                  <div className="card-action">
-                    <Link
-                      to="/projects"
-                      className="btn waves-effect waves-light blue"
-                    >
-                      Projects
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="col s12 l6">
-                <div className="card">
-                  <div className="card-content">
-                    <span className="card-title">Card Title</span>
-                    <p>Woordweb/technieken die ik ken/kan gebruiken</p>
-                  </div>
-                  <div className="card-action">
-                    <Link
-                      to="/skills"
-                      className="btn waves-effect waves-light blue"
-                    >
-                      Skills
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="col s12 l6">
-                <div className="card">
-                  <div className="card-content">
-                    <span className="card-title">Lorem, ipsum.</span>
-                    <p>
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      Harum ipsum libero ab aspernatur eius unde delectus minus
-                      ullam doloribus quam porro, dolor placeat, laudantium
-                      modi. Ut incidunt minima eaque explicabo?
-                    </p>
-                  </div>
-                  <div className="card-action">
-                    <Link to="/" className="btn waves-effect waves-light blue">
-                      Home
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="col s12 l6">
-                <div className="card">
-                  <div className="card-content">
-                    <span className="card-title">Card Title</span>
-                    <p>Technieken die ik wil leren?</p>
-                  </div>
-                  <div className="card-action">
-                    <Link
-                      to="/skills"
-                      className="btn waves-effect waves-light blue"
-                    >
-                      Skills
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="col s12 l6">
-                <div className="card">
-                  <div className="card-content">
-                    <span className="card-title">Card Title</span>
-                    <p>Full width slider met projecten?</p>
-                  </div>
-                  <div className="card-action">
-                    <Link
-                      to="/projects"
-                      className="btn waves-effect waves-light blue"
-                    >
-                      Projects
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="col s12 l6">
-                <div className="card">
-                  <div className="card-content">
-                    <span className="card-title">Card Title</span>
-                    <p>Contact form</p>
-                  </div>
-                  <div className="card-action">
-                    <Link
-                      to="/contact"
-                      className="btn waves-effect waves-light blue"
-                    >
-                      Contact
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="col s12 l6">
-                <div className="card">
-                  <div className="card-content">
-                    <span className="card-title">Lorem, ipsum.</span>
-                    <p>
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                      Harum ipsum libero ab aspernatur eius unde delectus minus
-                      ullam doloribus quam porro, dolor placeat, laudantium
-                      modi. Ut incidunt minima eaque explicabo?
-                    </p>
-                  </div>
-                  <div className="card-action">
-                    <Link to="/" className="btn waves-effect waves-light blue">
-                      Home
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        {pageContent}
         <Footer goodbye={goodbye} copyright={copyright} logo={Logo} />
       </div>
     );
