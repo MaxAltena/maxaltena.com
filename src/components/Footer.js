@@ -126,7 +126,6 @@ class Footer extends Component {
           }
         ]
       },
-
       copyright: {
         text: <p>&copy; {new Date().getFullYear()} Max Altena</p>,
         links: [
@@ -146,6 +145,7 @@ class Footer extends Component {
       }
     };
   }
+
   render() {
     const { goodbye, copyright } = this.state;
     return (

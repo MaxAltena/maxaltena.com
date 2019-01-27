@@ -3,6 +3,6 @@
   "name": "Website of Max Altena",
   "start_url": "./",
   "display": "standalone",
-  "theme_color": "#039be5  ",
-  "background_color": "#039be5  "
+  "theme_color": "#039be5",
+  "background_color": "#039be5 "
 }
