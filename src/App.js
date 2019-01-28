@@ -17,16 +17,16 @@ import Contact from "./components/pages/Contact";
 import Terms from "./components/pages/Terms";
 import Credits from "./components/pages/Credits";
 
-import imgHome from "./assets/img/splash/home.jpg";
-import imgAbout from "./assets/img/splash/about.jpg";
-import imgProjects from "./assets/img/splash/projects.jpg";
-import imgLamecoDashboard from "./assets/img/splash/lamecodashboard.jpg";
-import imgResumeMaxaltenaCom from "./assets/img/splash/resume.maxaltena.com.jpg";
-import imgTimeMaxaltenaCom from "./assets/img/splash/time.maxaltena.com.jpg";
-import imgSkills from "./assets/img/splash/skills.jpg";
-import imgContact from "./assets/img/splash/contact.jpg";
-import imgTerms from "./assets/img/splash/terms.jpg";
-import imgCredits from "./assets/img/splash/credits.jpg";
+import imgHome from "./assets/img/splash/home-min.jpg";
+import imgAbout from "./assets/img/splash/about-min.jpg";
+import imgProjects from "./assets/img/splash/projects-min.jpg";
+import imgLamecoDashboard from "./assets/img/splash/lamecodashboard-min.jpg";
+import imgResumeMaxaltenaCom from "./assets/img/splash/resume.maxaltena.com-min.jpg";
+import imgTimeMaxaltenaCom from "./assets/img/splash/time.maxaltena.com-min.jpg";
+import imgSkills from "./assets/img/splash/skills-min.jpg";
+import imgContact from "./assets/img/splash/contact-min.jpg";
+import imgTerms from "./assets/img/splash/terms-min.jpg";
+import imgCredits from "./assets/img/splash/credits-min.jpg";
 import Logo from "./assets/img/Logo";
 import "./App.css";
 
@@ -457,6 +457,7 @@ class App extends Component {
     let pageContent = null;
     switch (this.props.match.path) {
       case "/about":
+        document.title = "About – Max Altena";
         splashImage = imgAbout;
         splashContent = {
           title: {
@@ -473,6 +474,7 @@ class App extends Component {
         pageContent = <About />;
         break;
       case "/projects":
+        document.title = "Projects – Max Altena";
         splashImage = imgProjects;
         splashContent = {
           title: {
@@ -490,6 +492,7 @@ class App extends Component {
         pageContent = <Projects />;
         break;
       case "/projects/LamecoDashboard":
+        document.title = "Laméco Dashboard – Max Altena";
         splashImage = imgLamecoDashboard;
         splashContent = {
           title: {
@@ -514,6 +517,7 @@ class App extends Component {
         pageContent = <LamecoDashoard />;
         break;
       case "/projects/resume.maxaltena.com":
+        document.title = "resume.maxaltena.com – Max Altena";
         splashImage = imgResumeMaxaltenaCom;
         splashContent = {
           title: {
@@ -540,6 +544,7 @@ class App extends Component {
         pageContent = <ResumeMaxaltenaCom />;
         break;
       case "/projects/time.maxaltena.com":
+        document.title = "time.maxaltena.com – Max Altena";
         splashImage = imgTimeMaxaltenaCom;
         splashContent = {
           title: {
@@ -565,6 +570,7 @@ class App extends Component {
         pageContent = <TimeMaxaltenaCom />;
         break;
       case "/skills":
+        document.title = "Skills – Max Altena";
         splashImage = imgSkills;
         splashContent = {
           title: {
@@ -582,6 +588,7 @@ class App extends Component {
         pageContent = <Skills />;
         break;
       case "/contact":
+        document.title = "Contact – Max Altena";
         splashImage = imgContact;
         splashContent = {
           title: {
@@ -598,6 +605,7 @@ class App extends Component {
         pageContent = <Contact />;
         break;
       case "/terms":
+        document.title = "Terms & conditions – Max Altena";
         scroll.scrollToTop({ duration: 300, delay: 200, smooth: "easeInOut" });
         splashImage = imgTerms;
         splashContent = {
@@ -618,6 +626,7 @@ class App extends Component {
         pageContent = <Terms />;
         break;
       case "/credits":
+        document.title = "Credits – Max Altena";
         scroll.scrollToTop({ duration: 300, delay: 200, smooth: "easeInOut" });
         splashImage = imgCredits;
         splashContent = {
@@ -637,6 +646,7 @@ class App extends Component {
         break;
       case "/":
       default:
+        document.title = "Max Altena";
         splashImage = parallax.bgImage;
         splashContent = splash;
         pageContent = <Home />;
