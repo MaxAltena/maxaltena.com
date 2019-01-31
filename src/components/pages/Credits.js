@@ -60,11 +60,11 @@ const Credits = () => {
             </li>
             <li>
               <a
-                href="https://unsplash.com/photos/JYGnB9gTCls"
+                href="https://unsplash.com/photos/4SNUcHPiC8c"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Alexander Andrews
+                Quino Al
               </a>
             </li>
             <li>
