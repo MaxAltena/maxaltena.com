@@ -1,6 +1,6 @@
 import React from "react";
 
-const TimeMaxaltenaCom = () => {
+const Resume = () => {
   return (
     <div className="Projects">
       <div className="container">
@@ -8,7 +8,7 @@ const TimeMaxaltenaCom = () => {
           <div className="col s12 l6">
             <div className="card">
               <div className="card-content">
-                <span className="card-title">time.maxaltena.com</span>
+                <span className="card-title">Online résumé</span>
                 <p>
                   Some general information and product information about this
                   project.
@@ -22,4 +22,4 @@ const TimeMaxaltenaCom = () => {
   );
 };
 
-export default TimeMaxaltenaCom;
+export default Resume;

@@ -1,3 +1,4 @@
+@import "./Footer/ContactCTA";
 @import "./Footer/Goodbye";
 @import "./Footer/Copyright";
 
@@ -25,6 +26,12 @@
         width: 100%;
         opacity: 0.3;
       }
+    }
+
+    a::selection,
+    p::selection,
+    i::selection {
+      background: rgba(238, 238, 238, 0.25);
     }
   }
   .slant {
@@ -59,8 +66,5 @@
     g {
       fill: $white;
     }
-  }
-  *::selection {
-    background: rgba(238, 238, 238, 0.25);
   }
 }

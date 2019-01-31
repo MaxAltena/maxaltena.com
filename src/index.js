@@ -10,8 +10,8 @@ ReactDOM.render(
       <Route exact path="/about" component={App} />
       <Route exact path="/projects" component={App} />
       <Route exact path="/projects/LamecoDashboard" component={App} />
-      <Route exact path="/projects/resume.maxaltena.com" component={App} />
-      <Route exact path="/projects/time.maxaltena.com" component={App} />
+      <Route exact path="/projects/resume" component={App} />
+      <Route exact path="/projects/time" component={App} />
       <Route exact path="/skills" component={App} />
       <Route exact path="/contact" component={App} />
       <Route exact path="/terms" component={App} />

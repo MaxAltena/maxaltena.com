@@ -27,7 +27,7 @@
     transform: skewY(-4deg) translateY(0);
     z-index: 4;
   }
-  *::selection {
+  * ::selection {
     background: rgba(238, 238, 238, 0.25);
   }
 }

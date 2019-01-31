@@ -9,8 +9,8 @@ import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import Projects from "./components/pages/Projects";
 import LamecoDashoard from "./components/pages/Projects/LamecoDashboard";
-import ResumeMaxaltenaCom from "./components/pages/Projects/ResumeMaxaltenaCom";
-import TimeMaxaltenaCom from "./components/pages/Projects/TimeMaxaltenaCom";
+import Resume from "./components/pages/Projects/Resume";
+import Time from "./components/pages/Projects/Time";
 import Skills from "./components/pages/Skills";
 import Contact from "./components/pages/Contact";
 import Terms from "./components/pages/Terms";
@@ -20,13 +20,14 @@ import imgHome from "./assets/img/splash/home-min.jpg";
 import imgAbout from "./assets/img/splash/about-min.jpg";
 import imgProjects from "./assets/img/splash/projects-min.jpg";
 import imgLamecoDashboard from "./assets/img/splash/lamecodashboard-min.jpg";
-import imgResumeMaxaltenaCom from "./assets/img/splash/resume.maxaltena.com-min.jpg";
-import imgTimeMaxaltenaCom from "./assets/img/splash/time.maxaltena.com-min.jpg";
+import imgResume from "./assets/img/splash/resume-min.jpg";
+import imgTime from "./assets/img/splash/time-min.jpg";
 import imgSkills from "./assets/img/splash/skills-min.jpg";
 import imgContact from "./assets/img/splash/contact-min.jpg";
 import imgTerms from "./assets/img/splash/terms-min.jpg";
 import imgCredits from "./assets/img/splash/credits-min.jpg";
 import Logo from "./assets/img/Logo";
+
 import "./App.css";
 
 class App extends Component {
@@ -95,14 +96,14 @@ class App extends Component {
                 },
                 {
                   type: "NavLink",
-                  to: "/projects/resume.maxaltena.com",
-                  name: "resume.maxaltena.com",
+                  to: "/projects/resume",
+                  name: "Online résumé",
                   classes: "lowercase"
                 },
                 {
                   type: "NavLink",
-                  to: "/projects/time.maxaltena.com",
-                  name: "time.maxaltena.com",
+                  to: "/projects/time",
+                  name: "Countdown timer",
                   classes: "lowercase"
                 }
               ]
@@ -262,15 +263,15 @@ class App extends Component {
               },
               {
                 type: "NavLink",
-                to: "/projects/resume.maxaltena.com",
-                name: "resume.maxaltena.com",
-                classes: "grey-text text-lighten-2 margin-left-10"
+                to: "/projects/resume",
+                name: "Online résumé",
+                classes: "grey-text text-lighten-2 lowercase margin-left-10"
               },
               {
                 type: "NavLink",
-                to: "/projects/time.maxaltena.com",
-                name: "time.maxaltena.com",
-                classes: "grey-text text-lighten-2 margin-left-10"
+                to: "/projects/time",
+                name: "Countdown timer",
+                classes: "grey-text text-lighten-2 lowercase margin-left-10"
               }
             ]
           },
@@ -343,13 +344,13 @@ class App extends Component {
               type: "Link",
               to: "/terms",
               name: "Terms & conditions",
-              classes: "white-text lowercase"
+              classes: "lowercase"
             },
             {
               type: "Link",
               to: "/credits",
               name: "Credits",
-              classes: "white-text lowercase"
+              classes: "lowercase"
             }
           ]
         }
@@ -449,11 +450,12 @@ class App extends Component {
     const { isOpen, customBurgerIcon, customCrossIcon, styles } = sidebar;
     const { parallax, nav, splash, logo } = header;
     const { goodbye, copyright } = footer;
+    const { path } = this.props.match;
 
     let splashImage = null;
     let splashContent = null;
     let pageContent = null;
-    switch (this.props.match.path) {
+    switch (path) {
       case "/about":
         document.title = "About – Max Altena";
         splashImage = imgAbout;
@@ -514,14 +516,12 @@ class App extends Component {
         };
         pageContent = <LamecoDashoard />;
         break;
-      case "/projects/resume.maxaltena.com":
-        document.title = "resume.maxaltena.com – Max Altena";
-        splashImage = imgResumeMaxaltenaCom;
+      case "/projects/resume":
+        document.title = "Résumé – Max Altena";
+        splashImage = imgResume;
         splashContent = {
           title: {
-            all: (
-              <h1 className="hind bold white-text big">resume.maxaltena.com</h1>
-            )
+            all: <h1 className="hind bold white-text big">Online résumé</h1>
           },
           subtitle: {
             all: (
@@ -539,16 +539,14 @@ class App extends Component {
             name: "Visit website"
           }
         };
-        pageContent = <ResumeMaxaltenaCom />;
+        pageContent = <Resume />;
         break;
-      case "/projects/time.maxaltena.com":
-        document.title = "time.maxaltena.com – Max Altena";
-        splashImage = imgTimeMaxaltenaCom;
+      case "/projects/time":
+        document.title = "Countdown timer – Max Altena";
+        splashImage = imgTime;
         splashContent = {
           title: {
-            all: (
-              <h1 className="hind bold white-text big">time.maxaltena.com</h1>
-            )
+            all: <h1 className="hind bold white-text big">Countdown timer</h1>
           },
           subtitle: {
             all: (
@@ -565,7 +563,7 @@ class App extends Component {
             name: "Visit website"
           }
         };
-        pageContent = <TimeMaxaltenaCom />;
+        pageContent = <Time />;
         break;
       case "/skills":
         document.title = "Skills – Max Altena";

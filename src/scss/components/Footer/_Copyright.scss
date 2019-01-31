@@ -1,6 +1,7 @@
 .Copyright {
   height: auto;
   .innerCopyright {
+    color: $grey-lighten-2 !important;
     &.hide-on-med-and-down {
       display: flex;
       justify-content: space-between;
@@ -46,8 +47,30 @@
       height: auto;
       padding: 1vh 0;
       > a,
-      > p {
+      > div {
         margin: 0.5vh 0;
+      }
+      > a {
+        align-items: center;
+        transition: color 0.3s ease-in-out;
+        .inner {
+          .default,
+          .hover {
+            color: $grey-lighten-2 !important;
+          }
+        }
+
+        &:hover,
+        &:active,
+        &:focus,
+        &.active {
+          .inner {
+            .default,
+            .hover {
+              color: $white !important;
+            }
+          }
+        }
       }
     }
   }
