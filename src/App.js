@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { slide as Menu } from "react-burger-menu";
-import { animateScroll as scroll } from "react-scroll";
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -381,10 +380,9 @@ class App extends Component {
       case "add":
         this.state.header.logo.X.classList.add("animated");
         break;
+      default:
       case "remove":
         this.state.header.logo.X.classList.remove("animated");
-        break;
-      default:
         break;
     }
   };
@@ -606,7 +604,6 @@ class App extends Component {
         break;
       case "/terms":
         document.title = "Terms & conditions – Max Altena";
-        scroll.scrollToTop({ duration: 300, delay: 200, smooth: "easeInOut" });
         splashImage = imgTerms;
         splashContent = {
           title: {
@@ -627,7 +624,6 @@ class App extends Component {
         break;
       case "/credits":
         document.title = "Credits – Max Altena";
-        scroll.scrollToTop({ duration: 300, delay: 200, smooth: "easeInOut" });
         splashImage = imgCredits;
         splashContent = {
           title: {

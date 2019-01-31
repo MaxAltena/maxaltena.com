@@ -1,4 +1,5 @@
 import React from "react";
+import { animateScroll as scroll } from "react-scroll";
 import { Link } from "react-router-dom";
 import Sitemap from "./Goodbye/Sitemap";
 
@@ -38,7 +39,16 @@ const Goodbye = ({ sitemap, other }) => {
                                 </span>
                               </a>
                             ) : (
-                              <Link to={link.to} className={link.classes}>
+                              <Link
+                                to={link.to}
+                                className={link.classes}
+                                onClick={() =>
+                                  scroll.scrollToTop({
+                                    duration: 500,
+                                    smooth: "easeInOut"
+                                  })
+                                }
+                              >
                                 {link.icon}
                                 <span className="inner">
                                   <span className="default">{link.name}</span>
@@ -88,13 +98,22 @@ const Goodbye = ({ sitemap, other }) => {
                                 </span>
                               </a>
                             ) : (
-                              <a href={link.to} className={link.classes}>
+                              <Link
+                                to={link.to}
+                                className={link.classes}
+                                onClick={() =>
+                                  scroll.scrollToTop({
+                                    duration: 500,
+                                    smooth: "easeInOut"
+                                  })
+                                }
+                              >
                                 {link.icon}
                                 <span className="inner">
                                   <span className="default">{link.name}</span>
                                   <span className="hover">{link.name}</span>
                                 </span>
-                              </a>
+                              </Link>
                             )}
                           </li>
                         );

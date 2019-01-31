@@ -60,4 +60,7 @@
       fill: $white;
     }
   }
+  *::selection {
+    background: rgba(238, 238, 238, 0.25);
+  }
 }

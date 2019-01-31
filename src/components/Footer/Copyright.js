@@ -16,6 +16,7 @@ const Copyright = ({ text, links }) => {
                   to={link.to}
                   name={link.name}
                   classes={link.classes}
+                  scrollToTop={true}
                 />
               );
             })}
@@ -31,6 +32,7 @@ const Copyright = ({ text, links }) => {
                 to={link.to}
                 name={link.name}
                 classes={link.classes}
+                scrollToTop={true}
               />
             );
           })}

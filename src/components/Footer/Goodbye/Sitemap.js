@@ -19,6 +19,7 @@ const Sitemap = ({ title, links, projects, size }) => {
                           to={link.to}
                           name={link.name}
                           classes={link.classes}
+                          scrollToTop={true}
                         />
                       </li>
                     );
@@ -36,6 +37,7 @@ const Sitemap = ({ title, links, projects, size }) => {
                           to={project.to}
                           name={project.name}
                           classes={project.classes}
+                          scrollToTop={true}
                         />
                       </li>
                     );
@@ -65,6 +67,7 @@ const Sitemap = ({ title, links, projects, size }) => {
                                 to={project.to}
                                 name={project.name}
                                 classes={project.classes}
+                                scrollToTop={true}
                               />
                             </li>
                           );
@@ -76,6 +79,7 @@ const Sitemap = ({ title, links, projects, size }) => {
                             to={link.to}
                             name={link.name}
                             classes={link.classes}
+                            scrollToTop={true}
                           />
                         </li>
                       );
@@ -87,6 +91,7 @@ const Sitemap = ({ title, links, projects, size }) => {
                             to={link.to}
                             name={link.name}
                             classes={link.classes}
+                            scrollToTop={true}
                           />
                         </li>
                       );

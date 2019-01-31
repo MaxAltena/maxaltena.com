@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Alink from "./common/Alink";
 
 const Sidebar = ({ nav, handleSidebar }) => {
@@ -26,6 +25,8 @@ const Sidebar = ({ nav, handleSidebar }) => {
                     to={item.to}
                     name={item.name}
                     classes={item.classes}
+                    scrollToTop={true}
+                    onClick={() => handleSidebar(false)}
                   />
                 </li>
               );
@@ -37,6 +38,8 @@ const Sidebar = ({ nav, handleSidebar }) => {
                       to={subItem.to}
                       name={subItem.name}
                       classes={subItem.classes}
+                      scrollToTop={true}
+                      onClick={() => handleSidebar(false)}
                     />
                   </li>
                 );
@@ -49,6 +52,8 @@ const Sidebar = ({ nav, handleSidebar }) => {
                     to={item.to}
                     name={item.name}
                     classes={item.classes}
+                    scrollToTop={true}
+                    onClick={() => handleSidebar(false)}
                   />
                 </li>
               );
@@ -59,28 +64,18 @@ const Sidebar = ({ nav, handleSidebar }) => {
           socials.map(social => {
             return (
               <li key={social.name} className="linkExternal">
-                {social.type === "other" ? (
-                  <a
-                    href={social.to}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={social.classes}
-                  >
-                    {social.icon}
-                    <span className="inner">
-                      <span className="default">{social.name}</span>
-                      <span className="hover">{social.name}</span>
-                    </span>
-                  </a>
-                ) : (
-                  <Link to={social.to} className={social.classes}>
-                    {social.icon}
-                    <span className="inner">
-                      <span className="default">{social.name}</span>
-                      <span className="hover">{social.name}</span>
-                    </span>
-                  </Link>
-                )}
+                <a
+                  href={social.to}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={social.classes}
+                >
+                  {social.icon}
+                  <span className="inner">
+                    <span className="default">{social.name}</span>
+                    <span className="hover">{social.name}</span>
+                  </span>
+                </a>
               </li>
             );
           })}
