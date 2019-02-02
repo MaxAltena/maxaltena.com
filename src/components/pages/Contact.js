@@ -27,12 +27,7 @@ class Contact extends Component {
       data: { token }
     })
       .then(result => {
-        console.log(result);
-        if (result.success) {
-          this.setState({ verified: true });
-        } else {
-          this.setState({ verified: false });
-        }
+        this.setState({ verified: result.data.success });
       })
       .catch(error => this.setState({ error: error.message }));
   };
