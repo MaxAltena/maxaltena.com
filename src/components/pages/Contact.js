@@ -24,13 +24,7 @@ class Contact extends Component {
     loadReCaptcha({
       key: "6Lcrmo4UAAAAAL0ZYCJY_wuc5XDBUNgkZeiKeHYz",
       id: "contactForm"
-    })
-      .then(id => {
-        console.log("ReCaptcha loaded", id);
-      })
-      .catch((error, id) => {
-        console.error("Error when load ReCaptcha", id, error);
-      });
+    });
   };
 
   verifyCallback = token => {
@@ -69,7 +63,9 @@ class Contact extends Component {
         })
         .catch(error => this.setState({ error: error.message }));
     } else {
-      this.setState({ error: "ReCaptcha failed" });
+      this.setState({
+        error: "ReCaptcha failed, try another way of contacting"
+      });
     }
   };
 
