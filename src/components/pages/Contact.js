@@ -28,10 +28,11 @@ class Contact extends Component {
       data: { fullName, email, phone, subject, text }
     })
       .then(result => {
-        console.log(result);
-        this.setState({
-          mailSent: result.data.sent
-        });
+        if (result.status === 200) {
+          this.setState({ ...this.state, mailSent: true });
+        } else {
+          this.setState({ ...this.state, mailSent: false });
+        }
       })
       .catch(error => this.setState({ error: error.message }));
   };
