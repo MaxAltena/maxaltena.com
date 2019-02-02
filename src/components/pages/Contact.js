@@ -15,7 +15,8 @@ class Contact extends Component {
       subject: "",
       text: "",
       mailSent: false,
-      error: null
+      error: null,
+      verified: false
     };
   }
 
@@ -33,7 +34,6 @@ class Contact extends Component {
   };
 
   verifyCallback = token => {
-    console.log("verifycallback token:", token);
     const captchaResponse = token;
     axios({
       method: "post",
@@ -42,6 +42,12 @@ class Contact extends Component {
     })
       .then(result => {
         console.log(result);
+        if (result.data.score >= 0.5) {
+          console.log("big score!");
+          this.setState({ verified: true });
+        } else {
+          this.setState({ verified: false });
+        }
       })
       .catch(error => this.setState({ error: error.message }));
   };
@@ -57,16 +63,16 @@ class Contact extends Component {
     })
       .then(result => {
         if (result.status === 200) {
-          this.setState({ ...this.state, mailSent: true });
+          this.setState({ mailSent: true });
         } else {
-          this.setState({ ...this.state, mailSent: false });
+          this.setState({ mailSent: false });
         }
       })
       .catch(error => this.setState({ error: error.message }));
   };
 
   handleChange = e => {
-    this.setState({ ...this.state, [e.target.name]: e.target.value });
+    this.setState({ [e.target.name]: e.target.value });
   };
 
   render() {

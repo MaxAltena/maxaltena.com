@@ -29,12 +29,12 @@ const ContactType = ({
     case "#form":
       content = (
         <div className="contactType section form">
+          <ReCaptcha
+            action="main"
+            sitekey="6Lcrmo4UAAAAAL0ZYCJY_wuc5XDBUNgkZeiKeHYz"
+            verifyCallback={verifyCallback}
+          />
           <form onSubmit={handleSubmit} className="row" id="form">
-            <ReCaptcha
-              action="contactForm"
-              sitekey="6Lcrmo4UAAAAAL0ZYCJY_wuc5XDBUNgkZeiKeHYz"
-              verifyCallback={verifyCallback}
-            />
             <div className="col s12 l6">
               <p className="bold lowercase">
                 Full name <span className="red-text">*</span>
