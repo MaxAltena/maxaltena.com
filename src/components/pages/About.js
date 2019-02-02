@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { animateScroll as scroll } from "react-scroll";
 import photo from "../../assets/img/pf.jpg";
 
 const About = () => {
@@ -16,7 +17,6 @@ const About = () => {
             <span className="bold">Hey there!</span> As you might know by now,
             my name is Max and I'm a student.
           </p>
-
           <img
             src={photo}
             alt="Max Altena"
@@ -35,7 +35,15 @@ const About = () => {
           <p>
             Some projects me (and possibly my group) create will end up on my
             website. You can go and check these out on the{" "}
-            <Link to="/projects">projects</Link> page.
+            <Link
+              to="/projects"
+              onClick={() =>
+                scroll.scrollToTop({ duration: 500, smooth: "easeInOut" })
+              }
+            >
+              projects
+            </Link>{" "}
+            page.
           </p>
           <p>
             I've always liked helping people with their problems, solving
@@ -52,10 +60,17 @@ const About = () => {
           <p>
             I mostly work on projects I came up with during school but won't be
             completing within school. Furthermore projects which improve my{" "}
-            <Link to="/skills">skills</Link> that I want to improve are also a
-            big part of my time. Researching new technologies, learning them and
-            implementing them within an (simple) application is something I like
-            to do often.
+            <Link
+              to="/skills"
+              onClick={() =>
+                scroll.scrollToTop({ duration: 500, smooth: "easeInOut" })
+              }
+            >
+              skills
+            </Link>{" "}
+            that I want to improve are also a big part of my time. Researching
+            new technologies, learning them and implementing them within an
+            (simple) application is something I like to do often.
           </p>
           <h4 className="hind">What do you want to become?</h4>
           <p>
