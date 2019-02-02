@@ -34,11 +34,10 @@ class Contact extends Component {
   };
 
   verifyCallback = token => {
-    const captchaResponse = token;
     axios({
       method: "post",
       url: "https://new.maxaltena.com/api/recaptcha.php",
-      data: { captchaResponse }
+      data: { token }
     })
       .then(result => {
         console.log(result);
