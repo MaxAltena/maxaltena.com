@@ -23,7 +23,7 @@ class Contact extends Component {
     const { fullName, email, phone, subject, text } = this.state;
     axios({
       method: "post",
-      url: "https://maxaltena.com/api/contact.php",
+      url: "https://new.maxaltena.com/api/contact.php",
       headers: { "content-type": "application/json" },
       data: { fullName, email, phone, subject, text }
     })
