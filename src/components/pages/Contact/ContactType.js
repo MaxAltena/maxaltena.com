@@ -7,9 +7,20 @@ const ContactType = ({
   phone,
   subject,
   text,
+  emailSent,
+  error,
   handleChange,
   handleSubmit
 }) => {
+  let otherContent;
+  if (emailSent) {
+    otherContent = <p>Email was succesfully sent. Thanks for contacting me!</p>;
+  } else if (error) {
+    otherContent = <p className="red-text">{error}</p>;
+  } else {
+    otherContent = <p style={{ visibility: "hidden" }}>.</p>;
+  }
+
   let content;
   switch (hash) {
     default:
@@ -112,6 +123,7 @@ const ContactType = ({
                 Send message
               </button>
             </div>
+            <div className="col s12">{otherContent}</div>
           </form>
         </div>
       );

@@ -35,6 +35,9 @@
   .contactType {
     margin-top: 2vh;
     &.form {
+      form {
+        margin-bottom: 0 !important;
+      }
       .empty {
         visibility: hidden;
       }
@@ -52,6 +55,11 @@
           user-select: none;
           pointer-events: none;
           opacity: 0.75;
+        }
+        &:last-child {
+          min-height: 20px;
+          height: 20px;
+          margin-bottom: 0;
         }
       }
       input,

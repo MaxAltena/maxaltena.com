@@ -28,10 +28,10 @@ class Contact extends Component {
       data: { fullName, email, phone, subject, text }
     })
       .then(result => {
+        console.log(result);
         this.setState({
           mailSent: result.data.sent
         });
-        console.log("HEY!");
       })
       .catch(error => this.setState({ error: error.message }));
   };
@@ -42,7 +42,15 @@ class Contact extends Component {
 
   render() {
     const { hash } = this.props.props.location;
-    const { fullName, email, phone, subject, text } = this.state;
+    const {
+      fullName,
+      email,
+      phone,
+      subject,
+      text,
+      mailSent,
+      error
+    } = this.state;
 
     return (
       <div className="Contact">
@@ -56,6 +64,8 @@ class Contact extends Component {
             phone={phone}
             subject={subject}
             text={text}
+            mailSent={mailSent}
+            error={error}
             handleChange={this.handleChange}
             handleSubmit={this.handleSubmit}
           />
