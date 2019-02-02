@@ -34,6 +34,12 @@
   }
   .contactType {
     margin-top: 2vh;
+    .red-text.small {
+      font-size: 10px;
+    }
+    .grey-text.small {
+      font-size: 10px;
+    }
     &.form {
       form {
         margin-bottom: 0 !important;

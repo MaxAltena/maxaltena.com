@@ -38,6 +38,9 @@
       color: $grey-lighten-2;
       &.big {
         font-size: 1.4rem;
+        &.hide-on-med-and-down {
+          margin-left: 0 !important;
+        }
       }
       &.hide-on-med-and-down {
         margin-left: -4% !important;

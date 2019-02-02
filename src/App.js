@@ -8,9 +8,9 @@ import Footer from "./components/Footer";
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import Projects from "./components/pages/Projects";
-import LamecoDashoard from "./components/pages/Projects/LamecoDashboard";
-import Resume from "./components/pages/Projects/Resume";
-import Time from "./components/pages/Projects/Time";
+import LamecoDashoard from "./components/pages/projects/LamecoDashboard";
+import Resume from "./components/pages/projects/Resume";
+import Time from "./components/pages/projects/Time";
 import Skills from "./components/pages/Skills";
 import Contact from "./components/pages/Contact";
 import Terms from "./components/pages/Terms";
@@ -465,9 +465,16 @@ class App extends Component {
             all: <h1 className="hind bold white-text big">About</h1>
           },
           subtitle: {
-            all: (
-              <p className="big">
-                Some information about me, because you were looking for it!
+            large: (
+              <p className="hide-on-med-and-down big">
+                <span>Wanting to make sure that I'm not weird?</span>
+                <span>Here's some background to judge for yourself.</span>
+              </p>
+            ),
+            med: (
+              <p className="hide-on-large-only big">
+                Wanting to make sure that I'm not weird? Here's some background
+                to judge for yourself.
               </p>
             )
           }

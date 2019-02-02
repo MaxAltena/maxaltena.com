@@ -77,7 +77,7 @@ const ContactType = ({
           <form onSubmit={handleSubmit} className="row" id="form">
             <div className="col s12 l6">
               <p className="bold lowercase">
-                Full name <span className="red-text">*</span>
+                Full name <span className="red-text small">(required)</span>
               </p>
               <input
                 type="text"
@@ -92,7 +92,7 @@ const ContactType = ({
             <div className="col s0 l6 empty hide-on-med-and-down">.</div>
             <div className="col s12 l6">
               <p className="bold lowercase">
-                Email <span className="red-text">*</span>
+                Email <span className="red-text small">(required)</span>
               </p>
               <input
                 type="email"
@@ -105,7 +105,9 @@ const ContactType = ({
               />
             </div>
             <div className="col s12 l6">
-              <p className="bold lowercase">Phone</p>
+              <p className="bold lowercase">
+                Phone <span className="grey-text small">(optional)</span>
+              </p>
               <input
                 type="tel"
                 className="browser-default"
@@ -117,7 +119,7 @@ const ContactType = ({
             </div>
             <div className="col s12 l6">
               <p className="bold lowercase">
-                Subject <span className="red-text">*</span>
+                Subject <span className="red-text small">(required)</span>
               </p>
               <select
                 id="select"
@@ -148,7 +150,7 @@ const ContactType = ({
             <div className="col s0 l6 empty hide-on-med-and-down">.</div>
             <div className="col s12 l6">
               <p className="bold lowercase">
-                Message <span className="red-text">*</span>
+                Message <span className="red-text small">(required)</span>
               </p>
               <textarea
                 name="text"

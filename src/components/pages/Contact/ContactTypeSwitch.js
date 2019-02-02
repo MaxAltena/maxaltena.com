@@ -10,7 +10,7 @@ const ContactTypeSwitch = ({ hash }) => {
         <div className="contactTypeSwitch">
           <Link
             to="#form"
-            className="btn btn-large waves-effect waves-light lowercase active"
+            className="btn btn-large waves-effect waves-dark lowercase active"
           >
             Message me
           </Link>
@@ -36,7 +36,7 @@ const ContactTypeSwitch = ({ hash }) => {
           <div className="space" />
           <Link
             to="#direct"
-            className="btn btn-large waves-effect waves-light lowercase active"
+            className="btn btn-large waves-effect waves-dark lowercase active"
           >
             Email/Call me
           </Link>
