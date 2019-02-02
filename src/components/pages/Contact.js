@@ -28,6 +28,7 @@ class Contact extends Component {
       data: { fullName, email, phone, subject, text }
     })
       .then(result => {
+        console.log(result);
         if (result.status === 200) {
           this.setState({ ...this.state, mailSent: true });
         } else {
