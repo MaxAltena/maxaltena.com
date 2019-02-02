@@ -314,7 +314,7 @@ class App extends Component {
               links: [
                 {
                   type: "other",
-                  to: "tel: +31 6 39105742",
+                  to: "tel:+31 6 39105742",
                   name: "+31 6 39105742",
                   icon: <i className="material-icons">phone</i>,
                   classes: "Alink grey-text text-lighten-2 lowercase"
@@ -381,9 +381,10 @@ class App extends Component {
       case "add":
         this.state.header.logo.X.classList.add("animated");
         break;
-      default:
       case "remove":
         this.state.header.logo.X.classList.remove("animated");
+        break;
+      default:
         break;
     }
   };
@@ -471,7 +472,7 @@ class App extends Component {
             )
           }
         };
-        pageContent = <About />;
+        pageContent = <About props={this.props} />;
         break;
       case "/projects":
         document.title = "Projects – Max Altena";
@@ -489,7 +490,7 @@ class App extends Component {
             )
           }
         };
-        pageContent = <Projects />;
+        pageContent = <Projects props={this.props} />;
         break;
       case "/projects/LamecoDashboard":
         document.title = "Laméco Dashboard – Max Altena";
@@ -514,7 +515,7 @@ class App extends Component {
             name: "Visit website"
           }
         };
-        pageContent = <LamecoDashoard />;
+        pageContent = <LamecoDashoard props={this.props} />;
         break;
       case "/projects/resume":
         document.title = "Résumé – Max Altena";
@@ -539,7 +540,7 @@ class App extends Component {
             name: "Visit website"
           }
         };
-        pageContent = <Resume />;
+        pageContent = <Resume props={this.props} />;
         break;
       case "/projects/time":
         document.title = "Countdown timer – Max Altena";
@@ -563,7 +564,7 @@ class App extends Component {
             name: "Visit website"
           }
         };
-        pageContent = <Time />;
+        pageContent = <Time props={this.props} />;
         break;
       case "/skills":
         document.title = "Skills – Max Altena";
@@ -581,7 +582,7 @@ class App extends Component {
             )
           }
         };
-        pageContent = <Skills />;
+        pageContent = <Skills props={this.props} />;
         break;
       case "/contact":
         document.title = "Contact – Max Altena";
@@ -593,12 +594,13 @@ class App extends Component {
           subtitle: {
             all: (
               <p className="big">
-                Trying to contact me? This is the place to be!
+                Want to contact me for possible projects or just wanting to ask
+                a question? This is the place to be!
               </p>
             )
           }
         };
-        pageContent = <Contact />;
+        pageContent = <Contact props={this.props} />;
         break;
       case "/terms":
         document.title = "Terms & conditions – Max Altena";
@@ -618,7 +620,7 @@ class App extends Component {
             )
           }
         };
-        pageContent = <Terms />;
+        pageContent = <Terms props={this.props} />;
         break;
       case "/credits":
         document.title = "Credits – Max Altena";
@@ -636,14 +638,14 @@ class App extends Component {
             )
           }
         };
-        pageContent = <Credits />;
+        pageContent = <Credits props={this.props} />;
         break;
       case "/":
       default:
         document.title = "Max Altena";
         splashImage = parallax.bgImage;
         splashContent = splash;
-        pageContent = <Home />;
+        pageContent = <Home props={this.props} />;
         break;
     }
 
