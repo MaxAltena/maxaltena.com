@@ -48,20 +48,25 @@ class Contact extends Component {
     e.preventDefault();
     const { fullName, email, phone, subject, text, verified } = this.state;
     if (verified) {
-      axios({
-        method: "post",
-        url: "/api/contact.php",
-        headers: { "content-type": "application/json" },
-        data: { fullName, email, phone, subject, text }
-      })
-        .then(result => {
-          if (result.status === 200) {
-            this.setState({ mailSent: true });
-          } else {
-            this.setState({ mailSent: false });
-          }
+      const regexEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      if (regexEmail.test(email)) {
+        axios({
+          method: "post",
+          url: "/api/contact.php",
+          headers: { "content-type": "application/json" },
+          data: { fullName, email, phone, subject, text }
         })
-        .catch(error => this.setState({ error: error.message }));
+          .then(result => {
+            if (result.status === 200) {
+              this.setState({ mailSent: true });
+            } else {
+              this.setState({ mailSent: false });
+            }
+          })
+          .catch(error => this.setState({ error: error.message }));
+      } else {
+        this.setState({ error: "Email is not valid" });
+      }
     } else {
       this.setState({
         error: "ReCaptcha failed, try another way of contacting"
