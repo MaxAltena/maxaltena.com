@@ -37,6 +37,7 @@ class Contact extends Component {
     axios({
       method: "post",
       url: "https://new.maxaltena.com/api/recaptcha.php",
+      headers: { "content-type": "application/json" },
       data: { token }
     })
       .then(result => {
