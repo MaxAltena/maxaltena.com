@@ -7,13 +7,13 @@ const ContactType = ({
   phone,
   subject,
   text,
-  emailSent,
+  mailSent,
   error,
   handleChange,
   handleSubmit
 }) => {
   let otherContent;
-  if (emailSent) {
+  if (mailSent) {
     otherContent = <p>Email was succesfully sent. Thanks for contacting me!</p>;
   } else if (error) {
     otherContent = <p className="red-text">{error}</p>;
