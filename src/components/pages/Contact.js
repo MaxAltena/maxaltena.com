@@ -29,7 +29,9 @@ class Contact extends Component {
     })
       .then(result => {
         console.log(result);
+        console.log(result.status);
         if (result.status === 200) {
+          console.log("cool!");
           this.setState({ ...this.state, mailSent: true });
         } else {
           this.setState({ ...this.state, mailSent: false });
