@@ -79,7 +79,8 @@ class Contact extends Component {
       subject,
       text,
       mailSent,
-      error
+      error,
+      verified
     } = this.state;
 
     return (
@@ -96,6 +97,7 @@ class Contact extends Component {
             text={text}
             mailSent={mailSent}
             error={error}
+            verified={verified}
             handleChange={this.handleChange}
             handleSubmit={this.handleSubmit}
             verifyCallback={this.verifyCallback}

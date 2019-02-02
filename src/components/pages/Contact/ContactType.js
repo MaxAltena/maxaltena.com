@@ -10,6 +10,7 @@ const ContactType = ({
   text,
   mailSent,
   error,
+  verified,
   handleChange,
   handleSubmit,
   verifyCallback
@@ -34,7 +35,8 @@ const ContactType = ({
         fullName === "" ||
         email === "" ||
         subject === "" ||
-        text === ""
+        text === "" ||
+        !verified
       ) {
         button = (
           <button
@@ -160,7 +162,7 @@ const ContactType = ({
             <div className="col s0 l6 empty hide-on-med-and-down">.</div>
             <div className="col s12">
               <Recaptcha
-                sitekey="6Lcrmo4UAAAAAL0ZYCJY_wuc5XDBUNgkZeiKeHYz"
+                sitekey="6LfXq44UAAAAAIbyRauVAaOgTdHnNXH9JEIxVPb0"
                 verifyCallback={verifyCallback}
               />
             </div>
