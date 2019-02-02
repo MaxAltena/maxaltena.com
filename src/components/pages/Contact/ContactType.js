@@ -1,5 +1,5 @@
 import React from "react";
-import { ReCaptcha } from "recaptcha-v3-react";
+import Recaptcha from "react-recaptcha";
 
 const ContactType = ({
   hash,
@@ -72,11 +72,6 @@ const ContactType = ({
 
       content = (
         <div className="contactType section form">
-          <ReCaptcha
-            action="main"
-            sitekey="6Lcrmo4UAAAAAL0ZYCJY_wuc5XDBUNgkZeiKeHYz"
-            verifyCallback={verifyCallback}
-          />
           <form onSubmit={handleSubmit} className="row" id="form">
             <div className="col s12 l6">
               <p className="bold lowercase">
@@ -163,6 +158,12 @@ const ContactType = ({
               />
             </div>
             <div className="col s0 l6 empty hide-on-med-and-down">.</div>
+            <div className="col s12">
+              <Recaptcha
+                sitekey="6Lcrmo4UAAAAAL0ZYCJY_wuc5XDBUNgkZeiKeHYz"
+                verifyCallback={verifyCallback}
+              />
+            </div>
             <div className="col s12">{button}</div>
             <div className="col s12">{otherContent}</div>
           </form>

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { loadReCaptcha } from "recaptcha-v3-react";
 import ContactTypeSwitch from "./Contact/ContactTypeSwitch";
 import ContactType from "./Contact/ContactType";
 
@@ -19,13 +18,6 @@ class Contact extends Component {
       verified: false
     };
   }
-
-  componentDidMount = () => {
-    loadReCaptcha({
-      key: "6Lcrmo4UAAAAAL0ZYCJY_wuc5XDBUNgkZeiKeHYz",
-      id: "contactForm"
-    });
-  };
 
   verifyCallback = token => {
     axios({
