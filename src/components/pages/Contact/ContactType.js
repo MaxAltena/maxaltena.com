@@ -14,19 +14,62 @@ const ContactType = ({
   handleSubmit,
   verifyCallback
 }) => {
-  let otherContent;
-  if (mailSent) {
-    otherContent = <p>Email was succesfully sent. Thanks for contacting me!</p>;
-  } else if (error) {
-    otherContent = <p className="red-text">{error}</p>;
-  } else {
-    otherContent = <p style={{ visibility: "hidden" }}>.</p>;
-  }
-
   let content;
   switch (hash) {
     default:
     case "#form":
+      let button;
+      if (mailSent) {
+        button = (
+          <button
+            type="submit"
+            className="btn waves-effect waves-light bold lowercase disabled"
+            name="action"
+          >
+            <i className="material-icons right">send</i>
+            Send message
+          </button>
+        );
+      } else if (
+        fullName === "" ||
+        email === "" ||
+        subject === "" ||
+        text === ""
+      ) {
+        button = (
+          <button
+            type="submit"
+            className="btn waves-effect waves-light bold lowercase disabled"
+            name="action"
+          >
+            <i className="material-icons right">send</i>
+            Send message
+          </button>
+        );
+      } else {
+        button = (
+          <button
+            type="submit"
+            className="btn waves-effect waves-light bold lowercase"
+            name="action"
+          >
+            <i className="material-icons right">send</i>
+            Send message
+          </button>
+        );
+      }
+
+      let otherContent;
+      if (mailSent) {
+        otherContent = (
+          <p>Email was succesfully sent. Thanks for contacting me!</p>
+        );
+      } else if (error) {
+        otherContent = <p className="red-text">{error}</p>;
+      } else {
+        otherContent = <p style={{ visibility: "hidden" }}>.</p>;
+      }
+
       content = (
         <div className="contactType section form">
           <ReCaptcha
@@ -120,16 +163,7 @@ const ContactType = ({
               />
             </div>
             <div className="col s0 l6 empty hide-on-med-and-down">.</div>
-            <div className="col s12">
-              <button
-                type="submit"
-                className="btn waves-effect waves-light bold lowercase"
-                name="action"
-              >
-                <i className="material-icons right">send</i>
-                Send message
-              </button>
-            </div>
+            <div className="col s12">{button}</div>
             <div className="col s12">{otherContent}</div>
           </form>
         </div>
@@ -138,7 +172,7 @@ const ContactType = ({
     case "#direct":
       content = (
         <div className="contactType section direct">
-          <p>Good choice! This is the fastest way to contact me.</p>
+          <p>Good choice! This is the easiest and fastest way to contact me.</p>
           <small>
             You do need to provide some additional information along the way.
           </small>

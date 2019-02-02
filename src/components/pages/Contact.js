@@ -30,7 +30,7 @@ class Contact extends Component {
   verifyCallback = token => {
     axios({
       method: "post",
-      url: "https://new.maxaltena.com/api/recaptcha.php",
+      url: "/api/recaptcha.php",
       headers: { "content-type": "application/json" },
       data: { token }
     })
@@ -50,7 +50,7 @@ class Contact extends Component {
     if (verified) {
       axios({
         method: "post",
-        url: "https://new.maxaltena.com/api/contact.php",
+        url: "/api/contact.php",
         headers: { "content-type": "application/json" },
         data: { fullName, email, phone, subject, text }
       })
