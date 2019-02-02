@@ -491,8 +491,8 @@ class App extends Component {
           subtitle: {
             all: (
               <p className="big">
-                Here are the latest projects I've been working on, with or
-                without a group.
+                Here you'll find all my work from the past all the way to the
+                present.
               </p>
             )
           }
