@@ -30,6 +30,11 @@ const ContactType = ({
       content = (
         <div className="contactType section form">
           <form onSubmit={handleSubmit} className="row" id="form">
+            <ReCaptcha
+              action="contactForm"
+              sitekey="6Lcrmo4UAAAAAL0ZYCJY_wuc5XDBUNgkZeiKeHYz"
+              verifyCallback={verifyCallback}
+            />
             <div className="col s12 l6">
               <p className="bold lowercase">
                 Full name <span className="red-text">*</span>
@@ -112,14 +117,6 @@ const ContactType = ({
                 value={text}
                 onChange={handleChange}
                 required
-              />
-            </div>
-            <div className="col s0 l6 empty hide-on-med-and-down">.</div>
-            <div className="col s12">
-              <ReCaptcha
-                action="https://new.maxaltena.com/api/recaptcha.php"
-                sitekey="6Lcrmo4UAAAAAL0ZYCJY_wuc5XDBUNgkZeiKeHYz"
-                verifyCallback={verifyCallback}
               />
             </div>
             <div className="col s0 l6 empty hide-on-med-and-down">.</div>
