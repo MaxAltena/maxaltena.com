@@ -19,7 +19,7 @@ class Contact extends Component {
     };
   }
 
-  onloadCallback = token => {
+  verifyCallback = token => {
     axios({
       method: "post",
       url: "/api/recaptcha.php",
@@ -100,7 +100,7 @@ class Contact extends Component {
             verified={verified}
             handleChange={this.handleChange}
             handleSubmit={this.handleSubmit}
-            onloadCallback={this.onloadCallback}
+            verifyCallback={this.verifyCallback}
           />
         </div>
       </div>

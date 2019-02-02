@@ -13,7 +13,7 @@ const ContactType = ({
   verified,
   handleChange,
   handleSubmit,
-  onloadCallback
+  verifyCallback
 }) => {
   let content;
   switch (hash) {
@@ -163,7 +163,7 @@ const ContactType = ({
             <div className="col s12">
               <Recaptcha
                 sitekey="6LfXq44UAAAAAIbyRauVAaOgTdHnNXH9JEIxVPb0"
-                onloadCallback={onloadCallback}
+                verifyCallback={verifyCallback}
               />
             </div>
             <div className="col s12">{button}</div>
