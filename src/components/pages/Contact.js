@@ -41,9 +41,7 @@ class Contact extends Component {
       data: { token }
     })
       .then(result => {
-        console.log(result);
         if (result.data.score >= 0.5) {
-          console.log("big score!");
           this.setState({ verified: true });
         } else {
           this.setState({ verified: false });
@@ -54,21 +52,25 @@ class Contact extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const { fullName, email, phone, subject, text } = this.state;
-    axios({
-      method: "post",
-      url: "https://new.maxaltena.com/api/contact.php",
-      headers: { "content-type": "application/json" },
-      data: { fullName, email, phone, subject, text }
-    })
-      .then(result => {
-        if (result.status === 200) {
-          this.setState({ mailSent: true });
-        } else {
-          this.setState({ mailSent: false });
-        }
+    const { fullName, email, phone, subject, text, verified } = this.state;
+    if (verified) {
+      axios({
+        method: "post",
+        url: "https://new.maxaltena.com/api/contact.php",
+        headers: { "content-type": "application/json" },
+        data: { fullName, email, phone, subject, text }
       })
-      .catch(error => this.setState({ error: error.message }));
+        .then(result => {
+          if (result.status === 200) {
+            this.setState({ mailSent: true });
+          } else {
+            this.setState({ mailSent: false });
+          }
+        })
+        .catch(error => this.setState({ error: error.message }));
+    } else {
+      this.setState({ error: "ReCaptcha failed" });
+    }
   };
 
   handleChange = e => {
