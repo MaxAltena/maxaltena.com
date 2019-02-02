@@ -60,11 +60,11 @@ const Credits = () => {
             </li>
             <li>
               <a
-                href="https://unsplash.com/photos/4SNUcHPiC8c"
+                href="https://unsplash.com/photos/SpVHcbuKi6E"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Quino Al
+                William Iven
               </a>
             </li>
             <li>

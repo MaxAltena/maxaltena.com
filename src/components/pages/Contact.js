@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { loadReCaptcha } from "recaptcha-v3-react";
 import ContactTypeSwitch from "./Contact/ContactTypeSwitch";
 import ContactType from "./Contact/ContactType";
 
@@ -17,6 +18,23 @@ class Contact extends Component {
       error: null
     };
   }
+
+  componentDidMount = () => {
+    loadReCaptcha({
+      key: "6Lcrmo4UAAAAAL0ZYCJY_wuc5XDBUNgkZeiKeHYz",
+      id: "contactForm"
+    })
+      .then(id => {
+        console.log("ReCaptcha loaded", id);
+      })
+      .catch((error, id) => {
+        console.error("Error when load ReCaptcha", id, error);
+      });
+  };
+
+  verifyCallback = token => {
+    console.log("verifycallback token:", token);
+  };
 
   handleSubmit = e => {
     e.preventDefault();
@@ -69,6 +87,7 @@ class Contact extends Component {
             error={error}
             handleChange={this.handleChange}
             handleSubmit={this.handleSubmit}
+            verifyCallback={this.verifyCallback}
           />
         </div>
       </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { ReCaptcha } from "recaptcha-v3-react";
 
 const ContactType = ({
   hash,
@@ -10,7 +11,8 @@ const ContactType = ({
   mailSent,
   error,
   handleChange,
-  handleSubmit
+  handleSubmit,
+  verifyCallback
 }) => {
   let otherContent;
   if (mailSent) {
@@ -110,6 +112,14 @@ const ContactType = ({
                 value={text}
                 onChange={handleChange}
                 required
+              />
+            </div>
+            <div className="col s0 l6 empty hide-on-med-and-down">.</div>
+            <div className="col s12">
+              <ReCaptcha
+                action="https://new.maxaltena.com/api/recaptcha.php"
+                sitekey="6Lcrmo4UAAAAAL0ZYCJY_wuc5XDBUNgkZeiKeHYz"
+                verifyCallback={verifyCallback}
               />
             </div>
             <div className="col s0 l6 empty hide-on-med-and-down">.</div>
