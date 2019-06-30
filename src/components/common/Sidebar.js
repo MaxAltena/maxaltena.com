@@ -376,7 +376,7 @@ Sidebar.defaultProps = {
   docked: false,
   open: false,
   transitions: true,
-  touch: true,
+  touch: false,
   touchHandleWidth: 20,
   pullRight: false,
   shadow: false,
