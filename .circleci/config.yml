@@ -12,11 +12,14 @@ jobs:
           name: Build project
           command: npm run build
       - run:
+          name: Build success
+          command: echo "Build success"
+      - run:
           name: Upload to server
           command: node .circleci/deploy.js
       - run:
-          name: Completed
-          command: echo "Project built and deployed"
+          name: Deploy success
+          command: echo "Project deployed"
 
 workflows:
   version: 2

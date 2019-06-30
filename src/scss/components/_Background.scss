@@ -1,0 +1,128 @@
+div#background {
+  background: $light-blue;
+  position: fixed;
+  z-index: -5;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+
+  div {
+    position: absolute;
+    z-index: -6;
+    transition: 0.3s ease-in-out top, 0.3s ease-in-out left;
+  }
+
+  .size1 {
+    width: 50px;
+    height: 50px;
+    &::after {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  .size2 {
+    width: 100px;
+    height: 100px;
+    &::after {
+      width: 110px;
+      height: 110px;
+    }
+  }
+  .size3 {
+    width: 150px;
+    height: 150px;
+    &::after {
+      width: 160px;
+      height: 160px;
+    }
+  }
+  .size4 {
+    width: 200px;
+    height: 200px;
+    &::after {
+      width: 210px;
+      height: 210px;
+    }
+  }
+  .size5 {
+    width: 250px;
+    height: 250px;
+    &::after {
+      width: 260px;
+      height: 260px;
+    }
+  }
+
+  .rotation1 {
+    transform: rotate(45deg);
+  }
+  .rotation2 {
+    transform: rotate(90deg);
+  }
+  .rotation3 {
+    transform: rotate(135deg);
+  }
+  .rotation4 {
+    transform: rotate(180deg);
+  }
+  .rotation5 {
+    transform: rotate(225deg);
+  }
+  .rotation6 {
+    transform: rotate(270deg);
+  }
+  .rotation7 {
+    transform: rotate(315deg);
+  }
+  .rotation8 {
+    transform: rotate(360deg);
+  }
+
+  .square {
+    border: 6px solid black;
+  }
+  .circle {
+    border: 6px solid black;
+    border-radius: 50%;
+  }
+  .half-circle {
+    border: 6px solid black;
+
+    &.size1 {
+      $size: 40px;
+      border-top-left-radius: $size * 2;
+      border-top-right-radius: $size * 2;
+      height: $size;
+      width: $size * 2;
+    }
+    &.size2 {
+      $size: 60px;
+      border-top-left-radius: $size * 2;
+      border-top-right-radius: $size * 2;
+      height: $size;
+      width: $size * 2;
+    }
+    &.size3 {
+      $size: 80px;
+      border-top-left-radius: $size * 2;
+      border-top-right-radius: $size * 2;
+      height: $size;
+      width: $size * 2;
+    }
+    &.size4 {
+      $size: 100px;
+      border-top-left-radius: $size * 2;
+      border-top-right-radius: $size * 2;
+      height: $size;
+      width: $size * 2;
+    }
+    &.size5 {
+      $size: 120px;
+      border-top-left-radius: $size * 2;
+      border-top-right-radius: $size * 2;
+      height: $size;
+      width: $size * 2;
+    }
+  }
+}

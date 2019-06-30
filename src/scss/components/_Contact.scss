@@ -1,0 +1,104 @@
+#Contact {
+  border: 3px solid black;
+  border-top: none;
+
+  position: relative;
+  height: 40vh;
+  width: 100%;
+  background: transparent;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  > div.cat {
+    position: relative;
+    background: white;
+    border: 6px solid black;
+    min-width: 200px;
+    width: auto;
+    max-width: 600px;
+    min-height: 100px;
+    height: auto;
+    max-height: 40vh;
+
+    padding: 2vh 2vw;
+
+    transition: 0.15s ease-in-out width, 0.15s ease-in-out height;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &::after {
+      content: " ";
+      background: black;
+      width: calc(100% + 10.5px);
+      height: calc(100% + 10.5px);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    > h1 {
+      font-family: $header;
+      text-align: center;
+      font-size: 2em;
+      margin: 10px 25px;
+    }
+
+    > p {
+      font-family: $text;
+      margin: 10px 25px;
+
+      &:nth-of-type(1) {
+        margin-bottom: 0px;
+      }
+      &:nth-of-type(2) {
+        margin-bottom: 20px;
+      }
+    }
+
+    > a {
+      font-family: $text;
+      border: 3px solid black;
+      padding: 1em 2em;
+      font-size: 1.1em;
+      text-decoration: none;
+      color: black;
+      display: flex;
+      align-items: center;
+      > span.blink {
+        margin-left: 10px;
+        font-size: 1.5em;
+        line-height: 18px;
+        height: 18px;
+      }
+
+      box-sizing: border-box;
+      transition: 0.15s ease-in-out box-shadow;
+      outline: none;
+
+      &:hover,
+      &:focus {
+        box-shadow: 0px 0px 0px 3px black inset;
+      }
+      &:active {
+        box-shadow: 0px 0px 0px 6px black inset;
+      }
+    }
+
+    span {
+      font-family: $text;
+    }
+  }
+
+  @media only screen and (max-width: 916px) {
+    > div.cat {
+      width: 75vw;
+      max-width: 90vw;
+    }
+  }
+}

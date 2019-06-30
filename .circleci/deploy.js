@@ -6,12 +6,13 @@ var config = {
   password: process.env.FTPPASSWORD,
   host: process.env.FTPHOST,
   port: 21,
-  localRoot: __dirname + "/../build",
+  localRoot: __dirname + "/../public",
   remoteRoot: process.env.FTPPATH,
-  include: ["*"]
+  deleteRemote: true,
+  include: ["*", ".htaccess"]
 };
 
-ftpDeploy.deploy(config, function(err) {
+ftpDeploy.deploy(config, err => {
   if (err) console.log(err);
   else console.log("Uploaded to server");
 });
