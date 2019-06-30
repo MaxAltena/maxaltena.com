@@ -4,6 +4,10 @@ export default class Splash extends Component {
   constructor(props) {
     super(props);
 
+    this.state = { elements: [] };
+  }
+
+  componentDidMount() {
     const amount = Math.floor(Math.random() * 6) + 8;
     const shapes = ["circle", "square", "half-circle"];
     const sizes = [1, 2, 3, 4, 5];
@@ -39,7 +43,7 @@ export default class Splash extends Component {
       elements.push({ id: i, shape, size, rotation, color, x, y });
     }
 
-    this.state = { elements };
+    this.setState({ elements });
   }
 
   renderShapes = () => {
