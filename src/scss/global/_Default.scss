@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: $text;
 }
 
 html {
@@ -15,12 +15,38 @@ body {
 }
 
 main {
-  overflow-x: hidden;
+  overflow: hidden;
+  margin-bottom: 30px;
 }
 
 .anchor {
   display: block;
   position: relative;
-  top: calc(-10vh + -56px);
+  top: -94px;
   visibility: hidden;
+}
+
+@media only screen and (max-width: 916px) {
+  .anchor {
+    top: -41px;
+  }
+}
+
+#About h1,
+#Skills h1,
+#Projects h1 {
+  text-align: center;
+  position: relative;
+  width: auto;
+  margin-bottom: 25px;
+
+  &::after {
+    content: " ";
+    background: black;
+    position: absolute;
+    bottom: -25%;
+    left: 25%;
+    width: 50%;
+    height: 3px;
+  }
 }

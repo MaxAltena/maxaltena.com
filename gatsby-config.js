@@ -97,6 +97,20 @@ module.exports = {
         lang: "en"
       }
     },
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        google: {
+          families: ["Fira Mono"]
+        }
+      }
+    },
+    {
+      resolve: "gatsby-plugin-canonical-urls",
+      options: {
+        siteUrl: "https://maxaltena.com/"
+      }
+    },
     "gatsby-plugin-sitemap",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",

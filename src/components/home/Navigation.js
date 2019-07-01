@@ -31,7 +31,7 @@ export default class Navigation extends Component {
             {width >= 900 ? (
               <div id="menuLarge">
                 <div className="logo">
-                  <a href="#home">
+                  <a href="#">
                     <img
                       src={require("../../assets/vectors/logo.svg")}
                       alt="Logo"
@@ -111,7 +111,7 @@ export default class Navigation extends Component {
                   </div>
                   <div className="divider-v" />
                   <a
-                    href="#home"
+                    href="#"
                     id="logo"
                     onClick={() => this.setState({ sidebarOpen: false })}
                   >

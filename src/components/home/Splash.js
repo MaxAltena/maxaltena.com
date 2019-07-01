@@ -17,7 +17,7 @@ export default class Splash extends Component {
 
   render() {
     return (
-      <div id="home">
+      <div id="Splash">
         <div className="cat">
           <h1 className="home-baffle">Hey!</h1>
           <p>
@@ -26,7 +26,11 @@ export default class Splash extends Component {
           <p>Ready to discover who I am and what I do?</p>
           <a href="#about" className="button">
             <span className="home-baffle-long">Who&apos;s Max?</span>
-            <span className="blink">→</span>
+            <img
+              src={require("../../assets/icons/arrow.svg")}
+              alt="→"
+              className="blink"
+            />
           </a>
         </div>
       </div>

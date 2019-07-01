@@ -78,10 +78,11 @@ export default class About extends Component {
             <p>Busy most of the time with personal or team projects</p>
             <p>
               Some people call me a &quot;
-              <span className={glitched && "glitch"}>Robot</span>&quot;
+              <span className={glitched ? "glitch" : ""}>Robot</span>
+              &quot;
             </p>
           </div>
-          <div className={`image ${glitched && "glitch"}`}>
+          <div className={`image${glitched ? " glitch" : ""}`}>
             {glitched ? (
               <img
                 src={require("../../assets/images/picture_robot.jpg")}

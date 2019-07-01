@@ -1,28 +1,11 @@
 #About {
+  z-index: 1;
   background: $light-orange;
   padding: 4vh 15vw;
   border: 3px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  > h1 {
-    text-align: center;
-    font-family: $header;
-    position: relative;
-    width: auto;
-    margin-bottom: 25px;
-
-    &::after {
-      content: " ";
-      background: black;
-      position: absolute;
-      bottom: -25%;
-      left: 25%;
-      width: 50%;
-      height: 3px;
-    }
-  }
 
   > div {
     display: flex;
@@ -34,20 +17,17 @@
       margin-right: 2vw;
 
       h2 {
-        font-family: $header;
         font-weight: 300;
         font-size: 1.4em;
         margin-bottom: 15px;
 
         > span {
-          font-family: $header;
           font-size: 1.2em;
         }
       }
 
       p,
       span {
-        font-family: $text;
         margin-bottom: 10px;
 
         &:nth-last-of-type(1) {
@@ -83,10 +63,8 @@
         max-height: 262px;
         width: 50vw;
         height: 50vw;
-
         box-sizing: border-box;
         outline: none;
-
         border-radius: 50%;
         border: 6px solid black;
         -webkit-user-drag: none;

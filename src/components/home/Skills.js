@@ -149,6 +149,11 @@ export default class Skills extends Component {
           title: "Tools",
           items: [
             {
+              name: "Materialize",
+              x: 0,
+              y: 0
+            },
+            {
               name: "Git",
               x: 0,
               y: 0
@@ -165,11 +170,6 @@ export default class Skills extends Component {
             },
             {
               name: "APIs",
-              x: 0,
-              y: 0
-            },
-            {
-              name: "Materialize",
               x: 0,
               y: 0
             }
@@ -242,12 +242,13 @@ export default class Skills extends Component {
     // TODO: Filter on tags (frontend, backend etc.)
     // TODO: Add logos/icons to skills
     // TODO: Random order of skills
+    // TODO: Create cards from drags
 
     // DESKTOP + TABLET:
     // TODO: Refresh
 
     const dragHeight =
-      height / 5 - height / 25 <= 100 ? height / 5 - height / 25 : 100;
+      height / 5 - height / 25 <= 80 ? height / 5 - height / 25 : 80;
 
     return (
       <div id="Skills">

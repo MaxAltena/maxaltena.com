@@ -6,13 +6,13 @@ const CANCEL_DISTANCE_ON_SCROLL = 20;
 const defaultStyles = {
   root: {
     position: "fixed",
-    zIndex: 1,
+    zIndex: 500,
     top: 0,
     left: 0,
     overflow: "hidden"
   },
   sidebar: {
-    zIndex: 2,
+    zIndex: 500,
     position: "fixed",
     top: 0,
     bottom: 0,
@@ -32,7 +32,7 @@ const defaultStyles = {
     transition: "left .3s ease-in-out, right .3s ease-in-out"
   },
   overlay: {
-    zIndex: 1,
+    zIndex: 499,
     position: "fixed",
     top: 0,
     left: 0,

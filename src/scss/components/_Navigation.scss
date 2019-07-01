@@ -27,7 +27,6 @@ nav {
     color: black;
     text-decoration: none;
     font-size: 25px;
-    font-family: "Lucida Console", "Arial Black", "Arial", sans-serif;
     font-weight: 800;
 
     box-sizing: border-box;
@@ -128,6 +127,8 @@ nav {
 
     position: fixed;
     z-index: 10;
+    top: 0;
+    left: 0;
     cursor: pointer;
 
     box-sizing: border-box;
@@ -269,6 +270,25 @@ nav {
             user-select: none;
           }
         }
+      }
+    }
+  }
+  @media only screen and (max-width: 916px) {
+    a {
+      transition: 0.05s ease-in-out box-shadow;
+    }
+
+    #menuSmall-burger {
+      transition: 0.05s ease-in-out box-shadow;
+    }
+
+    #menuSmall {
+      > .row > #close {
+        transition: 0.05s ease-in-out box-shadow;
+      }
+
+      > div:not(.divider-h):not(.divider-v):not(.row) > div.row > a.social {
+        transition: 0.05s ease-in-out box-shadow;
       }
     }
   }

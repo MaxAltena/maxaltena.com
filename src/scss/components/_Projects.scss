@@ -1,4 +1,5 @@
 #Projects {
+  z-index: 1;
   background: $light-red;
   padding: 4vh 15vw;
   border: 3px solid black;
@@ -9,7 +10,6 @@
 
   > h1 {
     text-align: center;
-    font-family: $header;
     position: relative;
     width: auto;
     margin-bottom: 25px;
@@ -23,9 +23,5 @@
       width: 50%;
       height: 3px;
     }
-  }
-
-  p {
-    font-family: $text;
   }
 }

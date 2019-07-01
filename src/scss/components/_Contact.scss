@@ -1,9 +1,12 @@
 #Contact {
+  z-index: 1;
   border: 3px solid black;
   border-top: none;
+  border-bottom: none;
 
   position: relative;
   height: 40vh;
+  padding: 5vh 0;
   width: 100%;
   background: transparent;
 
@@ -11,11 +14,12 @@
   justify-content: center;
   align-items: center;
 
+  padding-top: 30px;
+
   > div.cat {
     position: relative;
     background: white;
     border: 6px solid black;
-    min-width: 200px;
     width: auto;
     max-width: 600px;
     min-height: 100px;
@@ -43,62 +47,64 @@
     }
 
     > h1 {
-      font-family: $header;
       text-align: center;
       font-size: 2em;
       margin: 10px 25px;
     }
 
     > p {
-      font-family: $text;
       margin: 10px 25px;
+      max-width: 395px;
+      text-align: center;
 
       &:nth-of-type(1) {
         margin-bottom: 0px;
       }
-      &:nth-of-type(2) {
+      &:nth-last-of-type(1) {
         margin-bottom: 20px;
       }
     }
 
-    > a {
-      font-family: $text;
-      border: 3px solid black;
-      padding: 1em 2em;
-      font-size: 1.1em;
-      text-decoration: none;
-      color: black;
+    > div {
       display: flex;
+      width: 80%;
+      justify-content: center;
       align-items: center;
-      > span.blink {
-        margin-left: 10px;
-        font-size: 1.5em;
-        line-height: 18px;
-        height: 18px;
-      }
 
-      box-sizing: border-box;
-      transition: 0.15s ease-in-out box-shadow;
-      outline: none;
+      > a {
+        margin: 0.1em 1em;
+        border: 3px solid black;
+        padding: 0.5em;
+        font-size: 1.1em;
+        text-decoration: none;
+        color: black;
+        display: flex;
+        align-items: center;
 
-      &:hover,
-      &:focus {
-        box-shadow: 0px 0px 0px 3px black inset;
-      }
-      &:active {
-        box-shadow: 0px 0px 0px 6px black inset;
-      }
-    }
+        box-sizing: border-box;
+        transition: 0.15s ease-in-out box-shadow;
+        outline: none;
 
-    span {
-      font-family: $text;
+        &:hover,
+        &:focus {
+          box-shadow: 0px 0px 0px 3px black inset;
+        }
+        &:active {
+          box-shadow: 0px 0px 0px 6px black inset;
+        }
+
+        > img {
+          width: 35px;
+          height: 35px;
+        }
+      }
     }
   }
 
   @media only screen and (max-width: 916px) {
     > div.cat {
-      width: 75vw;
-      max-width: 90vw;
+      width: 80vw;
+      max-width: 80vw;
     }
   }
 }

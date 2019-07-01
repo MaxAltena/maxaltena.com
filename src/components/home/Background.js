@@ -8,7 +8,7 @@ export default class Splash extends Component {
   }
 
   componentDidMount() {
-    const amount = Math.floor(Math.random() * 6) + 8;
+    const amount = Math.floor(Math.random() * 6) + 10;
     const shapes = ["circle", "square", "half-circle"];
     const sizes = [1, 2, 3, 4, 5];
     const rotations = [1, 2, 3, 4, 5, 6, 7, 8];
@@ -37,8 +37,8 @@ export default class Splash extends Component {
       const color = colors[Math.floor(Math.random() * colors.length)];
 
       // Get random positions
-      const x = Math.floor(Math.random() * 105) - 10;
-      const y = Math.floor(Math.random() * 85) - 10;
+      const x = Math.floor(Math.random() * 105) - 5;
+      const y = Math.floor(Math.random() * 105) - 5;
 
       elements.push({ id: i, shape, size, rotation, color, x, y });
     }
@@ -64,6 +64,13 @@ export default class Splash extends Component {
   };
 
   render() {
-    return <div id="background">{this.renderShapes()}</div>;
+    return (
+      <div id="background">
+        {this.renderShapes()}
+        <div className="cc">
+          Made with 💖 by <a href="#">Max</a>
+        </div>
+      </div>
+    );
   }
 }

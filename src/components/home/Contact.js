@@ -52,20 +52,37 @@ export default class Contact extends Component {
         <a className="anchor" id="contact" />
         <div className="cat">
           <h1 className="contact-baffle">Contact</h1>
-          <p>
-            That&apos;s me,{" "}
-            <span className="contact-baffle bold">Max Altena</span>.
-          </p>
-          <p>Ready to contact me?</p>
-          <a
-            href="mailto:max@maxaltena.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="button"
-          >
-            <span className="contact-baffle-long">Contact Max</span>
-            <span className="blink">→</span>
-          </a>
+          <p>Interested in contacting me?</p>
+          <p>Wanting to know what I am up to?</p>
+          <div>
+            <a
+              href="mailto:max@maxaltena.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={require("../../assets/icons/mail.svg")} alt="Mail" />
+            </a>
+            <a
+              href="https://github.com/MaxAltena"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={require("../../assets/icons/github.svg")}
+                alt="GitHub"
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/maxaltena/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={require("../../assets/icons/linkedin.svg")}
+                alt="LinkedIn"
+              />
+            </a>
+          </div>
         </div>
       </div>
     );

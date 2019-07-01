@@ -1,6 +1,6 @@
-#home {
+#Splash {
   position: relative;
-  height: 80vh;
+  min-height: 80vh;
   padding-top: 56px;
   width: 100%;
   background: transparent;
@@ -13,7 +13,6 @@
     position: relative;
     background: white;
     border: 6px solid black;
-    min-width: 200px;
     width: auto;
     max-width: 600px;
     min-height: 100px;
@@ -41,26 +40,24 @@
     }
 
     > h1 {
-      font-family: $header;
       text-align: center;
       font-size: 2em;
       margin: 10px 25px;
     }
 
     > p {
-      font-family: $text;
-      margin: 10px 25px;
+      margin: 10px 5px;
+      text-align: center;
 
       &:nth-of-type(1) {
         margin-bottom: 0px;
       }
-      &:nth-of-type(2) {
+      &:nth-last-of-type(1) {
         margin-bottom: 20px;
       }
     }
 
     > a {
-      font-family: $text;
       border: 3px solid black;
       padding: 1em 2em;
       font-size: 1.1em;
@@ -68,10 +65,8 @@
       color: black;
       display: flex;
       align-items: center;
-      > span.blink {
+      > .blink {
         margin-left: 10px;
-        font-size: 1.5em;
-        line-height: 18px;
         height: 18px;
       }
 
@@ -86,10 +81,6 @@
       &:active {
         box-shadow: 0px 0px 0px 6px black inset;
       }
-    }
-
-    span {
-      font-family: $text;
     }
   }
 
