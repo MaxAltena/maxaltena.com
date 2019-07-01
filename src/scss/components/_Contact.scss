@@ -105,6 +105,10 @@
     > div.cat {
       width: 80vw;
       max-width: 80vw;
+      padding: 2vh 1vw;
+      > p {
+        margin: 10px 5px;
+      }
     }
   }
 }
