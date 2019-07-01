@@ -46,7 +46,7 @@ export default class Projects extends Component {
       <div id="Projects">
         <a className="anchor" id="projects" />
         <h1 className="projects-baffle">Projects</h1>
-        <p>Currently busy with adding projects...</p>
+        <p>Currently busy with adding projects [GitHub and Personal]...</p>
       </div>
     );
   }

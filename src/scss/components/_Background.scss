@@ -16,42 +16,22 @@ div#background {
   .size1 {
     width: 2.5vw;
     height: 2.5vw;
-    &::after {
-      width: 3vw;
-      height: 3vw;
-    }
   }
   .size2 {
     width: 5vw;
     height: 5vw;
-    &::after {
-      width: 5.5vw;
-      height: 5.5vw;
-    }
   }
   .size3 {
     width: 7.5vw;
     height: 7.5vw;
-    &::after {
-      width: 8vw;
-      height: 8vw;
-    }
   }
   .size4 {
     width: 10vw;
     height: 10vw;
-    &::after {
-      width: 10.5vw;
-      height: 10.5vw;
-    }
   }
   .size5 {
     width: 12.5vw;
     height: 12.5vw;
-    &::after {
-      width: 13vw;
-      height: 13vw;
-    }
   }
 
   .rotation1 {
@@ -90,35 +70,35 @@ div#background {
     border: 6px solid black;
 
     &.size1 {
-      $size: 40px;
+      $size: 2.5vw;
       border-top-left-radius: $size * 2;
       border-top-right-radius: $size * 2;
       height: $size;
       width: $size * 2;
     }
     &.size2 {
-      $size: 60px;
+      $size: 5vw;
       border-top-left-radius: $size * 2;
       border-top-right-radius: $size * 2;
       height: $size;
       width: $size * 2;
     }
     &.size3 {
-      $size: 80px;
+      $size: 7.5vw;
       border-top-left-radius: $size * 2;
       border-top-right-radius: $size * 2;
       height: $size;
       width: $size * 2;
     }
     &.size4 {
-      $size: 100px;
+      $size: 10vw;
       border-top-left-radius: $size * 2;
       border-top-right-radius: $size * 2;
       height: $size;
       width: $size * 2;
     }
     &.size5 {
-      $size: 120px;
+      $size: 12.5vw;
       border-top-left-radius: $size * 2;
       border-top-right-radius: $size * 2;
       height: $size;

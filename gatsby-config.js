@@ -97,13 +97,6 @@ module.exports = {
         lang: "en"
       }
     },
-    {
-      resolve: "gatsby-plugin-hotjar",
-      options: {
-        id: 1379953,
-        sv: 6
-      },
-    },
     "gatsby-plugin-sitemap",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",
