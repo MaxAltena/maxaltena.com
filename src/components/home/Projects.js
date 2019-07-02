@@ -36,9 +36,15 @@ export default class Projects extends Component {
     }
   }
 
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.scrollReveal);
+  }
+
   getProjectsFromLocalStorage = () => {
     const organisations = JSON.parse(localStorage.getItem("gh-orgs"));
     const repositories = JSON.parse(localStorage.getItem("gh-repos"));
+
+    if (repositories == null) this.getProjects();
 
     this.setState({ organisations, repositories });
   };
@@ -117,10 +123,6 @@ export default class Projects extends Component {
       });
   };
 
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.scrollReveal);
-  }
-
   scrollReveal = () => {
     const height = window.innerHeight;
     const scroll = window.scrollY;
@@ -185,19 +187,19 @@ export default class Projects extends Component {
 
   render() {
     const { repositories } = this.state;
+    let projects;
 
-    const projects = repositories
-      .sort((a, b) => {
-        const aResult = this.calculateTimeInSeconds(a.pushed_at);
-        const bResult = this.calculateTimeInSeconds(b.pushed_at);
-        return bResult - aResult;
-      })
-      .slice(0, 6);
-
-    // const projects = repositories.slice(0, 5);
-    // console.log(projects);
-
-    // console.log(repositories);
+    if (repositories !== null || []) {
+      projects = repositories
+        .sort((a, b) => {
+          const aResult = this.calculateTimeInSeconds(a.pushed_at);
+          const bResult = this.calculateTimeInSeconds(b.pushed_at);
+          return bResult - aResult;
+        })
+        .slice(0, 6);
+    } else {
+      projects = repositories;
+    }
 
     // TODO: Add featured projects
 
@@ -209,7 +211,7 @@ export default class Projects extends Component {
         <h1 className="projects-baffle">Projects</h1>
         <p>{"// Featured projects"}</p>
 
-        <h2>Latest GitHub repos</h2>
+        <h2 className="projects-baffle-longer">Latest GitHub repos</h2>
         {projects.length >= 1 ? (
           <div className="gh-projectsholders">
             {this.renderProjectsGitHub(projects)}
