@@ -20,7 +20,7 @@ export default class Projects extends Component {
     this.scrollReveal();
     window.addEventListener("scroll", this.scrollReveal);
 
-    const token = "9ad07d868168a23eca26482b42712065ee2ef733";
+    const token = "b9146e5240d1f3be97ab23416503b7d8ba52a165";
     axios.defaults.headers.common["Authorization"] = "token " + token;
 
     axios
@@ -37,11 +37,20 @@ export default class Projects extends Component {
             this.setState({
               projectsGitHub: [...this.state.projectsGitHub, repo]
             });
+          console.log(this.state.projectsGitHub);
         });
       })
       .then(() => {
         this.setState({ loadingProjectsGitHub: false });
       });
+
+    axios.get("https://api.github.com/users/MaxAltena/repos").then(res => {
+      console.log("Hey, repos!");
+      console.log(res);
+    });
+
+    // Fix this so it loads on the client
+    // https://www.gatsbyjs.org/docs/using-client-side-only-packages/
   }
 
   componentWillUnmount() {
@@ -99,7 +108,7 @@ export default class Projects extends Component {
       <div id="Projects">
         <a className="anchor" id="projects" />
         <h1 className="projects-baffle">Projects</h1>
-        <p>// Featured projects</p>
+        <p>{"// Featured projects"}</p>
 
         <h2>Latest GitHub repos</h2>
         {loadingProjectsGitHub ? (
