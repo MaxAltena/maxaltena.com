@@ -11,7 +11,7 @@ module.exports = {
         short_name: "MaxAltena",
         start_url: "/",
         background_color: "#FFFFFF",
-        theme_color: "#FFFFFF",
+        theme_color: "#000000",
         display: "standalone",
         icon: "src/assets/icons/favicon.png"
       }
@@ -25,7 +25,7 @@ module.exports = {
         host: "maxaltena.com",
         custom: `
 <IfModule mod_headers.c>
-    <FilesMatch ".(jpg|jpeg|png|gif|ico)$">
+    <FilesMatch "\\.(json|jpg|jpeg|png|gif|ico)$">
         Header set Cache-Control "public, max-age=31536000, immutable"
     </FilesMatch>
     <FilesMatch "\\.html$">

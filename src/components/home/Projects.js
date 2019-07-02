@@ -216,7 +216,7 @@ export default class Projects extends Component {
       <div id="Projects">
         <a className="anchor" id="projects" />
         <h1 className="projects-baffle">Projects</h1>
-        <p>{"// Featured projects"}</p>
+        <p>{"// Coming soon: Featured projects"}</p>
 
         <h2 className="projects-baffle-longer">Latest GitHub repos</h2>
         {projects.length >= 1 ? (
