@@ -710,7 +710,7 @@
     "@babel/plugin-transform-react-jsx-self" "^7.0.0"
     "@babel/plugin-transform-react-jsx-source" "^7.0.0"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.2.0", "@babel/runtime@^7.3.1", "@babel/runtime@^7.4.2":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.1.2", "@babel/runtime@^7.2.0", "@babel/runtime@^7.3.1", "@babel/runtime@^7.4.2", "@babel/runtime@^7.4.3":
   version "7.4.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.4.5.tgz#582bb531f5f9dc67d2fcb682979894f75e253f12"
   integrity sha512-TuI4qpWZP6lGOGIuGWtp9sPluqYICmbk8T/1vpSysqJxRPkudh/ofFWyqdcMsDf2s7KvDL4/YHgKyvcS3g9CJQ==
@@ -5745,6 +5745,13 @@ gatsby-plugin-page-creator@^2.1.1:
     glob "^7.1.1"
     lodash "^4.17.10"
     micromatch "^3.1.10"
+
+gatsby-plugin-preconnect@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-preconnect/-/gatsby-plugin-preconnect-1.0.5.tgz#8c32602cacfdd6988bf6424dd27821a719d9820f"
+  integrity sha512-J/a7Ft1tFrnZOeJuclvDyIOLmBOqfvBOoGn5Tf9eVObfzlhZKq6O/89qbaTMUBUQOmlPa/RYSgq4BBMUX7pFpw==
+  dependencies:
+    "@babel/runtime" "^7.4.3"
 
 gatsby-plugin-react-helmet@^3.0.12:
   version "3.1.0"

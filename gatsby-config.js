@@ -25,20 +25,10 @@ module.exports = {
         host: "maxaltena.com",
         custom: `
 <IfModule mod_headers.c>
-    <FilesMatch "\\.(json|jpg|jpeg|png|gif|ico)$">
+    <FilesMatch "\\.(jpg|jpeg|png|gif|ico|webmanifest|txt|xml)$">
         Header set Cache-Control "public, max-age=31536000, immutable"
     </FilesMatch>
-    <FilesMatch "\\.html$">
-        Header set Cache-Control "public, max-age=0, must-revalidate"
-    </FilesMatch>
-    <FilesMatch "\\.(js|css)$">
-        Header set Cache-Control "public, max-age=31536000, immutable"
-    </FilesMatch>
-    <Files sw.js>
-        Header set Cache-Control "public, max-age=0, must-revalidate"
-    </Files>
-</IfModule>
-        `
+</IfModule>`
       }
     },
     {
@@ -124,6 +114,12 @@ module.exports = {
       resolve: "gatsby-plugin-canonical-urls",
       options: {
         siteUrl: "https://maxaltena.com/"
+      }
+    },
+    {
+      resolve: "gatsby-plugin-preconnect",
+      options: {
+        domains: ["https://fonts.googleapis.com", "https://api.github.com"]
       }
     },
     "gatsby-plugin-sitemap",
