@@ -12,6 +12,7 @@ export default class Projects extends Component {
     this.state = {
       scrolledTo: false,
       username: "MaxAltena",
+      takingLong: false,
       organisations: [],
       repositories: []
     };
@@ -21,35 +22,44 @@ export default class Projects extends Component {
     this.scrollReveal();
     window.addEventListener("scroll", this.scrollReveal);
 
-    const ghUpdate = localStorage.getItem("gh-update");
-    if (ghUpdate === null) {
-      localStorage.setItem("gh-update", Date.now());
-      this.getProjects();
-    } else {
-      const ghUpdateDate = Number(ghUpdate) + 60000 * 5;
-      if (Date.now() > ghUpdateDate) {
-        localStorage.setItem("gh-update", Date.now());
-        this.getProjects();
-      } else {
-        this.getProjectsFromLocalStorage();
-      }
-    }
+    setTimeout(() => {
+      this.setState({ takingLong: true });
+    }, 2500);
+
+    this.getProjects();
   }
 
   componentWillUnmount() {
     window.removeEventListener("scroll", this.scrollReveal);
   }
 
+  getProjects = () => {
+    const ghUpdate = localStorage.getItem("gh-update");
+
+    if (ghUpdate) {
+      const ghUpdateDate = Number(ghUpdate) + 60000 * 5;
+      if (Date.now() > ghUpdateDate) {
+        localStorage.setItem("gh-update", Date.now());
+        this.getRepos();
+      } else {
+        this.getProjectsFromLocalStorage();
+      }
+    } else {
+      localStorage.setItem("gh-update", Date.now());
+      this.getRepos();
+    }
+  };
+
   getProjectsFromLocalStorage = () => {
     const organisations = JSON.parse(localStorage.getItem("gh-orgs"));
     const repositories = JSON.parse(localStorage.getItem("gh-repos"));
 
-    if (repositories == null) this.getProjects();
+    if (repositories == null) this.getRepos();
 
     this.setState({ organisations, repositories });
   };
 
-  getProjects = () => {
+  getRepos = () => {
     this.getReposFromUser();
     this.getReposFromOrgs();
   };
@@ -186,10 +196,10 @@ export default class Projects extends Component {
   };
 
   render() {
-    const { repositories } = this.state;
-    let projects;
+    const { repositories, takingLong } = this.state;
+    let projects = [];
 
-    if (repositories !== null || []) {
+    if (repositories) {
       projects = repositories
         .sort((a, b) => {
           const aResult = this.calculateTimeInSeconds(a.pushed_at);
@@ -197,12 +207,9 @@ export default class Projects extends Component {
           return bResult - aResult;
         })
         .slice(0, 6);
-    } else {
-      projects = repositories;
     }
 
     // TODO: Add featured projects
-
     // TODO: Create loading animation
 
     return (
@@ -217,7 +224,12 @@ export default class Projects extends Component {
             {this.renderProjectsGitHub(projects)}
           </div>
         ) : (
-          <p>Loading...</p>
+          <>
+            <p>Loading...</p>
+            {takingLong ? (
+              <div>It&apos;s taking longer than expected...</div>
+            ) : null}
+          </>
         )}
       </div>
     );

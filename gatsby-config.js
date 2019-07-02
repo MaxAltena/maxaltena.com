@@ -22,7 +22,23 @@ module.exports = {
         RewriteBase: true,
         https: true,
         www: false,
-        host: "maxaltena.com"
+        host: "maxaltena.com",
+        custom: `
+<IfModule mod_headers.c>
+    <FilesMatch ".(jpg|jpeg|png|gif|ico)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    <FilesMatch "\\.html$">
+        Header set Cache-Control "public, max-age=0, must-revalidate"
+    </FilesMatch>
+    <FilesMatch "\\.(js|css)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    <Files sw.js>
+        Header set Cache-Control "public, max-age=0, must-revalidate"
+    </Files>
+</IfModule>
+        `
       }
     },
     {
@@ -39,7 +55,6 @@ module.exports = {
           {
             Developer: "Max Altena",
             GitHub: "MaxAltena",
-            Twitter: "@MaxAltena",
             LinkedIn: "maxaltena"
           }
         ],
