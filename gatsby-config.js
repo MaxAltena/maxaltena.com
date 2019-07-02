@@ -129,7 +129,6 @@ module.exports = {
     },
     "gatsby-plugin-sitemap",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sharp",
     "gatsby-plugin-sass",
     "gatsby-plugin-offline",
     "gatsby-plugin-no-sourcemaps"

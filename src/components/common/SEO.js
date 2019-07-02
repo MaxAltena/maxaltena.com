@@ -15,7 +15,8 @@ export default class SEO extends Component {
   static defaultProps = {
     lang: "en",
     title: "Max Altena",
-    description: "Max Altena's website with his work and his skills",
+    description:
+      "Max Altena's website with his skills and his latest projects. Contact him through here if you prefer.",
     author: "Max Altena",
     meta: []
   };
