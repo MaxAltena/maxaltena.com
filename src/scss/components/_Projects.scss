@@ -101,15 +101,20 @@
       }
     }
 
-    .stat {
-      margin-left: 15px;
+    .gitStats {
       display: flex;
       align-items: center;
 
-      > img {
-        margin-left: 5px;
-        width: auto;
-        height: 16px;
+      .stat {
+        margin-left: 15px;
+        display: flex;
+        align-items: center;
+
+        > img {
+          margin-left: 5px;
+          width: auto;
+          height: 16px;
+        }
       }
     }
   }
