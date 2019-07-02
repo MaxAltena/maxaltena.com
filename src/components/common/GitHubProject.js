@@ -22,8 +22,10 @@ const GitHubProject = ({
     >
       <div className="name">
         <img src={require("../../assets/icons/github-repo.svg")} alt="Repo" />
-        <span className="normal">{owner}</span>
-        <span className="bold">/{name}</span>
+        <span>
+          <span className="normal">{owner}</span>
+          <span className="bold">/{name}</span>
+        </span>
       </div>
       <p className="description">
         {description ? description : "No description"}
@@ -33,31 +35,35 @@ const GitHubProject = ({
           <span>Built with</span>
           <span className="bold">{language}</span>
         </div>
-        {watchers ? (
-          <div className="stat">
-            {watchers}{" "}
-            <img
-              src={require("../../assets/icons/github-watch.svg")}
-              alt="watch"
-            />
-          </div>
-        ) : null}
-        {stargazes ? (
-          <div className="stat">
-            {stargazes}{" "}
-            <img
-              src={require("../../assets/icons/github-star.svg")}
-              alt="star"
-            />
-          </div>
-        ) : null}
-        {forks ? (
-          <div className="stat">
-            {forks}{" "}
-            <img
-              src={require("../../assets/icons/github-fork.svg")}
-              alt="fork"
-            />
+        {watchers || stargazes || forks ? (
+          <div className="gitStats">
+            {watchers ? (
+              <div className="stat">
+                {watchers}{" "}
+                <img
+                  src={require("../../assets/icons/github-watch.svg")}
+                  alt="watch"
+                />
+              </div>
+            ) : null}
+            {stargazes ? (
+              <div className="stat">
+                {stargazes}{" "}
+                <img
+                  src={require("../../assets/icons/github-star.svg")}
+                  alt="star"
+                />
+              </div>
+            ) : null}
+            {forks ? (
+              <div className="stat">
+                {forks}{" "}
+                <img
+                  src={require("../../assets/icons/github-fork.svg")}
+                  alt="fork"
+                />
+              </div>
+            ) : null}
           </div>
         ) : null}
       </div>

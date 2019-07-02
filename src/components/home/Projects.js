@@ -37,7 +37,7 @@ export default class Projects extends Component {
     const ghUpdate = localStorage.getItem("gh-update");
 
     if (ghUpdate) {
-      const ghUpdateDate = Number(ghUpdate) + 60000 * 5;
+      const ghUpdateDate = Number(ghUpdate) + 60000 * 60;
       if (Date.now() > ghUpdateDate) {
         localStorage.setItem("gh-update", Date.now());
         this.getRepos();

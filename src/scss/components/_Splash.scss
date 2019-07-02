@@ -1,6 +1,6 @@
 #Splash {
   position: relative;
-  min-height: 80vh;
+  min-height: 75vh;
   padding-top: 56px;
   width: 100%;
   background: transparent;
@@ -89,6 +89,17 @@
     > div.cat {
       width: 75vw;
       max-width: 90vw;
+
+      > h1 {
+        margin: 5px;
+      }
+
+      > a {
+        padding: 0.5em 1em;
+        > img {
+          margin-left: 5px;
+        }
+      }
     }
   }
 }

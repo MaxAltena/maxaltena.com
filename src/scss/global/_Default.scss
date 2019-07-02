@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   font-family: $text;
-  font-display: auto;
 }
 
 html {
@@ -34,7 +33,7 @@ main {
 
 @media only screen and (max-width: 916px) {
   .anchor {
-    top: -41px;
+    top: 0;
   }
 }
 
