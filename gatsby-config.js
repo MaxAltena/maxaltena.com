@@ -13,7 +13,12 @@ module.exports = {
         background_color: "#FFFFFF",
         theme_color: "#000000",
         display: "standalone",
-        icon: "src/assets/icons/favicon.png"
+        icon: "./src/assets/icons/favicon.png",
+        dir: "auto",
+        lang: "en-US",
+        orientation: "any",
+        version: "1.0.0",
+        description: "The website of Max Altena"
       }
     },
     {
@@ -69,7 +74,7 @@ module.exports = {
         dir: "auto",
         lang: "en-US",
         background: "#FFFFFF",
-        theme_color: "#FFFFFF",
+        theme_color: "#000000",
         display: "standalone",
         orientation: "any",
         start_url: "/",
@@ -126,7 +131,7 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",
     "gatsby-plugin-sass",
-    "gatsby-plugin-offline"
-    // "gatsby-plugin-no-sourcemaps"
+    "gatsby-plugin-offline",
+    "gatsby-plugin-no-sourcemaps"
   ]
 };
