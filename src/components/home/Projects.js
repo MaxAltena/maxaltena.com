@@ -20,8 +20,8 @@ export default class Projects extends Component {
     this.scrollReveal();
     window.addEventListener("scroll", this.scrollReveal);
 
-    const token = "b9146e5240d1f3be97ab23416503b7d8ba52a165";
-    axios.defaults.headers.common["Authorization"] = "token " + token;
+    // const token = process.env.GITHUBTOKEN;
+    // axios.defaults.headers.common["Authorization"] = "token " + token;
 
     axios
       .get("https://api.github.com/user/repos", {
@@ -44,10 +44,14 @@ export default class Projects extends Component {
         this.setState({ loadingProjectsGitHub: false });
       });
 
-    axios.get("https://api.github.com/users/MaxAltena/repos").then(res => {
-      console.log("Hey, repos!");
-      console.log(res);
-    });
+    axios
+      .get("https://api.github.com/users/MaxAltena/repos", {
+        params: { type: "all", sort: "pushed" }
+      })
+      .then(res => {
+        console.log("Hey, repos!");
+        console.log(res);
+      });
 
     // Fix this so it loads on the client
     // https://www.gatsbyjs.org/docs/using-client-side-only-packages/
