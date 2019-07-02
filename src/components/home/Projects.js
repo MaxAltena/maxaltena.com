@@ -51,14 +51,12 @@ export default class Projects extends Component {
   };
 
   getProjectsFromLocalStorage = () => {
-    let orgs = localStorage.getItem("gh-orgs");
-    let repos = localStorage.getItem("gh-repos");
-
-    const organisations = typeof orgs == "object" ? orgs : JSON.parse(orgs);
-    const repositories = typeof repos == "object" ? repos : JSON.parse(repos);
+    const organisations = JSON.parse(localStorage.getItem("gh-orgs") || "[]");
+    const repositories = JSON.parse(localStorage.getItem("gh-repos") || "[]");
 
     if (repositories == null) this.getRepos();
-    else this.setState({ organisations, repositories });
+
+    this.setState({ organisations, repositories });
   };
 
   getRepos = () => {
