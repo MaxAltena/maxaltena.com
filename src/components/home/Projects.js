@@ -11,8 +11,9 @@ export default class Projects extends Component {
 
     this.state = {
       scrolledTo: false,
-      loadingProjectsGitHub: true,
-      projectsGitHub: []
+      username: "MaxAltena",
+      organisations: [],
+      repositories: []
     };
   }
 
@@ -20,42 +21,101 @@ export default class Projects extends Component {
     this.scrollReveal();
     window.addEventListener("scroll", this.scrollReveal);
 
-    // const token = process.env.GITHUBTOKEN;
-    // axios.defaults.headers.common["Authorization"] = "token " + token;
+    const ghUpdate = localStorage.getItem("gh-update");
+    if (ghUpdate === null) {
+      localStorage.setItem("gh-update", Date.now());
+      this.getProjects();
+    } else {
+      const ghUpdateDate = Number(ghUpdate) + 60000 * 5;
+      if (Date.now() > ghUpdateDate) {
+        localStorage.setItem("gh-update", Date.now());
+        this.getProjects();
+      } else {
+        this.getProjectsFromLocalStorage();
+      }
+    }
+  }
 
+  getProjectsFromLocalStorage = () => {
+    const organisations = JSON.parse(localStorage.getItem("gh-orgs"));
+    const repositories = JSON.parse(localStorage.getItem("gh-repos"));
+
+    this.setState({ organisations, repositories });
+  };
+
+  getProjects = () => {
+    this.getReposFromUser();
+    this.getReposFromOrgs();
+  };
+
+  getReposFromOrgs = () => {
+    const { username } = this.state;
     axios
-      .get("https://api.github.com/user/repos", {
-        params: {
-          visibility: "public",
-          affilitation: "owner,organization_member",
-          sort: "pushed"
-        }
+      .get("https://api.github.com/users/" + username + "/orgs")
+      .then(orgs => {
+        orgs.data.forEach(org => {
+          this.setState({
+            organisations: [...this.state.organisations, org]
+          });
+          localStorage.setItem(
+            "gh-orgs",
+            JSON.stringify(this.state.organisations)
+          );
+          axios
+            .get("https://api.github.com/orgs/" + org.login + "/repos", {
+              params: { sort: "pushed", direction: "desc" }
+            })
+            .then(repos => {
+              repos.data.forEach(repo => {
+                if (!repo.archived)
+                  axios
+                    .get(
+                      "https://api.github.com/repos/" +
+                        org.login +
+                        "/" +
+                        repo.name +
+                        "/contributors"
+                    )
+                    .then(contris => {
+                      if (contris.data !== "")
+                        contris.data.forEach(contri => {
+                          if (contri.login === username) {
+                            this.setState({
+                              repositories: [...this.state.repositories, repo]
+                            });
+                            localStorage.setItem(
+                              "gh-repos",
+                              JSON.stringify(this.state.repositories)
+                            );
+                          }
+                        });
+                    });
+              });
+            });
+        });
+      });
+  };
+
+  getReposFromUser = () => {
+    const { username } = this.state;
+    axios
+      .get("https://api.github.com/users/" + username + "/repos", {
+        params: { type: "owner", sort: "pushed", direction: "desc" }
       })
       .then(repos => {
         repos.data.forEach(repo => {
-          if (!repo.archived && this.state.projectsGitHub.length !== 6)
+          if (!repo.archived) {
             this.setState({
-              projectsGitHub: [...this.state.projectsGitHub, repo]
+              repositories: [...this.state.repositories, repo]
             });
-          console.log(this.state.projectsGitHub);
+            localStorage.setItem(
+              "gh-repos",
+              JSON.stringify(this.state.repositories)
+            );
+          }
         });
-      })
-      .then(() => {
-        this.setState({ loadingProjectsGitHub: false });
       });
-
-    axios
-      .get("https://api.github.com/users/MaxAltena/repos", {
-        params: { type: "all", sort: "pushed" }
-      })
-      .then(res => {
-        console.log("Hey, repos!");
-        console.log(res);
-      });
-
-    // Fix this so it loads on the client
-    // https://www.gatsbyjs.org/docs/using-client-side-only-packages/
-  }
+  };
 
   componentWillUnmount() {
     window.removeEventListener("scroll", this.scrollReveal);
@@ -82,8 +142,30 @@ export default class Projects extends Component {
     }).reveal(3000);
   };
 
-  renderProjectsGitHub = () => {
-    return this.state.projectsGitHub.map(project => {
+  calculateTimeInSeconds = ISOString => {
+    let oldDate = new Date(ISOString);
+    let obj = [
+      oldDate.getUTCFullYear(),
+      oldDate.getUTCMonth(),
+      oldDate.getUTCDate(),
+      oldDate.getUTCHours(),
+      oldDate.getUTCMinutes(),
+      oldDate.getUTCSeconds()
+    ];
+
+    let newDate = new Date();
+    newDate.setUTCFullYear(obj[0]);
+    newDate.setUTCMonth(obj[1]);
+    newDate.setUTCDate(obj[2]);
+    newDate.setUTCHours(obj[3]);
+    newDate.setUTCMinutes(obj[4]);
+    newDate.setUTCSeconds(obj[5]);
+
+    return newDate.getTime();
+  };
+
+  renderProjectsGitHub = projects => {
+    return projects.map(project => {
       return (
         <GitHubProject
           key={project.id}
@@ -102,7 +184,20 @@ export default class Projects extends Component {
   };
 
   render() {
-    const { loadingProjectsGitHub } = this.state;
+    const { repositories } = this.state;
+
+    const projects = repositories
+      .sort((a, b) => {
+        const aResult = this.calculateTimeInSeconds(a.pushed_at);
+        const bResult = this.calculateTimeInSeconds(b.pushed_at);
+        return bResult - aResult;
+      })
+      .slice(0, 6);
+
+    // const projects = repositories.slice(0, 5);
+    // console.log(projects);
+
+    // console.log(repositories);
 
     // TODO: Add featured projects
 
@@ -115,12 +210,12 @@ export default class Projects extends Component {
         <p>{"// Featured projects"}</p>
 
         <h2>Latest GitHub repos</h2>
-        {loadingProjectsGitHub ? (
-          <p>Loading...</p>
-        ) : (
+        {projects.length >= 1 ? (
           <div className="gh-projectsholders">
-            {this.renderProjectsGitHub()}
+            {this.renderProjectsGitHub(projects)}
           </div>
+        ) : (
+          <p>Loading...</p>
         )}
       </div>
     );
