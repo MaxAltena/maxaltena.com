@@ -25,6 +25,7 @@ nav {
     align-items: center;
 
     color: black;
+    background: white;
     text-decoration: none;
     font-size: 25px;
     font-weight: 800;
@@ -151,6 +152,7 @@ nav {
     max-width: 500px;
     display: flex;
     flex-direction: column;
+    background: white;
 
     > .row {
       height: 50px;
@@ -161,6 +163,7 @@ nav {
       > #close {
         width: 50px;
         height: 50px;
+        background: white;
 
         display: flex;
         justify-content: center;
@@ -204,6 +207,7 @@ nav {
       > a#logo {
         flex-grow: 1;
         width: auto;
+        background: white;
         > img {
           width: auto;
           height: 30px;
@@ -216,10 +220,12 @@ nav {
       display: flex;
       flex-direction: column;
       flex-grow: 1;
+      background: white;
 
       > div:not(.divider-h):not(.divider-v) {
         height: 50px;
         flex-grow: 1;
+        background: white;
 
         > a {
           &:hover,

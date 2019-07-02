@@ -14,24 +14,24 @@ div#background {
   }
 
   .size1 {
-    width: 4vw;
-    height: 4vw;
+    width: 5vw;
+    height: 5vw;
   }
   .size2 {
-    width: 6vw;
-    height: 6vw;
+    width: 7vw;
+    height: 7vw;
   }
   .size3 {
-    width: 8vw;
-    height: 8vw;
+    width: 9vw;
+    height: 9vw;
   }
   .size4 {
-    width: 10vw;
-    height: 10vw;
+    width: 11vw;
+    height: 11vw;
   }
   .size5 {
-    width: 12vw;
-    height: 12vw;
+    width: 13vw;
+    height: 13vw;
   }
 
   .rotation1 {
@@ -70,35 +70,35 @@ div#background {
     border: 6px solid black;
 
     &.size1 {
-      $size: 4vw;
+      $size: 3vw;
       border-top-left-radius: $size * 2;
       border-top-right-radius: $size * 2;
       height: $size;
       width: $size * 2;
     }
     &.size2 {
-      $size: 5.5vw;
+      $size: 4vw;
       border-top-left-radius: $size * 2;
       border-top-right-radius: $size * 2;
       height: $size;
       width: $size * 2;
     }
     &.size3 {
-      $size: 7vw;
+      $size: 5vw;
       border-top-left-radius: $size * 2;
       border-top-right-radius: $size * 2;
       height: $size;
       width: $size * 2;
     }
     &.size4 {
-      $size: 8.5vw;
+      $size: 6vw;
       border-top-left-radius: $size * 2;
       border-top-right-radius: $size * 2;
       height: $size;
       width: $size * 2;
     }
     &.size5 {
-      $size: 10vw;
+      $size: 7vw;
       border-top-left-radius: $size * 2;
       border-top-right-radius: $size * 2;
       height: $size;
