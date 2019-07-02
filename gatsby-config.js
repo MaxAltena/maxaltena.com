@@ -126,8 +126,7 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sharp",
     "gatsby-plugin-sass",
-    "gatsby-plugin-offline",
-    "gatsby-plugin-no-sourcemaps",
-    "gatsby-transformer-sharp"
+    "gatsby-plugin-offline"
+    // "gatsby-plugin-no-sourcemaps"
   ]
 };
