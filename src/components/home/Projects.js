@@ -26,7 +26,7 @@ export default class Projects extends Component {
       this.setState({ takingLong: true });
     }, 2500);
 
-    this.getProjects();
+    // this.getProjects();
   }
 
   componentWillUnmount() {
@@ -51,17 +51,6 @@ export default class Projects extends Component {
   };
 
   getProjectsFromLocalStorage = () => {
-    console.log("ls gh-orgs: ", localStorage.getItem("gh-orgs"));
-    console.log("ls gh-repos: ", localStorage.getItem("gh-repos"));
-    console.log(
-      "ls gh-orgs (PARSED): ",
-      JSON.parse(localStorage.getItem("gh-orgs"))
-    );
-    console.log(
-      "ls gh-repos (PARSED): ",
-      JSON.parse(localStorage.getItem("gh-repos"))
-    );
-
     const organisations = JSON.parse(localStorage.getItem("gh-orgs") || "[]");
     const repositories = JSON.parse(localStorage.getItem("gh-repos") || "[]");
 
