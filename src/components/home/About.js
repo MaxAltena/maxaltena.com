@@ -62,7 +62,7 @@ export default class About extends Component {
     const { glitched } = this.state;
 
     return (
-      <div id="About">
+      <section id="About">
         <a className="anchor" id="about" />
         <h1 className="about-baffle">About</h1>
         <div>
@@ -96,7 +96,7 @@ export default class About extends Component {
             )}
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 }

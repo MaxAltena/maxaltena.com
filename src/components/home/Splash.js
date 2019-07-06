@@ -7,8 +7,8 @@ export default class Splash extends Component {
   }
 
   doBaffle = () => {
-    baffle(".home-baffle", { characters: "█▓▒░", speed: 150 }).reveal(2500);
-    baffle(".home-baffle-long", {
+    baffle(".splash-baffle", { characters: "█▓▒░", speed: 150 }).reveal(2500);
+    baffle(".splash-baffle-long", {
       characters: "█▓▒░",
       speed: 300,
       duration: 5000
@@ -17,15 +17,15 @@ export default class Splash extends Component {
 
   render() {
     return (
-      <div id="Splash">
+      <section id="Splash">
         <div className="cat">
-          <h1 className="home-baffle">Hey!</h1>
+          <h1 className="splash-baffle">Hey!</h1>
           <p>
-            My name is <span className="home-baffle bold">Max Altena</span>.
+            My name is <span className="splash-baffle bold">Max Altena</span>.
           </p>
           <p>Ready to discover who I am and what I do?</p>
           <a href="#about" className="button">
-            <span className="home-baffle-long">Who&apos;s Max?</span>
+            <span className="splash-baffle-long">Who&apos;s Max?</span>
             <img
               src={require("../../assets/icons/arrow.svg")}
               alt="→"
@@ -33,7 +33,7 @@ export default class Splash extends Component {
             />
           </a>
         </div>
-      </div>
+      </section>
     );
   }
 }

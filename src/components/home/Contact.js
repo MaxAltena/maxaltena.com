@@ -48,7 +48,7 @@ export default class Contact extends Component {
 
   render() {
     return (
-      <div id="Contact">
+      <section id="Contact">
         <a className="anchor" id="contact" />
         <div className="cat">
           <h1 className="contact-baffle">Contact</h1>
@@ -84,7 +84,7 @@ export default class Contact extends Component {
             </a>
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 }

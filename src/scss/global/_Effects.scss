@@ -1,29 +1,3 @@
-.throb {
-  animation: throb 2s infinite;
-  display: inline-block !important;
-}
-
-@keyframes throb {
-  0% {
-    transform: scale(0.75);
-  }
-  20% {
-    transform: scale(1);
-  }
-  40% {
-    transform: scale(0.75);
-  }
-  60% {
-    transform: scale(1);
-  }
-  80% {
-    transform: scale(0.75);
-  }
-  100% {
-    transform: scale(0.75);
-  }
-}
-
 .blink {
   animation: blink 1s step-start infinite;
 }
@@ -121,67 +95,56 @@ span.glitch {
   }
 
   10% {
-    -webkit-transform: none;
     transform: none;
     opacity: 1;
   }
 
   27% {
-    -webkit-transform: none;
     transform: none;
     opacity: 1;
   }
 
   30% {
-    -webkit-transform: skew(0.8deg, -0.1deg);
     transform: skew(0.8deg, -0.1deg);
     opacity: 0.75;
   }
 
   35% {
-    -webkit-transform: none;
     transform: none;
     opacity: 1;
   }
 
   52% {
-    -webkit-transform: none;
     transform: none;
     opacity: 1;
   }
 
   55% {
-    -webkit-transform: skew(-1deg, 0.2deg);
     transform: skew(-1deg, 0.2deg);
     opacity: 0.75;
   }
 
   50% {
-    -webkit-transform: none;
     transform: none;
     opacity: 1;
   }
 
   72% {
-    -webkit-transform: none;
     transform: none;
     opacity: 1;
   }
 
   75% {
-    -webkit-transform: skew(0.4deg, 1deg);
     transform: skew(0.4deg, 1deg);
     opacity: 0.75;
   }
 
   80% {
-    -webkit-transform: none;
     transform: none;
     opacity: 1;
   }
 
   100% {
-    -webkit-transform: none;
     transform: none;
     opacity: 1;
   }
@@ -189,79 +152,66 @@ span.glitch {
 
 @-webkit-keyframes glitch2 {
   0% {
-    -webkit-transform: none;
     transform: none;
     opacity: 1;
   }
 
   7% {
-    -webkit-transform: skew(-0.7deg, -5deg);
     transform: skew(-0.7deg, -5deg);
     opacity: 0.75;
   }
 
   10% {
-    -webkit-transform: none;
     transform: none;
     opacity: 1;
   }
 
   27% {
-    -webkit-transform: none;
     transform: none;
     opacity: 1;
   }
 
   30% {
-    -webkit-transform: skew(0.6deg, -0.2deg);
     transform: skew(0.6deg, -0.2deg);
     opacity: 0.5;
   }
 
   35% {
-    -webkit-transform: none;
     transform: none;
     opacity: 1;
   }
 
   52% {
-    -webkit-transform: none;
     transform: none;
     opacity: 1;
   }
 
   55% {
-    -webkit-transform: skew(-45deg, 5deg);
     transform: skew(-45deg, 5deg);
     opacity: 0.75;
   }
 
   50% {
-    -webkit-transform: none;
     transform: none;
     opacity: 1;
   }
 
   72% {
-    -webkit-transform: none;
     transform: none;
     opacity: 1;
   }
 
   75% {
-    -webkit-transform: skew(0.5deg, 12deg);
     transform: skew(0.5deg, 12deg);
     opacity: 0.25;
   }
 
   80% {
-    -webkit-transform: none;
     transform: none;
     opacity: 1;
   }
 
   100% {
-    -webkit-transform: none;
     transform: none;
     opacity: 1;
   }
@@ -269,79 +219,66 @@ span.glitch {
 
 @keyframes glitch2 {
   0% {
-    -webkit-transform: none;
     transform: none;
     opacity: 1;
   }
 
   7% {
-    -webkit-transform: skew(-0.7deg, -5deg);
     transform: skew(-0.7deg, -5deg);
     opacity: 0.75;
   }
 
   10% {
-    -webkit-transform: none;
     transform: none;
     opacity: 1;
   }
 
   27% {
-    -webkit-transform: none;
     transform: none;
     opacity: 1;
   }
 
   30% {
-    -webkit-transform: skew(0.6deg, -0.2deg);
     transform: skew(0.6deg, -0.2deg);
     opacity: 0.5;
   }
 
   35% {
-    -webkit-transform: none;
     transform: none;
     opacity: 1;
   }
 
   52% {
-    -webkit-transform: none;
     transform: none;
     opacity: 1;
   }
 
   55% {
-    -webkit-transform: skew(-15deg, 0.5deg);
     transform: skew(-15deg, 0.5deg);
     opacity: 0.75;
   }
 
   50% {
-    -webkit-transform: none;
     transform: none;
     opacity: 1;
   }
 
   72% {
-    -webkit-transform: none;
     transform: none;
     opacity: 1;
   }
 
   75% {
-    -webkit-transform: skew(0.5deg, 12deg);
     transform: skew(0.5deg, 12deg);
     opacity: 0.25;
   }
 
   80% {
-    -webkit-transform: none;
     transform: none;
     opacity: 1;
   }
 
   100% {
-    -webkit-transform: none;
     transform: none;
     opacity: 1;
   }

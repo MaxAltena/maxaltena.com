@@ -251,7 +251,7 @@ export default class Skills extends Component {
       height / 5 - height / 25 <= 80 ? height / 5 - height / 25 : 80;
 
     return (
-      <div id="Skills">
+      <section id="Skills">
         <a className="anchor" id="skills" />
         <h1 className="skills-baffle">Skills</h1>
         {/* <div className="options">
@@ -279,7 +279,7 @@ export default class Skills extends Component {
             </div>
           )}
         </Measure>
-      </div>
+      </section>
     );
   }
 }
