@@ -20,36 +20,43 @@ export default class Skills extends Component {
           items: [
             {
               name: "HTML",
+              image: require("../../assets/images/skills/html.png"),
               x: 0,
               y: 0
             },
             {
               name: "CSS",
+              image: require("../../assets/images/skills/css.png"),
               x: 0,
               y: 0
             },
             {
-              name: "SCSS",
+              name: "SASS",
+              image: require("../../assets/images/skills/sass.png"),
               x: 0,
               y: 0
             },
             {
               name: "JavaScript",
+              image: require("../../assets/images/skills/javascript.png"),
               x: 0,
               y: 0
             },
             {
               name: "PHP",
+              image: require("../../assets/images/skills/php.png"),
               x: 0,
               y: 0
             },
             {
               name: "Swift",
+              image: require("../../assets/images/skills/swift.png"),
               x: 0,
               y: 0
             },
             {
               name: "Java",
+              image: require("../../assets/images/skills/java.png"),
               x: 0,
               y: 0
             }
@@ -60,16 +67,19 @@ export default class Skills extends Component {
           items: [
             {
               name: "MySQL",
+              image: require("../../assets/images/skills/mysql.png"),
               x: 0,
               y: 0
             },
             {
               name: "MongoDB",
+              image: require("../../assets/images/skills/mongodb.png"),
               x: 0,
               y: 0
             },
             {
               name: "Firebase",
+              image: require("../../assets/images/skills/firebase.png"),
               x: 0,
               y: 0
             }
@@ -80,11 +90,13 @@ export default class Skills extends Component {
           items: [
             {
               name: "Gatsby",
+              image: require("../../assets/images/skills/gatsby.png"),
               x: 0,
               y: 0
             },
             {
               name: "React Native",
+              image: require("../../assets/images/skills/reactnative.png"),
               x: 0,
               y: 0
             }
@@ -95,11 +107,13 @@ export default class Skills extends Component {
           items: [
             {
               name: "React",
+              image: require("../../assets/images/skills/react.png"),
               x: 0,
               y: 0
             },
             {
               name: "Redux",
+              image: require("../../assets/images/skills/redux.png"),
               x: 0,
               y: 0
             }
@@ -110,16 +124,19 @@ export default class Skills extends Component {
           items: [
             {
               name: "Figma",
+              image: require("../../assets/images/skills/figma.png"),
               x: 0,
               y: 0
             },
             {
               name: "Sketch",
+              image: require("../../assets/images/skills/sketch.png"),
               x: 0,
               y: 0
             },
             {
               name: "Adobe Suite",
+              image: require("../../assets/images/skills/adobe.png"),
               x: 0,
               y: 0
             }
@@ -130,16 +147,19 @@ export default class Skills extends Component {
           items: [
             {
               name: "GitHub",
+              image: require("../../assets/images/skills/github.png"),
               x: 0,
               y: 0
             },
             {
               name: "CircleCI",
+              image: require("../../assets/images/skills/circleci.png"),
               x: 0,
               y: 0
             },
             {
               name: "Heroku",
+              image: require("../../assets/images/skills/heroku.png"),
               x: 0,
               y: 0
             }
@@ -150,21 +170,25 @@ export default class Skills extends Component {
           items: [
             {
               name: "Materialize",
+              image: require("../../assets/images/skills/materialize.png"),
               x: 0,
               y: 0
             },
             {
               name: "Git",
+              image: require("../../assets/images/skills/git.png"),
               x: 0,
               y: 0
             },
             {
               name: "Node",
+              image: require("../../assets/images/skills/node.png"),
               x: 0,
               y: 0
             },
             {
               name: "Yarn",
+              image: require("../../assets/images/skills/yarn.png"),
               x: 0,
               y: 0
             },
@@ -214,7 +238,10 @@ export default class Skills extends Component {
       return skill.items.map((item, i) => {
         return (
           <Draggable key={i} bounds="parent" grid={[5, 5]}>
-            <div className={`drag cat-${skill.title}`}>{item.name}</div>
+            <div className={`drag cat-${skill.title}`}>
+              {item.image && <img src={item.image} alt={item.name} />}
+              {item.name && <span>{item.name}</span>}
+            </div>
           </Draggable>
         );
       });
@@ -226,7 +253,8 @@ export default class Skills extends Component {
       return skill.items.map((item, i) => {
         return (
           <div key={i} className={`skill-item cat-${skill.title}`}>
-            {item.name}
+            {item.image && <img src={item.image} alt={item.name} />}
+            {item.name && <span>{item.name}</span>}
           </div>
         );
       });
