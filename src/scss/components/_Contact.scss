@@ -45,7 +45,7 @@
       z-index: -1;
     }
 
-    > h1 {
+    > h2 {
       text-align: center;
       font-size: 2em;
       margin: 10px 25px;
@@ -111,10 +111,10 @@
       }
       > div {
         width: 100%;
-        justify-content: space-around;
+        justify-content: center;
         > a {
           padding: 0.5em;
-          margin: 0;
+          margin: 0 4vw;
           > img {
             width: 25px;
             height: 25px;

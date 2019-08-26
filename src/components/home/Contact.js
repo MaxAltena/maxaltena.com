@@ -51,7 +51,7 @@ export default class Contact extends Component {
       <section id="Contact">
         <a className="anchor" id="contact" />
         <div className="cat">
-          <h1 className="contact-baffle">Contact</h1>
+          <h2 className="contact-baffle">Contact</h2>
           <p>Interested in contacting me?</p>
           <p>Wanting to know what I am up to?</p>
           <div>

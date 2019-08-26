@@ -10,23 +10,6 @@
   min-height: 50vh;
   height: 100%;
 
-  > h1 {
-    text-align: center;
-    position: relative;
-    width: auto;
-    margin-bottom: 25px;
-
-    &::after {
-      content: " ";
-      background: black;
-      position: absolute;
-      bottom: -25%;
-      left: 25%;
-      width: 50%;
-      height: 3px;
-    }
-  }
-
   .options {
     width: 86%;
     height: auto;

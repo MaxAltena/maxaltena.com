@@ -1,7 +1,10 @@
 /* eslint-disable camelcase */
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://maxaltena.com/"
+    siteUrl: "https://maxaltena.com/",
+    title: "Max Altena",
+    description: "The website of Max Altena",
+    author: "@maxaltena"
   },
   plugins: [
     {
@@ -55,7 +58,7 @@ module.exports = {
         ],
         thanks: ["Gatsby", "Node", "Yarn"],
         site: {
-          "Last update": "25 June 2019",
+          "Last update": "25th of August 2019",
           Standards: "JavaScript, ES6",
           Components: "React",
           Softwares: "Visual Studio Code"

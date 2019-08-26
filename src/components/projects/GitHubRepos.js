@@ -186,7 +186,7 @@ export default class GitHubRepos extends Component {
 
     return (
       <>
-        <h2 className="projects-baffle-longer">Latest GitHub repos</h2>
+        <h3 className="projects-baffle-longer">Latest GitHub repos</h3>
         {projects.length >= 1 ? (
           <div className="gh-projectsholders">
             {this.renderProjectsGitHub(projects)}

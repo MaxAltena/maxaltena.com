@@ -64,12 +64,12 @@ export default class About extends Component {
     return (
       <section id="About">
         <a className="anchor" id="about" />
-        <h1 className="about-baffle">About</h1>
+        <h2 className="about-baffle">About</h2>
         <div>
           <div className="aboutText">
-            <h2>
+            <h3>
               I am <span className="about-baffle-longer bold">Max Altena</span>
-            </h2>
+            </h3>
             <p>A student living in Best, The Netherlands</p>
             <p>Currently studying ICT & Media Design at Fontys</p>
             <p>Full-stack web developer with 3 years of experience</p>
@@ -78,7 +78,12 @@ export default class About extends Component {
             <p>Busy most of the time with personal or team projects</p>
             <p>
               Some people call me a &quot;
-              <span className={glitched ? "glitch" : ""}>Robot</span>
+              <span
+                className={glitched ? "glitch" : ""}
+                onMouseOver={() => this.glitch()}
+              >
+                Robot
+              </span>
               &quot;
             </p>
           </div>

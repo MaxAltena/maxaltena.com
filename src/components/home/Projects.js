@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import baffle from "baffle";
 
-import { GitHubRepos } from "../projects";
+import { Projects as ProjectList, GitHubRepos } from "../projects";
 
 export default class Projects extends Component {
   constructor(props) {
@@ -44,14 +44,12 @@ export default class Projects extends Component {
   };
 
   render() {
-    // TODO: Add featured projects
-
     return (
       <section id="Projects">
         <a className="anchor" id="projects" />
-        <h1 className="projects-baffle">Projects</h1>
-        <p>{"// Coming soon: Featured projects"}</p>
+        <h2 className="projects-baffle">Projects</h2>
 
+        <ProjectList />
         <GitHubRepos username="MaxAltena" />
       </section>
     );

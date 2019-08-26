@@ -44,14 +44,15 @@ main {
   }
 }
 
-#About h1,
-#Skills h1,
-#Projects h1 {
+#About h2,
+#Skills h2,
+#Projects h2 {
   text-align: center;
   position: relative;
   width: auto;
-  margin-bottom: 25px;
-  font-size: 2em;
+  font-size: 2.5em;
+  line-height: 1.25em;
+  margin-bottom: 50px;
 
   &::after {
     content: " ";

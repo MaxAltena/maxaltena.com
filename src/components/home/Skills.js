@@ -253,7 +253,7 @@ export default class Skills extends Component {
     return (
       <section id="Skills">
         <a className="anchor" id="skills" />
-        <h1 className="skills-baffle">Skills</h1>
+        <h2 className="skills-baffle">Skills</h2>
         {/* <div className="options">
           <div className="left">search // tags</div>
           <div className="right">showall // refresh</div>

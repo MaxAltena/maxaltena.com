@@ -44,8 +44,16 @@ export default class SEO extends Component {
             content: description
           },
           {
+            property: "og:url",
+            content: "https://maxaltena.com/"
+          },
+          {
             property: "og:type",
             content: "website"
+          },
+          {
+            property: "og:image",
+            content: require("../../assets/images/picture_max.jpg")
           },
           {
             name: "twitter:card",
