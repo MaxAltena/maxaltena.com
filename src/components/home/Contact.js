@@ -33,17 +33,11 @@ export default class Contact extends Component {
   };
 
   doBaffle = () => {
-    baffle(".contact-baffle", { characters: "█▓▒░", speed: 150 }).reveal(2500);
-    baffle(".contact-baffle-longer", {
+    baffle(".contact-baffle", {
       characters: "█▓▒░",
       speed: 150,
-      duration: 3000
-    }).reveal(3000);
-    baffle(".contact-baffle-long", {
-      characters: "█▓▒░",
-      speed: 300,
-      duration: 5000
-    }).reveal(5000);
+      duration: 1500
+    }).reveal(1500);
   };
 
   render() {
@@ -60,7 +54,11 @@ export default class Contact extends Component {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={require("../../assets/icons/mail.svg")} alt="Mail" />
+              <img
+                src={require("../../assets/icons/mail.svg")}
+                title="Mail"
+                alt="Mail"
+              />
             </a>
             <a
               href="https://github.com/MaxAltena"
@@ -69,6 +67,7 @@ export default class Contact extends Component {
             >
               <img
                 src={require("../../assets/icons/github.svg")}
+                title="GitHub"
                 alt="GitHub"
               />
             </a>
@@ -79,6 +78,7 @@ export default class Contact extends Component {
             >
               <img
                 src={require("../../assets/icons/linkedin.svg")}
+                title="LinkedIn"
                 alt="LinkedIn"
               />
             </a>

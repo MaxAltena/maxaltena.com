@@ -41,19 +41,21 @@
     > h1 {
       text-align: center;
       font-size: 2em;
-      margin: 10px 25px;
+      margin: 10px 25px 0 25px;
+      > span:not(.splash-baffle) {
+        font-size: 0.5em;
+        font-weight: normal;
+        display: block;
+        margin: 10px 5px;
+        text-align: center;
+        margin-bottom: 0px;
+      }
     }
 
     > p {
       margin: 10px 5px;
       text-align: center;
-
-      &:nth-of-type(1) {
-        margin-bottom: 0px;
-      }
-      &:nth-last-of-type(1) {
-        margin-bottom: 20px;
-      }
+      margin-bottom: 20px;
     }
 
     > a {

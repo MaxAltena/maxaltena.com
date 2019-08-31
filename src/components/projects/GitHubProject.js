@@ -21,7 +21,11 @@ const GitHubProject = ({
       className="GitHubProject"
     >
       <div className="name">
-        <img src={require("../../assets/icons/github-repo.svg")} alt="Repo" />
+        <img
+          src={require("../../assets/icons/github-repo.svg")}
+          title="Repo"
+          alt="Repo"
+        />
         <h3>
           <span className="normal">{owner}</span>
           <span className="bold">/{name}</span>
@@ -42,6 +46,7 @@ const GitHubProject = ({
                 {watchers}{" "}
                 <img
                   src={require("../../assets/icons/github-watch.svg")}
+                  title="Watch"
                   alt="Watch"
                 />
               </div>
@@ -51,6 +56,7 @@ const GitHubProject = ({
                 {stargazes}{" "}
                 <img
                   src={require("../../assets/icons/github-star.svg")}
+                  title="Star"
                   alt="Star"
                 />
               </div>
@@ -60,6 +66,7 @@ const GitHubProject = ({
                 {forks}{" "}
                 <img
                   src={require("../../assets/icons/github-fork.svg")}
+                  title="Fork"
                   alt="Fork"
                 />
               </div>

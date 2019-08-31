@@ -8,6 +8,10 @@ export default class Skills extends Component {
   constructor(props) {
     super(props);
 
+    // TODO: Redo Skills
+    // TODO: Create descriptions for each skill to expand on the topic
+    // TODO: check for negative skills
+
     this.state = {
       scrolledTo: false,
       dimensions: {
@@ -169,8 +173,7 @@ export default class Skills extends Component {
           title: "Tools",
           items: [
             {
-              name: "Materialize",
-              image: require("../../assets/images/skills/materialize.png"),
+              name: "CSS frameworks",
               x: 0,
               y: 0
             },
@@ -225,12 +228,16 @@ export default class Skills extends Component {
   };
 
   doBaffle = () => {
-    baffle(".skills-baffle", { characters: "█▓▒░", speed: 150 }).reveal(2500);
-    baffle(".skills-baffle-longer", {
+    baffle(".skills-baffle", {
       characters: "█▓▒░",
       speed: 150,
-      duration: 3000
-    }).reveal(3000);
+      duration: 1500
+    }).reveal(1500);
+    baffle(".skills-baffle-long", {
+      characters: "█▓▒░",
+      speed: 150,
+      duration: 2500
+    }).reveal(2500);
   };
 
   renderSkills = () => {
@@ -239,7 +246,9 @@ export default class Skills extends Component {
         return (
           <Draggable key={i} bounds="parent" grid={[5, 5]}>
             <div className={`drag cat-${skill.title}`}>
-              {item.image && <img src={item.image} alt={item.name} />}
+              {item.image && (
+                <img src={item.image} title={item.name} alt={item.name} />
+              )}
               {item.name && <span>{item.name}</span>}
             </div>
           </Draggable>
@@ -253,7 +262,9 @@ export default class Skills extends Component {
       return skill.items.map((item, i) => {
         return (
           <div key={i} className={`skill-item cat-${skill.title}`}>
-            {item.image && <img src={item.image} alt={item.name} />}
+            {item.image && (
+              <img src={item.image} title={item.name} alt={item.name} />
+            )}
             {item.name && <span>{item.name}</span>}
           </div>
         );

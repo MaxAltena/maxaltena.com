@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
 import axios from "axios";
+import baffle from "baffle";
 
 import { Loading } from "../common";
 import { GitHubProject } from "../projects";
@@ -17,17 +19,45 @@ export default class GitHubRepos extends Component {
       username: this.props.username,
       takingLong: false,
       organisations: [],
-      repositories: []
+      repositories: [],
+      scrolledTo: false
     };
   }
 
   componentDidMount() {
+    this.scrollReveal();
+    window.addEventListener("scroll", this.scrollReveal);
+
     setTimeout(() => {
       this.setState({ takingLong: true });
     }, 2500);
 
     this.getProjects();
   }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.scrollReveal);
+  }
+
+  scrollReveal = () => {
+    const height = window.innerHeight;
+    const scroll = window.scrollY;
+    // eslint-disable-next-line react/no-find-dom-node
+    const offsetTop = ReactDOM.findDOMNode(this).offsetTop;
+
+    if (!this.state.scrolledTo && height + scroll > offsetTop) {
+      this.doBaffle();
+      this.setState({ scrolledTo: true });
+    }
+  };
+
+  doBaffle = () => {
+    baffle(".projects-github-baffle", {
+      characters: "█▓▒░",
+      speed: 150,
+      duration: 1500
+    }).reveal(1500);
+  };
 
   getProjects = () => {
     const ghUpdate = localStorage.getItem("gh-update");
@@ -186,7 +216,7 @@ export default class GitHubRepos extends Component {
 
     return (
       <>
-        <h3 className="projects-baffle-longer">Latest GitHub repos</h3>
+        <h3 className="projects-github-baffle">Latest GitHub repos</h3>
         {projects.length >= 1 ? (
           <div className="gh-projectsholders">
             {this.renderProjectsGitHub(projects)}
@@ -194,9 +224,7 @@ export default class GitHubRepos extends Component {
         ) : (
           <>
             <Loading />
-            {takingLong ? (
-              <div>It&apos;s taking longer than expected...</div>
-            ) : null}
+            {takingLong && <div>It&apos;s taking longer than expected...</div>}
           </>
         )}
       </>

@@ -50,12 +50,16 @@ export default class About extends Component {
   };
 
   doBaffle = () => {
-    baffle(".about-baffle", { characters: "█▓▒░", speed: 150 }).reveal(2500);
-    baffle(".about-baffle-longer", {
+    baffle(".about-baffle", {
       characters: "█▓▒░",
       speed: 150,
-      duration: 3000
-    }).reveal(3000);
+      duration: 1500
+    }).reveal(1500);
+    baffle(".about-baffle-long", {
+      characters: "█▓▒░",
+      speed: 150,
+      duration: 2500
+    }).reveal(2500);
   };
 
   render() {
@@ -68,7 +72,7 @@ export default class About extends Component {
         <div>
           <div className="aboutText">
             <h3>
-              I am <span className="about-baffle-longer bold">Max Altena</span>
+              I am <span className="about-baffle-long bold">Max Altena</span>
             </h3>
             <p>A student living in Best, The Netherlands</p>
             <p>Currently studying ICT & Media Design at Fontys</p>
@@ -91,12 +95,14 @@ export default class About extends Component {
             {glitched ? (
               <img
                 src={require("../../assets/images/picture_robot.jpg")}
-                alt="Robot"
+                title="Max Altena as a robot"
+                alt="Photo of Max Altena with a robot emoji over his face"
               />
             ) : (
               <img
                 src={require("../../assets/images/picture_max.jpg")}
-                alt="Max Altena"
+                title="Max Altena"
+                alt="Photo of Max Altena"
               />
             )}
           </div>

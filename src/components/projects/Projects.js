@@ -91,7 +91,11 @@ export default class Projects extends Component {
       return (
         <div key={i} className={`Project ${left ? "left" : "right"}`}>
           <div className="img">
-            <img src={project.image} alt={`${project.title} image`} />
+            <img
+              src={project.image}
+              title={project.title}
+              alt={`${project.title} image`}
+            />
             {(project.login || project.view || project.github) && (
               <div className="overlay">
                 {project.login && (
@@ -99,14 +103,16 @@ export default class Projects extends Component {
                     <span>
                       <img
                         src={require("../../assets/vectors/person.svg")}
-                        alt=""
+                        title="Username"
+                        alt="User"
                       />
                       {project.login.username}
                     </span>
                     <span>
                       <img
                         src={require("../../assets/vectors/lock.svg")}
-                        alt=""
+                        title="Password"
+                        alt="Lock"
                       />
                       {project.login.password}
                     </span>
@@ -138,7 +144,7 @@ export default class Projects extends Component {
               </div>
             )}
           </div>
-          <ProjectDetails project={project} />
+          <ProjectDetails project={project} number={i} />
         </div>
       );
     });

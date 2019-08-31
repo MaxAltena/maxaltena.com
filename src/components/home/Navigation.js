@@ -34,7 +34,8 @@ export default class Navigation extends Component {
                   <a href="#">
                     <img
                       src={require("../../assets/vectors/logo.svg")}
-                      alt="Logo"
+                      title="Logo"
+                      alt="Logo of Max Altena"
                     />
                   </a>
                 </div>
@@ -66,6 +67,7 @@ export default class Navigation extends Component {
                     >
                       <img
                         src={require("../../assets/icons/github.svg")}
+                        title="GitHub"
                         alt="GitHub"
                       />
                     </a>
@@ -79,6 +81,7 @@ export default class Navigation extends Component {
                     >
                       <img
                         src={require("../../assets/icons/linkedin.svg")}
+                        title="LinkedIn"
                         alt="LinkedIn"
                       />
                     </a>
@@ -117,7 +120,8 @@ export default class Navigation extends Component {
                   >
                     <img
                       src={require("../../assets/vectors/logo.svg")}
-                      alt="Logo"
+                      title="Logo"
+                      alt="Logo of Max Altena"
                     />
                   </a>
                 </div>
@@ -169,6 +173,7 @@ export default class Navigation extends Component {
                     >
                       <img
                         src={require("../../assets/icons/github.svg")}
+                        title="GitHub"
                         alt="GitHub"
                       />
                     </a>
@@ -182,6 +187,7 @@ export default class Navigation extends Component {
                     >
                       <img
                         src={require("../../assets/icons/linkedin.svg")}
+                        title="LinkedIn"
                         alt="LinkedIn"
                       />
                     </a>

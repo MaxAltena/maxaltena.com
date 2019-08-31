@@ -35,12 +35,11 @@ export default class Projects extends Component {
   };
 
   doBaffle = () => {
-    baffle(".projects-baffle", { characters: "█▓▒░", speed: 150 }).reveal(2500);
-    baffle(".projects-baffle-longer", {
+    baffle(".projects-baffle", {
       characters: "█▓▒░",
       speed: 150,
-      duration: 3000
-    }).reveal(3000);
+      duration: 1500
+    }).reveal(1500);
   };
 
   render() {

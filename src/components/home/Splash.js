@@ -7,28 +7,35 @@ export default class Splash extends Component {
   }
 
   doBaffle = () => {
-    baffle(".splash-baffle", { characters: "█▓▒░", speed: 150 }).reveal(2500);
+    baffle(".splash-baffle", {
+      characters: "█▓▒░",
+      speed: 150,
+      duration: 1500
+    }).reveal(1500);
     baffle(".splash-baffle-long", {
       characters: "█▓▒░",
-      speed: 300,
-      duration: 5000
-    }).reveal(5000);
+      speed: 150,
+      duration: 3000
+    }).reveal(3000);
   };
 
   render() {
     return (
       <section id="Splash">
         <div className="cat">
-          <h1 className="splash-baffle">Hey!</h1>
-          <p>
-            My name is <span className="splash-baffle bold">Max Altena</span>.
-          </p>
+          <h1>
+            <span className="splash-baffle">Hey!</span>
+            <span>
+              My name is <span className="splash-baffle bold">Max Altena</span>.
+            </span>
+          </h1>
           <p>Ready to discover who I am and what I do?</p>
           <a href="#about" className="button">
             <span className="splash-baffle-long">Who&apos;s Max?</span>
             <img
               src={require("../../assets/icons/arrow.svg")}
-              alt="→"
+              title="Arrow"
+              alt="Arrow to the right"
               className="blink"
             />
           </a>
