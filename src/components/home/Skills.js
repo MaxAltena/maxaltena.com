@@ -11,6 +11,8 @@ export default class Skills extends Component {
     // TODO: Redo Skills
     // TODO: Create descriptions for each skill to expand on the topic
     // TODO: check for negative skills
+    // TODO: sub list
+    // TODO: icon
 
     this.state = {
       scrolledTo: false,
