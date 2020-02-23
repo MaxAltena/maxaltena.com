@@ -11,11 +11,7 @@
 		"browser": true,
 		"es6": true
 	},
-	"extends": [
-		"eslint:recommended",
-		"plugin:react/recommended",
-		"plugin:prettier/recommended"
-	],
+	"extends": ["eslint:recommended", "plugin:react/recommended", "plugin:prettier/recommended"],
 	"globals": {
 		"require": "writable",
 		"module": "writable"
@@ -23,17 +19,6 @@
 	"plugins": ["react", "prettier"],
 	"rules": {
 		"linebreak-style": ["warn", "unix"],
-		"no-console": "warn",
-		"camelcase": "warn",
-		"no-unused-vars": "warn",
-		"no-case-declarations": "warn",
-		"no-undef": "warn",
-		"no-useless-escape": "warn",
-		"no-redeclare": "warn",
-		"no-prototype-builtins": "warn",
-		"no-empty": "warn",
-		"no-constant-condition": "warn",
-		"no-func-assign": "warn",
 		"prettier/prettier": [
 			"error",
 			{
@@ -44,7 +29,7 @@
 				"printWidth": 120,
 				"semi": true,
 				"singleQuote": false,
-				"tabWidth": 2,
+				"tabWidth": 4,
 				"useTabs": true
 			}
 		]

@@ -13,7 +13,7 @@
 	],
 	"private": true,
 	"author": "Max Altena <Max@MaxAltena.com>",
-	"license": "MIT",
+	"license": "UNLICENSED",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/MaxAltena/maxaltena.com.git"
@@ -24,9 +24,13 @@
 	"homepage": "https://maxaltena.com/",
 	"scripts": {
 		"build": "gatsby build",
-		"develop": "gatsby develop --port 8008",
-		"start": "npm run develop",
-		"serve": "gatsby serve"
+		"dev": "gatsby develop --port 8008",
+		"start": "npm run dev",
+		"serve": "gatsby serve",
+		"lint": "eslint .",
+		"lint:fix": "eslint --fix .",
+		"prettier": "prettier **/*",
+		"prettier:fix": "prettier --write **/*"
 	},
 	"dependencies": {
 		"axios": "^0.19.2",
@@ -65,12 +69,24 @@
 		"eslint-plugin-react": "^7.18.3",
 		"ftp-deploy": "^2.3.6",
 		"node-sass": "^4.13.1",
-		"prettier": "^1.19.1",
-		"prettier-eslint": "^9.0.1"
+		"prettier": "^1.19.1"
 	},
 	"browserslist": [
-		">0.2%",
-		"not dead",
-		"not op_mini all"
-	]
+		"last 1 version",
+		"> 0.25%",
+		"maintained node versions",
+		"not dead"
+	],
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*": "npm run prettier:fix",
+		"*.js": [
+			"npm run prettier:fix",
+			"npm run lint:fix"
+		]
+	}
 }
