@@ -77,6 +77,11 @@
 		"maintained node versions",
 		"not dead"
 	],
+	"engines": {
+		"node": ">= 8.17.0",
+		"npm": ">= 6.12.1",
+		"yarn": ">= 1.19.1"
+	},
 	"husky": {
 		"hooks": {
 			"pre-commit": "lint-staged"
