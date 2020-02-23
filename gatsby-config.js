@@ -133,12 +133,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-static-folders",
       options: {
-        folders: [
-          "./vendors",
-          "./css",
-          "./fonts",
-          "./images"
-        ]
+        folders: ["./vendors", "./css", "./fonts", "./images"]
       }
     },
     "gatsby-plugin-sitemap",

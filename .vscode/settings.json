@@ -12,11 +12,7 @@
   "eslint.autoFixOnSave": true,
   "eslint.enable": true,
   "eslint.options": {
-    "extensions": [
-      ".html",
-      ".js",
-      ".jsx"
-    ]
+    "extensions": [".html", ".js", ".jsx"]
   },
   "eslint.validate": [
     {
@@ -35,19 +31,6 @@
   "explorer.sortOrder": "default",
   "files.autoSave": "onFocusChange",
   "files.eol": "\n",
-  "files.exclude": {
-    "**/.DS_Store": true,
-    "**/._*": true,
-    "**/.cache": true,
-    "**/.circleci": true,
-    "**/.editorconfig": true,
-    "**/.eslintrc": true,
-    "**/.git": true,
-    "**/.gitignore": true,
-    "**/.prettierrc": true,
-    "**/.vscode": true,
-    "**/node_modules/**": true
-  },
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "javascript.format.enable": false,
