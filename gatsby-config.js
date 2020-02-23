@@ -130,6 +130,10 @@ module.exports = {
         domains: ["https://fonts.googleapis.com", "https://api.github.com"]
       }
     },
+    {
+      resolve: "gatsby-plugin-exclude",
+      options: { paths: ["/css/**", "/fonts/**", "/images/**", "/vendors/**"] },
+    },
     "gatsby-plugin-sitemap",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
