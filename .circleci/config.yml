@@ -11,17 +11,17 @@ jobs:
                       - v1-dependencies-{{ checksum "package.json" }}
                       - v1-dependencies-
             - run:
-                  name: Install packages
+                  name: Packages installation
                   command: npm install
             - save_cache:
                   paths:
                       - node_modules
                   key: v1-dependencies-{{ checksum "package.json" }}
             - run:
-                  name: Build project
+                  name: Project build
                   command: npm run build
             - run:
-                  name: Upload to server
+                  name: Server upload
                   command: node .circleci/deploy.js
             - run:
                   name: Completed

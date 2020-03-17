@@ -11,5 +11,5 @@ new FtpDeploy()
 		deleteRemote: true,
 		include: ["*", ".htaccess"]
 	})
-	.then(res => console.log("Uploaded to server.", res))
-	.catch(err => console.log("Failed to upload to server.", err));
+	.then(res => console.log(res))
+	.catch(err => console.log(err));
