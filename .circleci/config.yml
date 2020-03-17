@@ -1,38 +1,39 @@
 version: 2
 jobs:
-  build:
-    docker:
-      - image: circleci/node:latest
-    working_directory: ~/repo
-    steps:
-      - checkout
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            - v1-dependencies-
-      - run:
-          name: Install packages
-          command: npm install
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-      - run:
-          name: Build project
-          command: npm run build
-      - run:
-          name: Upload to server
-          command: node .circleci/deploy.js
-      - run:
-          name: Completed
-          command: echo "Project built and deployed"
+    build:
+        docker:
+            - image: circleci/node:latest
+        working_directory: ~/repo
+        steps:
+            - checkout
+            - restore_cache:
+                  keys:
+                      - v1-dependencies-{{ checksum "package.json" }}
+                      - v1-dependencies-
+            - run:
+                  name: Install packages
+                  command: npm install
+            - save_cache:
+                  paths:
+                      - node_modules
+                  key: v1-dependencies-{{ checksum "package.json" }}
+            - run:
+                  name: Build project
+                  command: npm run build
+            - run:
+                  name: Upload to server
+                  command: node .circleci/deploy.js
+            - run:
+                  name: Completed
+                  command: echo "Project built and deployed"
 
 workflows:
-  version: 2
-  deploy:
-    jobs:
-      - build:
-          filters:
-            branches:
-              only:
-                - master
+    version: 2
+    deploy:
+        jobs:
+            - build:
+                  context: Max Altena websites
+                  filters:
+                      branches:
+                          only:
+                              - master
