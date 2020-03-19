@@ -55,7 +55,7 @@
 		"gatsby-plugin-sitemap": "^2.2.30",
 		"gatsby-plugin-web-font-loader": "^1.0.4",
 		"prop-types": "^15.7.2",
-		"react": "^16.13.0",
+		"react": "^16.13.1",
 		"react-dom": "^16.13.0",
 		"react-draggable": "^4.2.0",
 		"react-helmet": "^5.2.1",
