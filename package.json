@@ -70,7 +70,7 @@
 		"eslint-plugin-react": "^7.19.0",
 		"ftp-deploy": "^2.3.6",
 		"node-sass": "^4.13.1",
-		"prettier": "^1.19.1"
+		"prettier": "^2.0.0"
 	},
 	"browserslist": [
 		"last 1 version",
