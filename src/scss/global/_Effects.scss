@@ -1,318 +1,318 @@
 .blink {
-  animation: blink 1s step-start infinite;
+	animation: blink 1s step-start infinite;
 }
 
 @keyframes blink {
-  50% {
-    opacity: 0;
-  }
+	50% {
+		opacity: 0;
+	}
 }
 
 .glitch {
-  animation: glitch1 2.5s infinite;
+	animation: glitch1 2.5s infinite;
 }
 
 span.glitch {
-  animation: glitch2 1.25s infinite;
+	animation: glitch2 1.25s infinite;
 }
 
 @-webkit-keyframes glitch1 {
-  0% {
-    transform: none;
-    opacity: 1;
-  }
+	0% {
+		transform: none;
+		opacity: 1;
+	}
 
-  7% {
-    transform: skew(-0.5deg, -0.9deg);
-    opacity: 0.75;
-  }
+	7% {
+		transform: skew(-0.5deg, -0.9deg);
+		opacity: 0.75;
+	}
 
-  10% {
-    transform: none;
-    opacity: 1;
-  }
+	10% {
+		transform: none;
+		opacity: 1;
+	}
 
-  27% {
-    transform: none;
-    opacity: 1;
-  }
+	27% {
+		transform: none;
+		opacity: 1;
+	}
 
-  30% {
-    transform: skew(0.8deg, -0.1deg);
-    opacity: 0.75;
-  }
+	30% {
+		transform: skew(0.8deg, -0.1deg);
+		opacity: 0.75;
+	}
 
-  35% {
-    transform: none;
-    opacity: 1;
-  }
+	35% {
+		transform: none;
+		opacity: 1;
+	}
 
-  52% {
-    transform: none;
-    opacity: 1;
-  }
+	52% {
+		transform: none;
+		opacity: 1;
+	}
 
-  55% {
-    transform: skew(-1deg, 0.2deg);
-    opacity: 0.75;
-  }
+	55% {
+		transform: skew(-1deg, 0.2deg);
+		opacity: 0.75;
+	}
 
-  50% {
-    transform: none;
-    opacity: 1;
-  }
+	50% {
+		transform: none;
+		opacity: 1;
+	}
 
-  72% {
-    transform: none;
-    opacity: 1;
-  }
+	72% {
+		transform: none;
+		opacity: 1;
+	}
 
-  75% {
-    transform: skew(0.4deg, 1deg);
-    opacity: 0.75;
-  }
+	75% {
+		transform: skew(0.4deg, 1deg);
+		opacity: 0.75;
+	}
 
-  80% {
-    transform: none;
-    opacity: 1;
-  }
+	80% {
+		transform: none;
+		opacity: 1;
+	}
 
-  100% {
-    transform: none;
-    opacity: 1;
-  }
+	100% {
+		transform: none;
+		opacity: 1;
+	}
 }
 
 @keyframes glitch1 {
-  0% {
-    transform: none;
-    opacity: 1;
-  }
+	0% {
+		transform: none;
+		opacity: 1;
+	}
 
-  7% {
-    transform: skew(-0.5deg, -0.9deg);
-    opacity: 0.75;
-  }
+	7% {
+		transform: skew(-0.5deg, -0.9deg);
+		opacity: 0.75;
+	}
 
-  10% {
-    transform: none;
-    opacity: 1;
-  }
+	10% {
+		transform: none;
+		opacity: 1;
+	}
 
-  27% {
-    transform: none;
-    opacity: 1;
-  }
+	27% {
+		transform: none;
+		opacity: 1;
+	}
 
-  30% {
-    transform: skew(0.8deg, -0.1deg);
-    opacity: 0.75;
-  }
+	30% {
+		transform: skew(0.8deg, -0.1deg);
+		opacity: 0.75;
+	}
 
-  35% {
-    transform: none;
-    opacity: 1;
-  }
+	35% {
+		transform: none;
+		opacity: 1;
+	}
 
-  52% {
-    transform: none;
-    opacity: 1;
-  }
+	52% {
+		transform: none;
+		opacity: 1;
+	}
 
-  55% {
-    transform: skew(-1deg, 0.2deg);
-    opacity: 0.75;
-  }
+	55% {
+		transform: skew(-1deg, 0.2deg);
+		opacity: 0.75;
+	}
 
-  50% {
-    transform: none;
-    opacity: 1;
-  }
+	50% {
+		transform: none;
+		opacity: 1;
+	}
 
-  72% {
-    transform: none;
-    opacity: 1;
-  }
+	72% {
+		transform: none;
+		opacity: 1;
+	}
 
-  75% {
-    transform: skew(0.4deg, 1deg);
-    opacity: 0.75;
-  }
+	75% {
+		transform: skew(0.4deg, 1deg);
+		opacity: 0.75;
+	}
 
-  80% {
-    transform: none;
-    opacity: 1;
-  }
+	80% {
+		transform: none;
+		opacity: 1;
+	}
 
-  100% {
-    transform: none;
-    opacity: 1;
-  }
+	100% {
+		transform: none;
+		opacity: 1;
+	}
 }
 
 @-webkit-keyframes glitch2 {
-  0% {
-    transform: none;
-    opacity: 1;
-  }
+	0% {
+		transform: none;
+		opacity: 1;
+	}
 
-  7% {
-    transform: skew(-0.7deg, -5deg);
-    opacity: 0.75;
-  }
+	7% {
+		transform: skew(-0.7deg, -5deg);
+		opacity: 0.75;
+	}
 
-  10% {
-    transform: none;
-    opacity: 1;
-  }
+	10% {
+		transform: none;
+		opacity: 1;
+	}
 
-  27% {
-    transform: none;
-    opacity: 1;
-  }
+	27% {
+		transform: none;
+		opacity: 1;
+	}
 
-  30% {
-    transform: skew(0.6deg, -0.2deg);
-    opacity: 0.5;
-  }
+	30% {
+		transform: skew(0.6deg, -0.2deg);
+		opacity: 0.5;
+	}
 
-  35% {
-    transform: none;
-    opacity: 1;
-  }
+	35% {
+		transform: none;
+		opacity: 1;
+	}
 
-  52% {
-    transform: none;
-    opacity: 1;
-  }
+	52% {
+		transform: none;
+		opacity: 1;
+	}
 
-  55% {
-    transform: skew(-45deg, 5deg);
-    opacity: 0.75;
-  }
+	55% {
+		transform: skew(-45deg, 5deg);
+		opacity: 0.75;
+	}
 
-  50% {
-    transform: none;
-    opacity: 1;
-  }
+	50% {
+		transform: none;
+		opacity: 1;
+	}
 
-  72% {
-    transform: none;
-    opacity: 1;
-  }
+	72% {
+		transform: none;
+		opacity: 1;
+	}
 
-  75% {
-    transform: skew(0.5deg, 12deg);
-    opacity: 0.25;
-  }
+	75% {
+		transform: skew(0.5deg, 12deg);
+		opacity: 0.25;
+	}
 
-  80% {
-    transform: none;
-    opacity: 1;
-  }
+	80% {
+		transform: none;
+		opacity: 1;
+	}
 
-  100% {
-    transform: none;
-    opacity: 1;
-  }
+	100% {
+		transform: none;
+		opacity: 1;
+	}
 }
 
 @keyframes glitch2 {
-  0% {
-    transform: none;
-    opacity: 1;
-  }
+	0% {
+		transform: none;
+		opacity: 1;
+	}
 
-  7% {
-    transform: skew(-0.7deg, -5deg);
-    opacity: 0.75;
-  }
+	7% {
+		transform: skew(-0.7deg, -5deg);
+		opacity: 0.75;
+	}
 
-  10% {
-    transform: none;
-    opacity: 1;
-  }
+	10% {
+		transform: none;
+		opacity: 1;
+	}
 
-  27% {
-    transform: none;
-    opacity: 1;
-  }
+	27% {
+		transform: none;
+		opacity: 1;
+	}
 
-  30% {
-    transform: skew(0.6deg, -0.2deg);
-    opacity: 0.5;
-  }
+	30% {
+		transform: skew(0.6deg, -0.2deg);
+		opacity: 0.5;
+	}
 
-  35% {
-    transform: none;
-    opacity: 1;
-  }
+	35% {
+		transform: none;
+		opacity: 1;
+	}
 
-  52% {
-    transform: none;
-    opacity: 1;
-  }
+	52% {
+		transform: none;
+		opacity: 1;
+	}
 
-  55% {
-    transform: skew(-15deg, 0.5deg);
-    opacity: 0.75;
-  }
+	55% {
+		transform: skew(-15deg, 0.5deg);
+		opacity: 0.75;
+	}
 
-  50% {
-    transform: none;
-    opacity: 1;
-  }
+	50% {
+		transform: none;
+		opacity: 1;
+	}
 
-  72% {
-    transform: none;
-    opacity: 1;
-  }
+	72% {
+		transform: none;
+		opacity: 1;
+	}
 
-  75% {
-    transform: skew(0.5deg, 12deg);
-    opacity: 0.25;
-  }
+	75% {
+		transform: skew(0.5deg, 12deg);
+		opacity: 0.25;
+	}
 
-  80% {
-    transform: none;
-    opacity: 1;
-  }
+	80% {
+		transform: none;
+		opacity: 1;
+	}
 
-  100% {
-    transform: none;
-    opacity: 1;
-  }
+	100% {
+		transform: none;
+		opacity: 1;
+	}
 }
 
 .borders {
-  position: fixed;
-  background: black;
-  z-index: 500;
+	position: fixed;
+	background: black;
+	z-index: 500;
 }
 .border-top,
 .border-bottom {
-  right: 0;
-  left: 0;
-  height: 3px;
-  width: 100%;
+	right: 0;
+	left: 0;
+	height: 3px;
+	width: 100%;
 }
 .border-top {
-  top: 0;
+	top: 0;
 }
 .border-bottom {
-  bottom: 0;
+	bottom: 0;
 }
 
 .border-right,
 .border-left {
-  top: 0;
-  bottom: 0;
-  width: 3px;
-  height: 100vh;
+	top: 0;
+	bottom: 0;
+	width: 3px;
+	height: 100vh;
 }
 .border-right {
-  right: 0;
+	right: 0;
 }
 .border-left {
-  left: 0;
+	left: 0;
 }

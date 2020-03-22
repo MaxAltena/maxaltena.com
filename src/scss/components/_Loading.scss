@@ -1,58 +1,58 @@
 .Loading {
-  $time: 2s;
-  $size: 30px;
-  width: $size * 6;
-  height: $size * 3;
-  transform: scale(1);
+	$time: 2s;
+	$size: 30px;
+	width: $size * 6;
+	height: $size * 3;
+	transform: scale(1);
 
-  @keyframes square {
-    0% {
-      left: $size * 0.8;
-      transform: scale(0);
-      z-index: 0;
-    }
-    25% {
-      left: $size * 0.8;
-      transform: scale(1);
-      z-index: 1;
-    }
-    50% {
-      left: $size * 2.5;
-    }
-    75% {
-      left: $size * 4.2;
-      transform: scale(1);
-      z-index: 1;
-    }
-    100% {
-      left: $size * 4.2;
-      transform: scale(0);
-      z-index: 0;
-    }
-  }
+	@keyframes square {
+		0% {
+			left: $size * 0.8;
+			transform: scale(0);
+			z-index: 0;
+		}
+		25% {
+			left: $size * 0.8;
+			transform: scale(1);
+			z-index: 1;
+		}
+		50% {
+			left: $size * 2.5;
+		}
+		75% {
+			left: $size * 4.2;
+			transform: scale(1);
+			z-index: 1;
+		}
+		100% {
+			left: $size * 4.2;
+			transform: scale(0);
+			z-index: 0;
+		}
+	}
 
-  > div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    width: $size;
-    height: $size;
-    background: white;
-    border: $size * 0.075 solid black;
-    top: $size;
-    left: $size * 0.8;
-    animation: square $time linear infinite forwards;
-    box-sizing: border-box;
-  }
-  div:nth-child(2) {
-    animation-delay: calc(#{$time} * -0.25);
-  }
-  div:nth-child(3) {
-    animation-delay: calc(#{$time} * -0.5);
-  }
-  div:nth-child(4) {
-    animation-delay: calc(#{$time} * -0.75);
-  }
+	> div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		transform: translate(-50%, -50%);
+		width: $size;
+		height: $size;
+		background: white;
+		border: $size * 0.075 solid black;
+		top: $size;
+		left: $size * 0.8;
+		animation: square $time linear infinite forwards;
+		box-sizing: border-box;
+	}
+	div:nth-child(2) {
+		animation-delay: calc(#{$time} * -0.25);
+	}
+	div:nth-child(3) {
+		animation-delay: calc(#{$time} * -0.5);
+	}
+	div:nth-child(4) {
+		animation-delay: calc(#{$time} * -0.75);
+	}
 }

@@ -1,66 +1,66 @@
 * {
-  margin: 0;
-  padding: 0;
-  font-family: $text;
+	margin: 0;
+	padding: 0;
+	font-family: $text;
 }
 
 html {
-  scroll-behavior: smooth;
+	scroll-behavior: smooth;
 }
 
 body {
-  width: 100%;
-  height: auto;
-  overflow-x: hidden;
+	width: 100%;
+	height: auto;
+	overflow-x: hidden;
 }
 
 noscript {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: monospace;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: monospace;
 }
 
 img {
-  -webkit-user-drag: none;
-  user-select: none;
+	-webkit-user-drag: none;
+	user-select: none;
 }
 
 main {
-  overflow: hidden;
-  margin-bottom: 30px;
+	overflow: hidden;
+	margin-bottom: 30px;
 }
 
 .anchor {
-  display: block;
-  position: relative;
-  top: -94px;
-  visibility: hidden;
+	display: block;
+	position: relative;
+	top: -94px;
+	visibility: hidden;
 }
 
 @media only screen and (max-width: 916px) {
-  .anchor {
-    top: 0;
-  }
+	.anchor {
+		top: 0;
+	}
 }
 
 #About h2,
 #Skills h2,
 #Projects h2 {
-  text-align: center;
-  position: relative;
-  width: auto;
-  font-size: 2.5em;
-  line-height: 1.25em;
-  margin-bottom: 50px;
+	text-align: center;
+	position: relative;
+	width: auto;
+	font-size: 2.5em;
+	line-height: 1.25em;
+	margin-bottom: 50px;
 
-  &::after {
-    content: " ";
-    background: black;
-    position: absolute;
-    bottom: -25%;
-    left: 25%;
-    width: 50%;
-    height: 3px;
-  }
+	&::after {
+		content: " ";
+		background: black;
+		position: absolute;
+		bottom: -25%;
+		left: 25%;
+		width: 50%;
+		height: 3px;
+	}
 }

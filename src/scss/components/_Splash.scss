@@ -1,107 +1,107 @@
 #Splash {
-  position: relative;
-  min-height: 75vh;
-  padding-top: 56px;
-  width: 100%;
-  background: transparent;
+	position: relative;
+	min-height: 75vh;
+	padding-top: 56px;
+	width: 100%;
+	background: transparent;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
-  > div.cat {
-    position: relative;
-    background: white;
-    border: 6px solid black;
-    width: auto;
-    max-width: 600px;
-    min-height: 100px;
-    height: auto;
+	> div.cat {
+		position: relative;
+		background: white;
+		border: 6px solid black;
+		width: auto;
+		max-width: 600px;
+		min-height: 100px;
+		height: auto;
 
-    padding: 2vh 2vw;
+		padding: 2vh 2vw;
 
-    transition: 0.15s ease-in-out width, 0.15s ease-in-out height;
+		transition: 0.15s ease-in-out width, 0.15s ease-in-out height;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
 
-    &::after {
-      content: " ";
-      background: black;
-      width: calc(100% + 10.5px);
-      height: calc(100% + 10.5px);
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-    }
+		&::after {
+			content: " ";
+			background: black;
+			width: calc(100% + 10.5px);
+			height: calc(100% + 10.5px);
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+		}
 
-    > h1 {
-      text-align: center;
-      font-size: 2em;
-      margin: 10px 25px 0 25px;
-      > span:not(.splash-baffle) {
-        font-size: 0.5em;
-        font-weight: normal;
-        display: block;
-        margin: 10px 5px;
-        text-align: center;
-        margin-bottom: 0px;
-      }
-    }
+		> h1 {
+			text-align: center;
+			font-size: 2em;
+			margin: 10px 25px 0 25px;
+			> span:not(.splash-baffle) {
+				font-size: 0.5em;
+				font-weight: normal;
+				display: block;
+				margin: 10px 5px;
+				text-align: center;
+				margin-bottom: 0px;
+			}
+		}
 
-    > p {
-      margin: 10px 5px;
-      text-align: center;
-      margin-bottom: 20px;
-    }
+		> p {
+			margin: 10px 5px;
+			text-align: center;
+			margin-bottom: 20px;
+		}
 
-    > a {
-      border: 3px solid black;
-      background: white;
-      padding: 1em 2em;
-      font-size: 1.1em;
-      text-decoration: none;
-      color: black;
-      display: flex;
-      align-items: center;
-      > .blink {
-        margin-left: 10px;
-        height: 18px;
-        -webkit-user-drag: none;
-      }
+		> a {
+			border: 3px solid black;
+			background: white;
+			padding: 1em 2em;
+			font-size: 1.1em;
+			text-decoration: none;
+			color: black;
+			display: flex;
+			align-items: center;
+			> .blink {
+				margin-left: 10px;
+				height: 18px;
+				-webkit-user-drag: none;
+			}
 
-      box-sizing: border-box;
-      transition: 0.15s ease-in-out box-shadow;
-      outline: none;
+			box-sizing: border-box;
+			transition: 0.15s ease-in-out box-shadow;
+			outline: none;
 
-      &:hover,
-      &:focus {
-        box-shadow: 0px 0px 0px 3px black inset;
-      }
-      &:active {
-        box-shadow: 0px 0px 0px 6px black inset;
-      }
-    }
-  }
+			&:hover,
+			&:focus {
+				box-shadow: 0px 0px 0px 3px black inset;
+			}
+			&:active {
+				box-shadow: 0px 0px 0px 6px black inset;
+			}
+		}
+	}
 
-  @media only screen and (max-width: 916px) {
-    > div.cat {
-      width: 75vw;
-      max-width: 90vw;
+	@media only screen and (max-width: 916px) {
+		> div.cat {
+			width: 75vw;
+			max-width: 90vw;
 
-      > h1 {
-        margin: 5px;
-      }
+			> h1 {
+				margin: 5px;
+			}
 
-      > a {
-        padding: 0.5em 1em;
-        > img {
-          margin-left: 5px;
-        }
-      }
-    }
-  }
+			> a {
+				padding: 0.5em 1em;
+				> img {
+					margin-left: 5px;
+				}
+			}
+		}
+	}
 }
