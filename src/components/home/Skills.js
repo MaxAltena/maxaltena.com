@@ -247,8 +247,8 @@ export default class Skills extends Component {
 			return skill.items.map((item, i) => {
 				return (
 					<Draggable key={i} bounds="parent" grid={[5, 5]}>
-						<div className={`drag cat-${skill.title}`} draggable>
-							{item.image && <img src={item.image} title={item.name} alt={item.name} draggable />}
+						<div className={`drag cat-${skill.title}`}>
+							{item.image && <img src={item.image} title={item.name} alt={item.name} />}
 							{item.name && <span>{item.name}</span>}
 						</div>
 					</Draggable>
