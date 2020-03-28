@@ -1,7 +1,8 @@
 {
 	"name": "maxaltena.com",
-	"description": "The website of Max Altena",
 	"version": "1.0.0",
+	"private": true,
+	"description": "The website of Max Altena",
 	"keywords": [
 		"max",
 		"altena",
@@ -11,31 +12,45 @@
 		"resume",
 		"projects"
 	],
-	"private": true,
-	"author": "Max Altena <Max@MaxAltena.com>",
-	"license": "UNLICENSED",
+	"homepage": "https://maxaltena.com/",
+	"bugs": {
+		"url": "https://github.com/MaxAltena/maxaltena.com/issues"
+	},
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/MaxAltena/maxaltena.com.git"
 	},
-	"bugs": {
-		"url": "https://github.com/MaxAltena/maxaltena.com/issues"
-	},
-	"homepage": "https://maxaltena.com/",
+	"license": "UNLICENSED",
+	"author": "Max Altena <Max@MaxAltena.com>",
 	"scripts": {
 		"build": "gatsby build",
 		"dev": "gatsby develop --port 8008",
-		"start": "npm run dev",
-		"serve": "gatsby serve",
 		"eslint": "eslint .",
 		"eslint:fix": "eslint --fix .",
 		"prettier": "prettier **/*",
-		"prettier:fix": "prettier --write **/*"
+		"prettier:fix": "prettier --write **/*",
+		"serve": "gatsby serve",
+		"start": "npm run dev"
 	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*": "npm run prettier:fix",
+		"*.js": "npm run eslint:fix"
+	},
+	"browserslist": [
+		"last 1 version",
+		"> 0.25%",
+		"maintained node versions",
+		"not dead"
+	],
 	"dependencies": {
 		"axios": "^0.19.2",
 		"baffle": "^0.3.6",
-		"gatsby": "^2.20.4",
+		"gatsby": "^2.20.8",
 		"gatsby-image": "^2.3.1",
 		"gatsby-plugin-canonical-urls": "^2.2.1",
 		"gatsby-plugin-exclude": "^1.0.2",
@@ -45,9 +60,9 @@
 		"gatsby-plugin-htaccess": "^1.4.0",
 		"gatsby-plugin-html-attributes": "^1.0.5",
 		"gatsby-plugin-humans-txt": "^1.1.4",
-		"gatsby-plugin-manifest": "^2.3.2",
+		"gatsby-plugin-manifest": "^2.3.3",
 		"gatsby-plugin-no-sourcemaps": "^2.2.0",
-		"gatsby-plugin-offline": "^3.1.1",
+		"gatsby-plugin-offline": "^3.1.2",
 		"gatsby-plugin-preconnect": "^1.0.5",
 		"gatsby-plugin-react-helmet": "^3.2.1",
 		"gatsby-plugin-robots-txt": "^1.5.0",
@@ -62,6 +77,7 @@
 		"react-measure": "^2.3.0"
 	},
 	"devDependencies": {
+		"@maxaltena/eslint-config-maxaltena": "^1.0.2",
 		"babel-eslint": "^10.1.0",
 		"eslint": "^6.8.0",
 		"eslint-config-prettier": "^6.10.1",
@@ -71,24 +87,9 @@
 		"node-sass": "^4.13.1",
 		"prettier": "^2.0.2"
 	},
-	"browserslist": [
-		"last 1 version",
-		"> 0.25%",
-		"maintained node versions",
-		"not dead"
-	],
 	"engines": {
 		"node": ">= 8.17.0",
 		"npm": ">= 6.12.1",
 		"yarn": ">= 1.19.1"
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
-	},
-	"lint-staged": {
-		"*": "npm run prettier:fix",
-		"*.js": "npm run eslint:fix"
 	}
 }
