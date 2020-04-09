@@ -50,7 +50,7 @@
 	"dependencies": {
 		"axios": "^0.19.2",
 		"baffle": "^0.3.6",
-		"gatsby": "^2.20.14",
+		"gatsby": "^2.20.15",
 		"gatsby-image": "^2.3.2",
 		"gatsby-plugin-canonical-urls": "^2.2.1",
 		"gatsby-plugin-exclude": "^1.0.2",
