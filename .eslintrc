@@ -11,7 +11,7 @@
 		"browser": true,
 		"es6": true
 	},
-	"extends": ["eslint:recommended", "plugin:react/recommended", "eslint-config-maxaltena"],
+	"extends": ["eslint:recommended", "plugin:react/recommended"],
 	"globals": {
 		"require": "writable",
 		"module": "writable"

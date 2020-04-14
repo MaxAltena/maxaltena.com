@@ -1,24 +1,33 @@
 exports.registerServiceWorker = () => true;
 
 exports.onServiceWorkerActive = () => {
-	console.log("ServiceWorker: active");
+  // eslint-disable-next-line no-console
+  console.log("ServiceWorker: active");
 };
 
 exports.onServiceWorkerInstalled = () => {
-	console.log("ServiceWorker: installed");
+  // eslint-disable-next-line no-console
+  console.log("ServiceWorker: installed");
 };
 
 exports.onServiceWorkerRedundant = () => {
-	console.log("ServiceWorker: redundant");
+  // eslint-disable-next-line no-console
+  console.log("ServiceWorker: redundant");
 };
 
 exports.onServiceWorkerUpdateFound = () => {
-	console.log("ServiceWorker: update found");
+  // eslint-disable-next-line no-console
+  console.log("ServiceWorker: update found");
 };
 
 exports.onServiceWorkerUpdateReady = () => {
-	console.log("ServiceWorker: update ready");
+  // eslint-disable-next-line no-console
+  console.log("ServiceWorker: update ready");
 
-	if (window.confirm("This page has been updated. " + "Reload to display the latest version?"))
-		window.location.reload();
+  if (
+    window.confirm(
+      "This page has been updated. " + "Reload to display the latest version?"
+    )
+  )
+    window.location.reload();
 };
