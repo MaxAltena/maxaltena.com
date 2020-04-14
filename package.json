@@ -49,8 +49,8 @@
 	"dependencies": {
 		"axios": "^0.19.2",
 		"baffle": "^0.3.6",
-		"gatsby": "^2.20.8",
-		"gatsby-image": "^2.3.1",
+		"gatsby": "^2.20.20",
+		"gatsby-image": "^2.3.2",
 		"gatsby-plugin-canonical-urls": "^2.2.1",
 		"gatsby-plugin-exclude": "^1.0.2",
 		"gatsby-plugin-favicon": "^3.1.6",
@@ -63,16 +63,16 @@
 		"gatsby-plugin-no-sourcemaps": "^2.2.0",
 		"gatsby-plugin-offline": "^3.1.2",
 		"gatsby-plugin-preconnect": "^1.0.5",
-		"gatsby-plugin-react-helmet": "^3.2.1",
+		"gatsby-plugin-react-helmet": "^3.2.2",
 		"gatsby-plugin-robots-txt": "^1.5.0",
 		"gatsby-plugin-sass": "^2.2.1",
-		"gatsby-plugin-sitemap": "^2.3.1",
+		"gatsby-plugin-sitemap": "^2.3.2",
 		"gatsby-plugin-web-font-loader": "^1.0.4",
 		"prop-types": "^15.7.2",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1",
-		"react-draggable": "^4.2.0",
-		"react-helmet": "^5.2.1",
+		"react-draggable": "^4.3.1",
+		"react-helmet": "^6.0.0",
 		"react-measure": "^2.3.0"
 	},
 	"devDependencies": {
@@ -80,11 +80,11 @@
 		"babel-eslint": "^10.1.0",
 		"eslint": "^6.8.0",
 		"eslint-config-prettier": "^6.10.1",
-		"eslint-loader": "^3.0.3",
-		"eslint-plugin-prettier": "^3.1.2",
+		"eslint-loader": "^4.0.0",
+		"eslint-plugin-prettier": "^3.1.3",
 		"eslint-plugin-react": "^7.19.0",
 		"node-sass": "^4.13.1",
-		"prettier": "^2.0.2"
+		"prettier": "^2.0.4"
 	},
 	"engines": {
 		"node": ">= 8.17.0",
