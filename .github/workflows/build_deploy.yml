@@ -3,7 +3,6 @@ on:
     push:
         branches:
             - master
-
 jobs:
     build:
         name: Build
@@ -12,7 +11,7 @@ jobs:
             - name: Checkout Repo
               uses: actions/checkout@master
             - name: Install Dependencies
-              run: npm install
+              uses: ahmutov/npm-install@master
             - name: Build
               run: npm run build
             - name: Archive Production Artifact
@@ -32,10 +31,9 @@ jobs:
               with:
                   name: build
             - name: FTP Deploy
-              uses: SamKirkland/FTP-Deploy-Action@3.0.0
+              uses: SamKirkland/FTP-Deploy-Action@2.0.0
               with:
                   ftp-server: ${{ secrets.FTP_SERVER }}${{ secrets.FTP_PATH }}
                   ftp-username: ${{ secrets.FTP_USERNAME }}
                   ftp-password: ${{ secrets.FTP_PASSWORD }}
                   local-dir: build/
-                  git-ftp-args: --all
