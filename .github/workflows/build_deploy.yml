@@ -40,10 +40,9 @@ jobs:
               with:
                   name: build
             - name: FTP deploy
-              uses: SamKirkland/FTP-Deploy-Action@2.0.0
+              uses: SamKirkland/FTP-Deploy-Action@master
               with:
-                  FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-                  FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-                  FTP_SERVER: ${{ secrets.FTP_SERVER }}
-                  REMOTE_DIR: ${{ secrets.FTP_PATH }}
-                  LOCAL_DIR: build
+                  ftp-server: ${{ secrets.FTP_SERVER }}${{ secrets.FTP_PATH }}
+                  ftp-username: ${{ secrets.FTP_USERNAME }}
+                  ftp-password: ${{ secrets.FTP_PASSWORD }}
+                  local-dir: build/
