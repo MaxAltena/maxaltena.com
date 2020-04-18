@@ -1,13 +1,16 @@
 name: Reviewdog
-on: [pull_request]
+on:
+    pull_request:
+        branches:
+            - master
 jobs:
   eslint:
-    name: ESLint
+    name: eslint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: ESLint
+      - name: eslint
         uses: reviewdog/action-eslint@master
         with:
           github_token: ${{ secrets.github_token }}
-          reporter: github-pr-check
+          reporter: github-check
