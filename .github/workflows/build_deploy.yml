@@ -37,14 +37,28 @@ jobs:
               uses: actions/checkout@master
               with:
                 fetch-depth: 2
-            - name: Download buil artifact
-              uses: actions/download-artifact@master
+            - name: Cache node modules
+              uses: actions/cache@v1
+              with:
+                path: node_modules
+                key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+                restore-keys: |
+                  ${{ runner.OS }}-build-${{ env.cache-name }}-
+                  ${{ runner.OS }}-build-
+                  ${{ runner.OS }}-
+            - name: Install dependencies
+              run: npm install
+            - name: Build project
+              run: npm run build
+            - name: Archive build artifact
+              uses: actions/upload-artifact@master
               with:
                   name: build
+                  path: public
             - name: FTP deploy
               uses: SamKirkland/FTP-Deploy-Action@master
               with:
                   ftp-server: ${{ secrets.FTP_SERVER }}${{ secrets.FTP_PATH }}
                   ftp-username: ${{ secrets.FTP_USERNAME }}
                   ftp-password: ${{ secrets.FTP_PASSWORD }}
-                  local-dir: build
+                  local-dir: public
