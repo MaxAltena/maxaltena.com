@@ -39,3 +39,4 @@ coverage/
 .eslintcache
 .cache
 public
+build
