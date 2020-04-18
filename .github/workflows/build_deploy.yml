@@ -8,13 +8,13 @@ jobs:
         name: Build
         runs-on: ubuntu-latest
         steps:
-            - name: Checkout Repo
+            - name: Checkout repo
               uses: actions/checkout@master
-            - name: Install Dependencies
-              uses: ahmutov/npm-install@v1
-            - name: Build
+            - name: Install dependencies
+              run: npm install
+            - name: Build project
               run: npm run build
-            - name: Archive Production Artifact
+            - name: Archive build artifact
               uses: actions/upload-artifact@master
               with:
                   name: build
@@ -24,13 +24,13 @@ jobs:
         needs: build
         runs-on: ubuntu-latest
         steps:
-            - name: Checkout Repo
+            - name: Checkout repo
               uses: actions/checkout@master
-            - name: Download Artifact
+            - name: Download buil artifact
               uses: actions/download-artifact@master
               with:
                   name: build
-            - name: FTP Deploy
+            - name: FTP deploy
               uses: SamKirkland/FTP-Deploy-Action@2.0.0
               with:
                   ftp-server: ${{ secrets.FTP_SERVER }}${{ secrets.FTP_PATH }}
