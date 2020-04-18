@@ -37,7 +37,7 @@ jobs:
                   ftp-server: ${{ secrets.FTP_SERVER }}${{ secrets.FTP_PATH }}
                   ftp-username: ${{ secrets.FTP_USERNAME }}
                   ftp-password: ${{ secrets.FTP_PASSWORD }}
-                  local-dir: public
+                  local-dir: ./
                   git-ftp-args: --all --dry-run
             - name: Archive build artifact
               uses: actions/upload-artifact@master
