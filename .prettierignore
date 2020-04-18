@@ -6,8 +6,14 @@ node_modules
 .editorconfig
 .browserslistrc
 .htaccess
-*.yml
 .git-ftp-include
+*.min.*
+*.yml
+*.pdf
+*.otf
+*.jpg
+*.gif
+*.png
 
 # Project specific
 public
