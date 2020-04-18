@@ -11,5 +11,3 @@ node_modules
 
 # Project specific
 public
-gatsby-config.js
-gatsby-browser.js

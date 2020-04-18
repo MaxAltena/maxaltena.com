@@ -26,10 +26,13 @@
 	"scripts": {
 		"build": "gatsby build",
 		"dev": "gatsby develop --port 8008",
-		"lint": "eslint .",
-		"lint:fix": "eslint --fix .",
+		"prettier": "prettier **/*",
+		"prettier:fix": "prettier **/* --write",
+		"eslint": "eslint .",
+		"eslint:fix": "eslint . --fix",
 		"serve": "gatsby serve",
-		"start": "npm run dev"
+		"start": "npm run dev",
+		"test": "echo \"Error: test not specified\" && exit 0"
 	},
 	"husky": {
 		"hooks": {

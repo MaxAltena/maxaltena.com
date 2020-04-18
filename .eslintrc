@@ -11,10 +11,25 @@
 		"browser": true,
 		"es6": true
 	},
-	"extends": ["eslint:recommended", "plugin:react/recommended"],
 	"globals": {
 		"require": "writable",
 		"module": "writable"
 	},
-	"plugins": ["react", "prettier"]
+	"extends": ["eslint:recommended", "plugin:react/recommended", "plugin:prettier/recommended"],
+	"plugins": ["react", "prettier"],
+	"rules": {
+		"linebreak-style": ["warn", "unix"],
+		"prettier/prettier": [
+			"error",
+			{
+				"arrowParens": "avoid",
+				"bracketSpacing": true,
+				"printWidth": 120,
+				"semi": true,
+				"singleQuote": false,
+				"tabWidth": 4,
+				"useTabs": true
+			}
+		]
+	}
 }
