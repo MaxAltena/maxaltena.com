@@ -1,36 +1,11 @@
-name: Build and Deploy
+name: Deploy
 on:
     push:
         branches:
             - master
 jobs:
-    build:
-        name: Build
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout repo
-              uses: actions/checkout@master
-            - name: Cache node modules
-              uses: actions/cache@v1
-              with:
-                path: node_modules
-                key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-                restore-keys: |
-                  ${{ runner.OS }}-build-${{ env.cache-name }}-
-                  ${{ runner.OS }}-build-
-                  ${{ runner.OS }}-
-            - name: Install dependencies
-              run: npm install
-            - name: Build project
-              run: npm run build
-            - name: Archive build artifact
-              uses: actions/upload-artifact@master
-              with:
-                  name: build
-                  path: public
     deploy:
         name: Deploy
-        needs: build
         runs-on: ubuntu-latest
         steps:
             - name: Checkout repo
