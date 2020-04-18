@@ -35,6 +35,8 @@ jobs:
         steps:
             - name: Checkout repo
               uses: actions/checkout@master
+              with:
+                fetch-depth: 2
             - name: Download buil artifact
               uses: actions/download-artifact@master
               with:
@@ -45,4 +47,4 @@ jobs:
                   ftp-server: ${{ secrets.FTP_SERVER }}${{ secrets.FTP_PATH }}
                   ftp-username: ${{ secrets.FTP_USERNAME }}
                   ftp-password: ${{ secrets.FTP_PASSWORD }}
-                  local-dir: build/
+                  local-dir: build
