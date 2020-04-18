@@ -34,10 +34,10 @@ jobs:
             - name: FTP deploy
               uses: SamKirkland/FTP-Deploy-Action@master
               with:
-                  ftp-server: ${{ secrets.FTP_SERVER }}${{ secrets.FTP_PATH }}
+                  ftp-server: ftp://ftp.d280763.cp.hostnet.nl/webspace/httpdocs/maxaltena.com/
                   ftp-username: ${{ secrets.FTP_USERNAME }}
                   ftp-password: ${{ secrets.FTP_PASSWORD }}
-                  local-dir: ./public/
+                  local-dir: ./
                   git-ftp-args: --all --dry-run
             - name: Archive build artifact
               uses: actions/upload-artifact@master
