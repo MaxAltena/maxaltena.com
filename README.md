@@ -1,6 +1,6 @@
 # maxaltena.com
 
-[![Build and Deploy](https://github.com/MaxAltena/maxaltena.com/workflows/Build%20and%20Deploy/badge.svg)](https://github.com/MaxAltena/maxaltena.com/actions?query=workflow%3A%22Build+and+Deploy%22)
+[![Deploy](https://github.com/MaxAltena/maxaltena.com/workflows/Deploy/badge.svg)](https://github.com/MaxAltena/maxaltena.com/actions?query=workflow%3A%22Deploy%22)
 [![Website](https://img.shields.io/website?down_color=red&down_message=offline&up_color=green&up_message=online&url=https%3A%2F%2Fmaxaltena.com)](https://maxaltena.com/)
 [![Version](https://img.shields.io/github/package-json/v/MaxAltena/maxaltena.com)](https://github.com/MaxAltena/maxaltena.com)
 [![Watchers](https://img.shields.io/github/watchers/MaxAltena/maxaltena.com)](https://github.com/MaxAltena/maxaltena.com/watchers)
