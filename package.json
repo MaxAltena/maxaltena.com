@@ -64,7 +64,7 @@
     "gatsby-plugin-htaccess": "^1.4.0",
     "gatsby-plugin-html-attributes": "^1.0.5",
     "gatsby-plugin-humans-txt": "^1.1.4",
-    "gatsby-plugin-manifest": "^2.4.6",
+    "gatsby-plugin-manifest": "^2.4.8",
     "gatsby-plugin-no-sourcemaps": "^2.2.0",
     "gatsby-plugin-offline": "^3.2.6",
     "gatsby-plugin-preconnect": "^1.1.43",
