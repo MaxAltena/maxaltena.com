@@ -77,7 +77,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-draggable": "^4.4.2",
-    "react-helmet": "^6.0.0",
+    "react-helmet": "^6.1.0",
     "react-measure": "^2.3.0",
     "snyk": "^*"
   },
