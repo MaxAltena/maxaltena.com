@@ -4896,3 +4896,5 @@ patch:
         patched: '2020-08-04T04:09:38.053Z'
     - gatsby > gatsby-cli > gatsby-recipes > contentful-management > contentful-sdk-core > lodash:
         patched: '2020-08-04T04:09:38.053Z'
+    - snyk > snyk-nodejs-lockfile-parser > @yarnpkg/core > lodash:
+        patched: '2020-08-31T04:16:37.792Z'
