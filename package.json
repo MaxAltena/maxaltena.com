@@ -78,7 +78,7 @@
     "react-dom": "^16.13.1",
     "react-draggable": "^4.4.3",
     "react-helmet": "^6.1.0",
-    "react-measure": "^2.3.0",
+    "react-measure": "^2.5.0",
     "snyk": "^1.386.0"
   },
   "devDependencies": {
