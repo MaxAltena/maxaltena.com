@@ -54,7 +54,7 @@
   "dependencies": {
     "axios": "^0.20.0",
     "baffle": "^0.3.6",
-    "gatsby": "^2.24.53",
+    "gatsby": "^2.24.54",
     "gatsby-image": "^2.4.17",
     "gatsby-plugin-canonical-urls": "^2.3.10",
     "gatsby-plugin-exclude": "^1.0.2",
@@ -64,9 +64,9 @@
     "gatsby-plugin-htaccess": "^1.4.0",
     "gatsby-plugin-html-attributes": "^1.0.5",
     "gatsby-plugin-humans-txt": "^1.1.4",
-    "gatsby-plugin-manifest": "^2.4.27",
+    "gatsby-plugin-manifest": "^2.4.28",
     "gatsby-plugin-no-sourcemaps": "^2.2.0",
-    "gatsby-plugin-offline": "^3.2.26",
+    "gatsby-plugin-offline": "^3.2.27",
     "gatsby-plugin-preconnect": "^1.1.54",
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-robots-txt": "^1.5.1",
@@ -79,7 +79,7 @@
     "react-draggable": "^4.4.3",
     "react-helmet": "^6.1.0",
     "react-measure": "^2.5.0",
-    "snyk": "^1.389.0"
+    "snyk": "^1.391.1"
   },
   "devDependencies": {
     "@maxaltena/eslint-config-maxaltena": "^1.1.2",
