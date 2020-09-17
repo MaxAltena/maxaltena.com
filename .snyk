@@ -4928,3 +4928,7 @@ patch:
         patched: '2020-09-15T04:07:34.039Z'
     - snyk > snyk-mvn-plugin > @snyk/cli-interface > @snyk/dep-graph > graphlib > lodash:
         patched: '2020-09-15T04:07:34.039Z'
+    - gatsby > babel-plugin-lodash > lodash:
+        patched: '2020-09-17T04:20:30.016Z'
+    - gatsby > babel-plugin-lodash > @babel/types > lodash:
+        patched: '2020-09-17T04:20:30.016Z'
