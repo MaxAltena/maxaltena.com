@@ -42,8 +42,7 @@ export default class Contact extends Component {
 
 	render() {
 		return (
-			<section id="Contact">
-				<a className="anchor" id="contact" />
+			<section id="contact">
 				<div className="cat">
 					<h2 className="contact-baffle">Contact</h2>
 					<p>Interested in contacting me?</p>

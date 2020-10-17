@@ -288,7 +288,7 @@ export default class Skills extends Component {
 
 		return (
 			<section id="Skills">
-				<a className="anchor" id="skills" />
+				<span className="anchor" id="skills"></span>
 				<h2 className="skills-baffle">Skills</h2>
 				{/* <div className="options">
           <div className="left">search // tags</div>

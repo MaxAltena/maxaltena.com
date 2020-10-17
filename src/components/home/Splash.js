@@ -21,7 +21,8 @@ export default class Splash extends Component {
 
 	render() {
 		return (
-			<section id="Splash">
+			<section id="splash">
+				<span className="anchor" id="" />
 				<div className="cat">
 					<h1>
 						<span className="splash-baffle">Hey!</span>

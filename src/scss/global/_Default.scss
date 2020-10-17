@@ -34,13 +34,13 @@ main {
 .anchor {
 	display: block;
 	position: relative;
-	top: -94px;
+	top: calc(-54px + -4vh);
 	visibility: hidden;
 }
 
 @media only screen and (max-width: 916px) {
 	.anchor {
-		top: 0;
+		top: -4vh;
 	}
 }
 

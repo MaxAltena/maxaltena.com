@@ -45,7 +45,7 @@ export default class Projects extends Component {
 	render() {
 		return (
 			<section id="Projects">
-				<a className="anchor" id="projects" />
+				<span className="anchor" id="projects"></span>
 				<h2 className="projects-baffle">Projects</h2>
 
 				<ProjectList />

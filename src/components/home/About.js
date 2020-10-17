@@ -64,7 +64,7 @@ export default class About extends Component {
 
 		return (
 			<section id="About">
-				<a className="anchor" id="about" />
+				<span className="anchor" id="about"></span>
 				<h2 className="about-baffle">About</h2>
 				<div>
 					<div className="aboutText">
