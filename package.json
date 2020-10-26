@@ -79,7 +79,7 @@
     "react-draggable": "^4.4.3",
     "react-helmet": "^6.1.0",
     "react-measure": "^2.5.2",
-    "snyk": "^1.419.1"
+    "snyk": "^1.420.1"
   },
   "devDependencies": {
     "@maxaltena/eslint-config-maxaltena": "^1.1.2",
