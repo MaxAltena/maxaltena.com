@@ -71,7 +71,7 @@
 		"gatsby-plugin-react-helmet": "^3.5.0",
 		"gatsby-plugin-robots-txt": "^1.5.3",
 		"gatsby-plugin-sass": "^2.6.0",
-		"gatsby-plugin-sitemap": "^2.6.0",
+		"gatsby-plugin-sitemap": "^2.7.0",
 		"gatsby-plugin-web-font-loader": "^1.0.4",
 		"prop-types": "^15.7.2",
 		"react": "^17.0.1",
