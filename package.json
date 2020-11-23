@@ -83,14 +83,14 @@
 	"devDependencies": {
 		"@maxaltena/eslint-config-maxaltena": "^1.1.2",
 		"babel-eslint": "^10.1.0",
-		"eslint": "^7.13.0",
+		"eslint": "^7.14.0",
 		"eslint-config-prettier": "^6.15.0",
 		"eslint-loader": "^4.0.2",
 		"eslint-plugin-prettier": "^3.1.4",
 		"eslint-plugin-react": "^7.21.5",
 		"node-sass": "^4.14.1",
 		"prettier": "^2.2.0",
-		"snyk": "^1.428.2"
+		"snyk": "^1.430.0"
 	},
 	"engines": {
 		"node": ">= 8.17.0",
