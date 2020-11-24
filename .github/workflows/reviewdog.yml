@@ -1,16 +1,21 @@
-name: Reviewdog
+name: 🦮 Reviewdog
+
 on:
     pull_request:
         branches:
-            - master
+            - development
+            - staging
+            - production
+
 jobs:
   eslint:
-    name: eslint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - name: eslint
-        uses: reviewdog/action-eslint@master
+      - name: 🚚 Checkout repository
+        uses: actions/checkout@v2
+
+      - name: 🎀 Lint files
+        uses: reviewdog/action-eslint@v1
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-check
