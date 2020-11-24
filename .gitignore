@@ -40,3 +40,6 @@ coverage/
 .cache
 public
 build
+
+# Local Netlify folder
+.netlify
