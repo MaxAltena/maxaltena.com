@@ -1,4 +1,5 @@
-name: automerge
+name: 🔃 Automatically merge pull request
+
 on:
   pull_request:
     types:
@@ -17,13 +18,14 @@ on:
     types:
       - completed
   status: {}
+
 jobs:
-  automerge:
+  auto-merge:
     runs-on: ubuntu-latest
     steps:
-      - name: automerge
-        uses: "pascalgn/automerge-action@4536e8847eb62fe2f0ee52c8fa92d17aa97f932f"
+      - name: 🔃 Automatically merge
+        uses: pascalgn/automerge-action@v0.12.0
         env:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-          MERGE_LABELS: "dependencies"
-          MERGE_METHOD: "rebase"
+          MERGE_LABELS: ""
+          MERGE_DELETE_BRANCH: false
