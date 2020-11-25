@@ -7,6 +7,13 @@ module.exports = {
 	},
 	plugins: [
 		{
+			resolve: "@sentry/gatsby",
+			options: {
+				dsn: "https://53bbf5138f9a45d2bec1f64daabf0b11@o482180.ingest.sentry.io/5531971",
+				sampleRate: 1.0,
+			},
+		},
+		{
 			resolve: "gatsby-plugin-manifest",
 			options: {
 				name: "Max Altena",
@@ -18,21 +25,6 @@ module.exports = {
 				icon: "./src/assets/icons/favicon.png",
 				lang: "en-US",
 				description: "The website of Max Altena",
-			},
-		},
-		{
-			resolve: "gatsby-plugin-htaccess",
-			options: {
-				RewriteBase: true,
-				https: true,
-				www: false,
-				host: "maxaltena.com",
-				custom: `
-<IfModule mod_headers.c>
-    <FilesMatch "\\.(jpg|jpeg|png|gif|ico|webmanifest|txt|xml)$">
-        Header set Cache-Control "public, max-age=31536000, immutable"
-    </FilesMatch>
-</IfModule>`,
 			},
 		},
 		{

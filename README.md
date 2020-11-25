@@ -14,7 +14,7 @@ Find it on [https://maxaltena.com/][link:maxaltena]!
 [link:netlify-status]: https://app.netlify.com/sites/maxaltena/deploys
 [img:uptimerobot-status]: https://img.shields.io/uptimerobot/status/m786464602-a83a3336fdbd0bfb1dce0e6e
 [img:uptimerobot-ratio]: https://img.shields.io/uptimerobot/ratio/m786464602-a83a3336fdbd0bfb1dce0e6e
-[link:uptimerobot-status]: https://status.maxaltena.com/
+[link:uptimerobot-status]: https://status.maxaltena.com/786464605
 [img:snyk]: https://img.shields.io/snyk/vulnerabilities/github/MaxAltena/maxaltena.com
 [link:snyk]: https://app.snyk.io/org/maxaltena/project/263b9403-a548-4aa5-80a2-fae4ac0674b6
 [img:github-version]: https://img.shields.io/github/package-json/v/MaxAltena/maxaltena.com
