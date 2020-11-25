@@ -21,7 +21,7 @@
 		"type": "git",
 		"url": "https://github.com/MaxAltena/maxaltena.com.git"
 	},
-	"license": "UNLICENSED",
+	"license": "MIT",
 	"author": "Max Altena <max@maxaltena.com> (https://maxaltena.com/)",
 	"scripts": {
 		"build": "gatsby build",
