@@ -52,7 +52,6 @@
 		"not dead"
 	],
 	"dependencies": {
-		"@sentry/gatsby": "^5.27.6",
 		"axios": "^0.21.0",
 		"baffle": "^0.3.6",
 		"gatsby": "^2.27.2",

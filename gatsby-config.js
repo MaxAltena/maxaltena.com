@@ -7,13 +7,6 @@ module.exports = {
 	},
 	plugins: [
 		{
-			resolve: "@sentry/gatsby",
-			options: {
-				dsn: "https://53bbf5138f9a45d2bec1f64daabf0b11@o482180.ingest.sentry.io/5531971",
-				sampleRate: 1.0,
-			},
-		},
-		{
 			resolve: "gatsby-plugin-manifest",
 			options: {
 				name: "Max Altena",
