@@ -1,4 +1,4 @@
-# maxaltena.com
+# [maxaltena.com][link:maxaltena]
 
 ###### [![Netlify status][img:netlify-status]][link:netlify-status] [![Uptime Robot status][img:uptimerobot-status]][link:uptimerobot-status] [![Uptime Robot ratio (30 days)][img:uptimerobot-ratio]][link:uptimerobot-status] [![Snyk Vulnerabilities for GitHub Repo][img:snyk]][link:snyk]
 
@@ -8,7 +8,7 @@
 
 > Personal website and portfolio of Max Altena
 
-Find it on [https://maxaltena.com/][link:maxaltena]!
+Find it on [maxaltena.com][link:maxaltena]!
 
 [img:netlify-status]: https://img.shields.io/netlify/e388b4af-3e4b-47e0-84a6-e6588356c54f
 [link:netlify-status]: https://app.netlify.com/sites/maxaltena/deploys
