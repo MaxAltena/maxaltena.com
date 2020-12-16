@@ -69,7 +69,7 @@
 		"gatsby-plugin-preconnect": "^1.1.54",
 		"gatsby-plugin-react-helmet": "^3.6.0",
 		"gatsby-plugin-robots-txt": "^1.5.3",
-		"gatsby-plugin-sass": "^2.7.0",
+		"gatsby-plugin-sass": "^2.8.0",
 		"gatsby-plugin-sitemap": "^2.8.0",
 		"gatsby-plugin-web-font-loader": "^1.0.4",
 		"prop-types": "^15.7.2",
