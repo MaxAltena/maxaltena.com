@@ -70,7 +70,7 @@
 		"gatsby-plugin-react-helmet": "^3.7.0",
 		"gatsby-plugin-robots-txt": "^1.5.5",
 		"gatsby-plugin-sass": "^2.8.0",
-		"gatsby-plugin-sitemap": "^2.9.0",
+		"gatsby-plugin-sitemap": "^2.10.0",
 		"gatsby-plugin-web-font-loader": "^1.0.4",
 		"prop-types": "^15.7.2",
 		"react": "^17.0.1",
