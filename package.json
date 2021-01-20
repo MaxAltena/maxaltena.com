@@ -65,7 +65,7 @@
 		"gatsby-plugin-humans-txt": "^1.1.4",
 		"gatsby-plugin-manifest": "^2.11.0",
 		"gatsby-plugin-no-sourcemaps": "^2.7.0",
-		"gatsby-plugin-offline": "^3.8.0",
+		"gatsby-plugin-offline": "^3.9.0",
 		"gatsby-plugin-preconnect": "^1.1.54",
 		"gatsby-plugin-react-helmet": "^3.8.0",
 		"gatsby-plugin-robots-txt": "^1.5.5",
