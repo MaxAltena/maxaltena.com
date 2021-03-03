@@ -16,7 +16,7 @@ Find it on [maxaltena.com][link:maxaltena]!
 [img:uptimerobot-ratio]: https://img.shields.io/uptimerobot/ratio/m786464602-a83a3336fdbd0bfb1dce0e6e
 [link:uptimerobot-status]: https://status.maxaltena.com/786464605
 [img:snyk]: https://img.shields.io/snyk/vulnerabilities/github/MaxAltena/maxaltena.com
-[link:snyk]: https://app.snyk.io/org/maxaltena/project/263b9403-a548-4aa5-80a2-fae4ac0674b6
+[link:snyk]: https://app.snyk.io/org/maxaltena/project/5bc9f54c-cdfe-4470-9564-b2a67cbb64af
 [img:github-version]: https://img.shields.io/github/package-json/v/MaxAltena/maxaltena.com
 [link:github-version]: https://github.com/MaxAltena/maxaltena.com
 [img:github-issues]: https://img.shields.io/github/issues/MaxAltena/maxaltena.com
