@@ -54,7 +54,7 @@
 	"dependencies": {
 		"axios": "^0.21.1",
 		"baffle": "^0.3.6",
-		"gatsby": "^3.0.4",
+		"gatsby": "^3.1.0",
 		"gatsby-image": "^3.1.0",
 		"gatsby-plugin-canonical-urls": "^3.1.0",
 		"gatsby-plugin-exclude": "^1.0.2",
