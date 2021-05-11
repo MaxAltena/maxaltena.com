@@ -88,7 +88,7 @@
 		"eslint-plugin-prettier": "^3.4.0",
 		"eslint-plugin-react": "^7.23.2",
 		"node-sass": "^4.14.1",
-		"prettier": "^2.2.1",
+		"prettier": "^2.3.0",
 		"snyk": "^1.590.0"
 	},
 	"engines": {
