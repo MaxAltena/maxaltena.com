@@ -52,7 +52,7 @@
 		"not dead"
 	],
 	"dependencies": {
-		"axios": "^0.21.1",
+		"axios": "^0.21.3",
 		"baffle": "^0.3.6",
 		"gatsby": "^3.13.0",
 		"gatsby-image": "^3.11.0",
