@@ -86,10 +86,10 @@
 		"eslint-config-prettier": "^6.15.0",
 		"eslint-loader": "^4.0.2",
 		"eslint-plugin-prettier": "^3.4.1",
-		"eslint-plugin-react": "^7.25.1",
+		"eslint-plugin-react": "^7.25.2",
 		"node-sass": "^6.0.1",
 		"prettier": "^2.4.0",
-		"snyk": "^1.715.0"
+		"snyk": "^1.716.0"
 	},
 	"engines": {
 		"node": ">= 8.17.0",
