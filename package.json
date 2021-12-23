@@ -72,7 +72,7 @@
 		"gatsby-plugin-sass": "^2.8.0",
 		"gatsby-plugin-sitemap": "^4.10.0",
 		"gatsby-plugin-web-font-loader": "^1.0.4",
-		"prop-types": "^15.7.2",
+		"prop-types": "^15.8.0",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
 		"react-draggable": "^4.4.4",
