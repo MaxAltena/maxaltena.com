@@ -82,7 +82,7 @@
 	"devDependencies": {
 		"@maxaltena/eslint-config-maxaltena": "^1.1.2",
 		"babel-eslint": "^10.1.0",
-		"eslint": "^8.12.0",
+		"eslint": "^8.13.0",
 		"eslint-config-prettier": "^6.15.0",
 		"eslint-loader": "^4.0.2",
 		"eslint-plugin-prettier": "^4.0.0",
