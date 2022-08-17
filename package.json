@@ -56,7 +56,7 @@
 		"baffle": "^0.3.6",
 		"gatsby": "^4.20.0",
 		"gatsby-image": "^3.11.0",
-		"gatsby-plugin-canonical-urls": "^4.20.0",
+		"gatsby-plugin-canonical-urls": "^4.21.0",
 		"gatsby-plugin-exclude": "^1.0.2",
 		"gatsby-plugin-favicon": "^3.1.6",
 		"gatsby-plugin-google-analytics": "^4.21.0",
