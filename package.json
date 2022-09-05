@@ -86,7 +86,7 @@
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-loader": "^4.0.2",
 		"eslint-plugin-prettier": "^4.2.1",
-		"eslint-plugin-react": "^7.31.1",
+		"eslint-plugin-react": "^7.31.6",
 		"node-sass": "^7.0.1",
 		"prettier": "^2.7.1",
 		"snyk": "^1.997.0"
