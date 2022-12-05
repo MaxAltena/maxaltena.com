@@ -89,7 +89,7 @@
 		"eslint-plugin-react": "^7.31.11",
 		"node-sass": "^8.0.0",
 		"prettier": "^2.8.0",
-		"snyk": "^1.1065.0"
+		"snyk": "^1.1066.0"
 	},
 	"engines": {
 		"node": ">= 8.17.0",
