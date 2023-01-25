@@ -59,7 +59,7 @@
 		"gatsby-plugin-canonical-urls": "^5.5.0",
 		"gatsby-plugin-exclude": "^1.0.2",
 		"gatsby-plugin-favicon": "^3.1.6",
-		"gatsby-plugin-google-analytics": "^5.4.0",
+		"gatsby-plugin-google-analytics": "^5.5.0",
 		"gatsby-plugin-google-tagmanager": "^5.5.0",
 		"gatsby-plugin-html-attributes": "^1.0.5",
 		"gatsby-plugin-humans-txt": "^1.1.4",
