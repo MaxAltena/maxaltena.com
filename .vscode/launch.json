@@ -1,0 +1,48 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Next: dev",
+			"type": "node",
+			"runtimeExecutable": "npm",
+			"request": "launch",
+			"runtimeArgs": ["run", "dev"],
+			"console": "integratedTerminal"
+		},
+		{
+			"name": "Next: debug full stack",
+			"type": "node",
+			"runtimeExecutable": "npm",
+			"request": "launch",
+			"runtimeArgs": ["run", "dev"],
+			"console": "integratedTerminal",
+			"serverReadyAction": {
+				"pattern": "started server on .+, url: (https?://.+)",
+				"uriFormat": "%s",
+				"action": "debugWithChrome"
+			}
+		},
+		{
+			"name": "Next: debug back-end",
+			"type": "node",
+			"runtimeExecutable": "npm",
+			"request": "launch",
+			"runtimeArgs": ["run", "dev"],
+			"console": "integratedTerminal"
+		},
+		{
+			"name": "Next: debug front-end",
+			"type": "chrome",
+			"request": "launch",
+			"url": "http://localhost:3000"
+		},
+		{
+			"name": "Next: attach",
+			"port": 9229,
+			"request": "attach",
+			"skipFiles": ["<node_internals>/**"],
+			"type": "node",
+			"restart": true
+		}
+	]
+}
