@@ -67,7 +67,7 @@
 		"gatsby-plugin-no-sourcemaps": "^5.9.0",
 		"gatsby-plugin-offline": "^6.9.0",
 		"gatsby-plugin-preconnect": "^1.4.0",
-		"gatsby-plugin-react-helmet": "^6.9.0",
+		"gatsby-plugin-react-helmet": "^6.10.0",
 		"gatsby-plugin-robots-txt": "^1.8.0",
 		"gatsby-plugin-sass": "^6.9.0",
 		"gatsby-plugin-sitemap": "^6.9.0",
