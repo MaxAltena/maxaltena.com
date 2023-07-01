@@ -40,6 +40,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			<body className="min-h-screen bg-brand-blue">
 				{children}
 				<Analytics />
+				<a className="invisible hidden" rel="me" href="https://mastodon.social/@maxaltena">
+					Mastodon
+				</a>
 			</body>
 		</html>
 	);
