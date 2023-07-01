@@ -1,12 +1,10 @@
 import Link from "next/link";
-import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconHoverGitHub } from "@/components/IconHover/GitHub";
+import { IconHoverLinkedIn } from "@/components/IconHover/LinkedIn";
 import { Logo } from "@/components/Logo";
 import { Marquee } from "@/components/Marquee";
 import { Navbar } from "@/components/Navigation";
-import { buttonVariants } from "@/components/ui/button";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
-import { cn } from "@/lib/utils";
 
 export default function Page() {
 	return (
@@ -15,21 +13,8 @@ export default function Page() {
 				<Logo asLink="/" />
 
 				<div className="flex gap-3">
-					<Link
-						href="https://github.com/MaxAltena"
-						className={cn(buttonVariants({ size: "icon" }), "border-2 border-black bg-[#000000]")}
-					>
-						<FontAwesomeIcon icon={faGithub} className="h-6 w-6" />
-					</Link>
-					<Link
-						href="https://linkedin.com/in/MaxAltena"
-						className={cn(
-							buttonVariants({ size: "icon" }),
-							"border-2 border-black bg-[#0077B5] hover:bg-[#0077B5]"
-						)}
-					>
-						<FontAwesomeIcon icon={faLinkedinIn} className="h-6 w-6" />
-					</Link>
+					<IconHoverGitHub />
+					<IconHoverLinkedIn />
 				</div>
 			</Navbar>
 
