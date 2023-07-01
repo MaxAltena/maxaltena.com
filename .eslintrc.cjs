@@ -24,17 +24,6 @@ const config = {
 				fixStyle: "inline-type-imports",
 			},
 		],
-		"import/order": [
-			"warn",
-			{
-				groups: ["builtin", "type", "external", "internal", "parent", "sibling", "index", "object"],
-				alphabetize: {
-					order: "asc",
-					caseInsensitive: true,
-				},
-			},
-		],
-		"import/no-duplicates": "warn",
 		"import/no-named-default": "error",
 		"import/no-default-export": "error",
 		"react-hooks/exhaustive-deps": "off",

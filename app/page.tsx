@@ -1,75 +1,81 @@
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
+import Link from "next/link";
+import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Logo } from "@/components/Logo";
+import { Marquee } from "@/components/Marquee";
+import { Navbar } from "@/components/Navigation";
+import { buttonVariants } from "@/components/ui/button";
+import { Card, CardDescription, CardTitle } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 
-const inter = Inter({ subsets: ['latin'] })
+export default function Page() {
+	return (
+		<div className="flex min-h-screen flex-col">
+			<Navbar className="sticky inset-x-0 top-0 z-10 border-b-4 border-black bg-white">
+				<Logo asLink="/" />
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
+				<div className="flex gap-3">
+					<Link
+						href="https://github.com/MaxAltena"
+						className={cn(buttonVariants({ size: "icon" }), "border-2 border-black bg-[#000000]")}
+					>
+						<FontAwesomeIcon icon={faGithub} className="h-6 w-6" />
+					</Link>
+					<Link
+						href="https://linkedin.com/in/MaxAltena"
+						className={cn(
+							buttonVariants({ size: "icon" }),
+							"border-2 border-black bg-[#0077B5] hover:bg-[#0077B5]"
+						)}
+					>
+						<FontAwesomeIcon icon={faLinkedinIn} className="h-6 w-6" />
+					</Link>
+				</div>
+			</Navbar>
 
-          </a>
-        </div>
-      </div>
+			<Marquee
+				className="border-b-4 border-black bg-brand-yellow py-4 font-mono text-brand-blue"
+				shownIndex={1}
+				count={20}
+			>
+				{(isShown) => (
+					<>
+						<span>Experienced front-end developer</span>
+						<span>
+							Works at{" "}
+							<Link
+								className="rounded-sm font-bold hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue motion-safe:transition"
+								tabIndex={!isShown ? -1 : undefined}
+								href="https://stijlbreuk.nl"
+							>
+								Stijlbreuk
+							</Link>
+						</span>
+						<span>Mechanical keyboard enthusiast</span>
+						<span>All-round learner</span>
+						<span>
+							Improving{" "}
+							<Link
+								className="rounded-sm font-bold hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue motion-safe:transition"
+								tabIndex={!isShown ? -1 : undefined}
+								href="https://threejs.org/"
+							>
+								Three.js
+							</Link>{" "}
+							skills
+						</span>
+					</>
+				)}
+			</Marquee>
 
-      <div className={styles.center}>
-
-        <div className={styles.thirteen}>
-        </div>
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+			<main className="flex flex-1 flex-col items-center justify-center gap-4">
+				<Card className="bg-brand-yellow px-6 py-4 text-brand-blue sm:px-12 sm:py-8">
+					<CardTitle className="font-display text-3xl font-black">Max Altena</CardTitle>
+					<CardDescription className="mt-2 text-brand-blue">
+						I guess there will be something here soon.
+					</CardDescription>
+				</Card>
+			</main>
+		</div>
+	);
 }
