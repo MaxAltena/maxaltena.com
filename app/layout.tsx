@@ -1,4 +1,5 @@
 import { Fira_Code, Inter, Playfair_Display, Unbounded } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const inter = Inter({
@@ -36,7 +37,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 			lang="en"
 			className={`${inter.variable} ${playfairDisplay.variable} ${firaCode.variable} ${unbounded.variable} font-sans`}
 		>
-			<body className="min-h-screen bg-brand-blue">{children}</body>
+			<body className="min-h-screen bg-brand-blue">
+				{children}
+				<Analytics />
+			</body>
 		</html>
 	);
 }
