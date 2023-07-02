@@ -54,7 +54,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
 					<div className="flex gap-3">
 						<IconHoverGitHub login={clientEnv.NEXT_PUBLIC_GITHUB_LOGIN} />
-						<IconHoverLinkedIn />
+						<IconHoverLinkedIn vanityName={clientEnv.NEXT_PUBLIC_LINKEDIN_VANITYNAME} />
 					</div>
 				</Navbar>
 

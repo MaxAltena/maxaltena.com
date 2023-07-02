@@ -4,6 +4,7 @@ import { z } from "zod";
 export const clientEnv = createEnv({
 	client: {
 		NEXT_PUBLIC_GITHUB_LOGIN: z.string(),
+		NEXT_PUBLIC_LINKEDIN_VANITYNAME: z.string(),
 		NEXT_PUBLIC_MASTODON_LINK: z.string(),
 	},
 	shared: {

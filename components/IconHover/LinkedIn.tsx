@@ -4,10 +4,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-export function IconHoverLinkedIn() {
+export function IconHoverLinkedIn({ vanityName }: { vanityName: string }) {
 	return (
 		<Link
-			href="https://linkedin.com/in/MaxAltena"
+			href={`https://linkedin.com/in/${vanityName}`}
 			className={cn(
 				buttonVariants({ size: "icon" }),
 				"border-2 border-black bg-[#0077B5] hover:bg-[#0077B5]"
