@@ -1,8 +1,11 @@
-import { use } from "react";
+import { type ComponentProps } from "react";
 import Link from "next/link";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { buttonVariants } from "@/components/ui/button";
+import { IconHoverGitHubLastContribution } from "@/components/IconHover/GitHub/LastContribution";
+import { IconHoverGitHubStatus } from "@/components/IconHover/GitHub/Status";
+import { IconHoverGitHubTrigger } from "@/components/IconHover/GitHub/Trigger";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
 	HoverCard,
 	HoverCardArrow,
@@ -10,74 +13,70 @@ import {
 	HoverCardTrigger,
 } from "@/components/ui/hover-card";
 import { clientEnv } from "@/env/client.mjs";
-import { serverEnv } from "@/env/server.mjs";
-import { cn } from "@/lib/utils";
+import { getGitHubUser } from "@/lib/getGitHubUser";
 
-export async function IconHoverGitHub() {
-	// const data = use(
+export async function IconHoverGitHub({
+	openDelay = 250,
+	closeDelay = 250,
+	...props
+}: ComponentProps<typeof HoverCard>) {
+	const userResponse = await getGitHubUser(clientEnv.NEXT_PUBLIC_GITHUB_USERNAME);
 
-	// 		.then((result) => console.log(result))
-	// );
-	// const data = await getGitHubUserHoverCardData(clientEnv.NEXT_PUBLIC_GITHUB_USERNAME);
+	if (!userResponse.success) {
+		return (
+			<IconHoverGitHubTrigger
+				href={`https://github.com/${clientEnv.NEXT_PUBLIC_GITHUB_USERNAME}`}
+			/>
+		);
+	}
 
-	// console.log(data);
+	const { data: user } = userResponse;
 
 	return (
-		<HoverCard openDelay={250} closeDelay={250} open>
+		<HoverCard openDelay={openDelay} closeDelay={closeDelay} {...props}>
 			<HoverCardTrigger asChild>
-				<Link
-					href={`https://github.com/${clientEnv.NEXT_PUBLIC_GITHUB_USERNAME}`}
-					className={cn(buttonVariants({ size: "icon" }), "border-2 border-black bg-[#000000]")}
-				>
-					<FontAwesomeIcon icon={faGithub} className="h-6 w-6" />
-				</Link>
+				<IconHoverGitHubTrigger href={user.url} />
 			</HoverCardTrigger>
-			<HoverCardContent>
-				The React Framework – created and maintained by @vercel.
+			<HoverCardContent className="text-sm">
+				<IconHoverGitHubStatus status={user.status} />
+
+				<div className="flex w-full flex-col gap-2">
+					<Avatar className="h-10 w-10">
+						<AvatarImage src={user.avatarUrl} alt={`Avatar of ${user.name}`} />
+						<AvatarFallback>{user.name.split(" ").map((word) => word[0])}</AvatarFallback>
+					</Avatar>
+
+					<div className="flex flex-col gap-[.125rem]">
+						<div className="flex gap-1">
+							<Link
+								className="rounded-sm font-bold hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue motion-safe:transition"
+								href={user.url}
+							>
+								{user.login}
+							</Link>
+							<span>
+								{user.name} · {user.pronouns}
+							</span>
+						</div>
+
+						<div dangerouslySetInnerHTML={{ __html: user.bioHTML }} />
+					</div>
+
+					<div className="flex flex-col gap-1">
+						{user.location && (
+							<div className="flex items-center gap-1 text-xs">
+								<FontAwesomeIcon icon={faLocationDot} className="h-4 w-4" />
+								<span>{user.location}</span>
+							</div>
+						)}
+
+						<IconHoverGitHubLastContribution
+							contributionsCollection={user.contributionsCollection}
+						/>
+					</div>
+				</div>
 				<HoverCardArrow width={14} height={7} />
 			</HoverCardContent>
 		</HoverCard>
 	);
-}
-
-async function getGitHubUserHoverCardData(username: string) {
-	const response = await fetch(serverEnv.GITHUB_GRAPHQL_API_URL, {
-		method: "POST",
-		headers: {
-			Authorization: `Bearer ${serverEnv.GITHUB_ACCESS_TOKEN}`,
-			"Content-Type": "application/json",
-		},
-		body: JSON.stringify({
-			query: `
-				{
-					user(login: "${username}") {
-						email
-						avatarUrl
-						name
-						url
-						bio
-						pronouns
-						location
-						status {
-							message
-							emoji
-						}
-					}
-				}
-			`,
-		}),
-		next: {
-			revalidate:
-				// Seconds
-				60 *
-				// Minutes
-				60 *
-				// Hours
-				12,
-		},
-		// 	})
-		// 		.then((res) => res.json())
-	});
-
-	return response.json();
 }

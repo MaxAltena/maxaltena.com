@@ -19,6 +19,8 @@ export function Logo({ className, asLink }: { className?: string; asLink?: strin
 				height={64}
 				alt="A logo displayed through a serif font containing the text MAx"
 				className="select-none [display:--logo-1]"
+				priority
+				loading="eager"
 			/>
 			<Image
 				src="./icon2.svg"
@@ -26,6 +28,7 @@ export function Logo({ className, asLink }: { className?: string; asLink?: strin
 				height={64}
 				alt="A logo displayed through a display font containing the text MAx"
 				className="select-none [display:--logo-2]"
+				loading="eager"
 			/>
 		</Comp>
 	);
