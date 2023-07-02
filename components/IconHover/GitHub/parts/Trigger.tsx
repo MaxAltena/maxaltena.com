@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 export function IconHoverGitHubTrigger({
 	className,
 	...props
-}: LinkProps & { className?: string }) {
+}: LinkProps & React.ComponentPropsWithoutRef<"a">) {
 	return (
 		<Link
 			className={cn(

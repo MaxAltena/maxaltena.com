@@ -35,11 +35,11 @@ export const GitHubUserSchema = z.object({
 	url: z.string().url().startsWith("https://github.com"),
 });
 
-export const preload = (username: string) => {
-	void getGitHubUser(username);
+export const preload = (login: string) => {
+	void getGitHubUser(login);
 };
 
-export const getGitHubUser = cache(async (username: string) => {
+export const getGitHubUser = cache(async (login: string) => {
 	const response = await fetch(serverEnv.GITHUB_GRAPHQL_API_URL, {
 		method: "POST",
 		headers: {
@@ -49,7 +49,7 @@ export const getGitHubUser = cache(async (username: string) => {
 		body: JSON.stringify({
 			query: `
 				{
-					user(login: "${username}") {
+					user(login: "${login}") {
 						avatarUrl
 						bioHTML
 						contributionsCollection {
@@ -77,7 +77,7 @@ export const getGitHubUser = cache(async (username: string) => {
 			`,
 		}),
 		next: {
-			tags: ["github", `github-user-${username}`],
+			tags: ["github", `github-user-${login}`],
 			revalidate: TIME_UNITS.hour,
 		},
 	});

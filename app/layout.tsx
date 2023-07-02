@@ -3,11 +3,12 @@ import Link from "next/link";
 import { Analytics } from "@vercel/analytics/react";
 import { Background } from "@/app/Background";
 import { Mastodon } from "@/app/Mastodon";
-import { IconHoverGitHub } from "@/components/IconHover/GitHub";
+import { IconHoverGitHub } from "@/components/IconHover/GitHub/GitHub";
 import { IconHoverLinkedIn } from "@/components/IconHover/LinkedIn";
 import { Logo } from "@/components/Logo";
 import { Marquee } from "@/components/Marquee";
 import { Navbar } from "@/components/Navigation";
+import { clientEnv } from "@/env/client.mjs";
 import "./globals.css";
 
 const inter = Inter({
@@ -52,7 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					<Logo asLink="/" />
 
 					<div className="flex gap-3">
-						<IconHoverGitHub />
+						<IconHoverGitHub login={clientEnv.NEXT_PUBLIC_GITHUB_LOGIN} />
 						<IconHoverLinkedIn />
 					</div>
 				</Navbar>
