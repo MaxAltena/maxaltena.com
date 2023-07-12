@@ -59,7 +59,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				</Navbar>
 
 				<Marquee
-					className="border-b-4 border-black bg-brand-yellow py-4 font-mono text-brand-blue"
+					className="border-b-4 border-black bg-brand-yellow font-mono text-brand-blue"
+					parts={{ inner: { className: "py-4" } }}
 					shownIndex={1}
 					count={20}
 				>

@@ -76,7 +76,7 @@ export default {
 				},
 				marquee: {
 					from: { translate: "0 0" },
-					to: { translate: "-100% 0" },
+					to: { translate: "calc(-50% - var(--gap) / 2) 0" },
 				},
 			},
 			animation: {
