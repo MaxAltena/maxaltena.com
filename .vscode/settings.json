@@ -1,5 +1,6 @@
 {
 	"typescript.tsdk": "node_modules/typescript/lib",
 	"typescript.enablePromptUseWorkspaceTsdk": true,
-	"dotenv.enableAutocloaking": false
+	"dotenv.enableAutocloaking": false,
+	"conventionalCommits.scopes": ["deps"]
 }
