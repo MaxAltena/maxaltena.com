@@ -28,7 +28,7 @@ export function IconHoverGitHubLastContribution({
 	const absolute = lastContributionDate.toLocaleDateString("en", { dateStyle: "long" });
 
 	const relative = new Intl.RelativeTimeFormat("en", { style: "long" }).format(
-		...getRelativeTimeFormatDifference(lastContributionDate)
+		...getRelativeTimeFormatDifference(lastContributionDate),
 	);
 
 	return (

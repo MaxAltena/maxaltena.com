@@ -2,7 +2,7 @@ import { TIME_UNITS } from "@/lib/time";
 
 export function getRelativeTimeFormatDifference(
 	date: string | number | Date,
-	compareTo: string | number | Date = Date.now()
+	compareTo: string | number | Date = Date.now(),
 ): [number, Intl.RelativeTimeFormatUnit] {
 	const dateToCompare = new Date(date),
 		compareToDate = new Date(compareTo);
@@ -16,7 +16,7 @@ export function getRelativeTimeFormatDifference(
 
 	for (const [unit, seconds] of Object.entries(TIME_UNITS) as [
 		Intl.RelativeTimeFormatUnit,
-		number
+		number,
 	][]) {
 		const value = Math.floor(differenceInSeconds / seconds);
 

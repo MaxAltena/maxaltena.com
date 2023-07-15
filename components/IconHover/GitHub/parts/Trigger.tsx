@@ -13,7 +13,7 @@ export function IconHoverGitHubTrigger({
 			className={cn(
 				buttonVariants({ size: "icon" }),
 				"border-2 border-black bg-[#000000]",
-				className
+				className,
 			)}
 			{...props}
 		>

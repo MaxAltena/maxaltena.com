@@ -15,9 +15,9 @@ export const GitHubUserSchema = z.object({
 						z.object({
 							contributionCount: z.number(),
 							date: z.coerce.date(),
-						})
+						}),
 					),
-				})
+				}),
 			),
 		}),
 	}),

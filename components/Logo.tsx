@@ -10,7 +10,7 @@ export function Logo({ className, asLink }: { className?: string; asLink?: strin
 			href={asLink ? asLink : (undefined as never)}
 			className={cn(
 				"relative block h-16 w-16 rounded ring-offset-transparent  [--logo-1:none] [--logo-2:block] hover:[--logo-1:block] hover:[--logo-2:none] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-blue focus-visible:[--logo-1:block] focus-visible:[--logo-2:none] motion-safe:transition",
-				className
+				className,
 			)}
 		>
 			<Image

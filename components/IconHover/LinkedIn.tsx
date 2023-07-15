@@ -10,7 +10,7 @@ export function IconHoverLinkedIn({ vanityName }: { vanityName: string }) {
 			href={`https://linkedin.com/in/${vanityName}`}
 			className={cn(
 				buttonVariants({ size: "icon" }),
-				"border-2 border-black bg-[#0077B5] hover:bg-[#0077B5]"
+				"border-2 border-black bg-[#0077B5] hover:bg-[#0077B5]",
 			)}
 		>
 			<FontAwesomeIcon icon={faLinkedinIn} className="h-6 w-6" />

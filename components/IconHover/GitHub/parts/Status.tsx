@@ -15,7 +15,7 @@ export function IconHoverGitHubStatus({
 		<div
 			className={cn(
 				"-mx-4 -mt-4 mb-4 flex items-center gap-2 border-b-2 border-black p-2",
-				className
+				className,
 			)}
 			{...props}
 		>
