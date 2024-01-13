@@ -1,23 +1,23 @@
 import Link, { type LinkProps } from "next/link";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { cx } from "@/lib/style/cva.config";
 
 export function IconHoverGitHubTrigger({
-	className,
+	href,
 	...props
-}: LinkProps & React.ComponentPropsWithoutRef<"a">) {
+}: React.ComponentProps<typeof Button> & Pick<LinkProps, "href">) {
 	return (
-		<Link
-			className={cn(
-				buttonVariants({ size: "icon" }),
-				"border-2 border-black bg-[#000000]",
-				className,
-			)}
+		<Button
+			as="child"
+			size="icon"
 			{...props}
+			className={cx("border-2 border-black bg-[#24292F] hover:bg-[#24292F]", props.className)}
 		>
-			<FontAwesomeIcon icon={faGithub} className="h-6 w-6" />
-		</Link>
+			<Link href={href}>
+				<FontAwesomeIcon icon={faGithub} className="size-6" />
+			</Link>
+		</Button>
 	);
 }

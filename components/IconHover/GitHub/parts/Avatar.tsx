@@ -2,7 +2,7 @@ import { type z } from "zod";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { type GitHubUserSchema } from "@/lib/getGitHubUser";
 import { getInitials } from "@/lib/getInitials";
-import { cn } from "@/lib/utils";
+import { cx } from "@/lib/style/cva.config";
 
 export function IconHoverGitHubAvatar({
 	avatarUrl,
@@ -14,7 +14,7 @@ export function IconHoverGitHubAvatar({
 	const initials = getInitials(name);
 
 	return (
-		<Avatar className={cn("h-10 w-10", className)} {...props}>
+		<Avatar className={cx("size-10", className)} {...props}>
 			<AvatarImage src={avatarUrl} alt={`Avatar of ${name}`} />
 			<AvatarFallback>{initials}</AvatarFallback>
 		</Avatar>

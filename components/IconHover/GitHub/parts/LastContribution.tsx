@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { type z } from "zod";
 import { type GitHubUserSchema } from "@/lib/getGitHubUser";
 import { getRelativeTimeFormatDifference } from "@/lib/getRelativeTimeFormatDifference";
-import { cn } from "@/lib/utils";
+import { cx } from "@/lib/style/cva.config";
 
 export function IconHoverGitHubLastContribution({
 	contributionsCollection,
@@ -32,8 +32,8 @@ export function IconHoverGitHubLastContribution({
 	);
 
 	return (
-		<div className={cn("flex items-center gap-1 text-xs", className)} {...props}>
-			<FontAwesomeIcon icon={faCodeCommit} className="h-4 w-4" />
+		<div className={cx("flex items-center gap-1 text-xs", className)} {...props}>
+			<FontAwesomeIcon icon={faCodeCommit} className="size-4" />
 			<span>
 				Last activity{" "}
 				<time dateTime={lastContributionDate.toISOString()}>

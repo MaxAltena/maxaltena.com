@@ -2,5 +2,11 @@
 	"typescript.tsdk": "node_modules/typescript/lib",
 	"typescript.enablePromptUseWorkspaceTsdk": true,
 	"dotenv.enableAutocloaking": false,
-	"conventionalCommits.scopes": ["deps"]
+	"conventionalCommits.scopes": ["deps"],
+
+	// TailwindCSS
+	"tailwindCSS.experimental.classRegex": [
+		["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+		["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+	]
 }

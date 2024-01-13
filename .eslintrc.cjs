@@ -1,13 +1,35 @@
 /** @type {import("eslint").Linter.Config} */
 const config = {
+	env: {
+		browser: true,
+		es2021: true,
+		node: true,
+	},
 	extends: [
 		"eslint:recommended",
 		"plugin:@typescript-eslint/recommended",
+		"plugin:react/recommended",
 		"next/core-web-vitals",
 		"prettier",
 	],
+	parser: "@typescript-eslint/parser",
+	parserOptions: {
+		ecmaVersion: "latest",
+		sourceType: "module",
+	},
+	plugins: ["@typescript-eslint", "react"],
 	rules: {
-		"@next/next/no-html-link-for-pages": ["error", "app/"],
+		// Always include curly braces everywhere for better readability
+		curly: ["warn", "all"],
+		// Prefer inline over general type imports
+		"@typescript-eslint/consistent-type-imports": [
+			"warn",
+			{
+				prefer: "type-imports",
+				fixStyle: "inline-type-imports",
+			},
+		],
+		// Allow some unassigning of variables
 		"@typescript-eslint/no-unused-vars": [
 			"warn",
 			{
@@ -17,40 +39,36 @@ const config = {
 				caughtErrorsIgnorePattern: "^_",
 			},
 		],
-		"@typescript-eslint/consistent-type-imports": [
-			"warn",
+		// Disable useEffect exhaustive deps
+		"react-hooks/exhaustive-deps": "off",
+		"no-restricted-imports": [
+			"error",
 			{
-				prefer: "type-imports",
-				fixStyle: "inline-type-imports",
+				paths: [
+					{
+						/* Error when trying to import `cva` instead of `@/lib/style/cva.config` to allow tailwind merging by default */
+						name: "cva",
+						message: "Please use '@/lib/style/cva.config' instead.",
+					},
+					{
+						/* Error when trying to import `tailwind-merge` instead of `@/lib/style/twMerge.config` to allow tailwind merging by default */
+						name: "tailwind-merge",
+						message: "Please use '@/lib/style/twMerge.config' instead.",
+					},
+				],
 			},
 		],
-		"import/no-named-default": "error",
-		"import/no-default-export": "error",
-		"react-hooks/exhaustive-deps": "off",
-		"max-params": ["error", 3],
-		"no-var": "error",
+		"@next/next/no-html-link-for-pages": ["error", "app/"],
 	},
 	overrides: [
 		{
-			/**
-			 *	Allow default export only for the following:
-			 *	- Next.js pages
-			 *	- TypeScript definitions files
-			 *	- Config files
-			 */
-			files: ["pages/**/*", "app/**/*", "middleware.ts", "*.d.ts", "*.config.*", "*.stories.*"],
-			rules: {
-				"import/no-anonymous-default-export": "off",
-				"import/no-default-export": "off",
+			/** ESLint config */
+			env: {
+				node: true,
 			},
-		},
-		{
-			/* TypeScript specific */
-			files: ["*.ts", "*.tsx"],
-			plugins: ["@typescript-eslint"],
-			parser: "@typescript-eslint/parser",
+			files: [".eslintrc.(c)js"],
 			parserOptions: {
-				project: "./tsconfig.json",
+				sourceType: "script",
 			},
 		},
 	],

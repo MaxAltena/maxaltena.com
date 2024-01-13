@@ -8,7 +8,9 @@ import { IconHoverLinkedIn } from "@/components/IconHover/LinkedIn";
 import { Logo } from "@/components/Logo";
 import { Marquee } from "@/components/Marquee";
 import { Navbar } from "@/components/Navigation";
+import { Code } from "@/components/ui/typography/code";
 import { clientEnv } from "@/env/client.mjs";
+import { cx } from "@/lib/style/cva.config";
 import "./globals.css";
 
 const inter = Inter({
@@ -44,17 +46,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 	return (
 		<html
 			lang="en"
-			className={`${inter.variable} ${playfairDisplay.variable} ${firaCode.variable} ${unbounded.variable} font-sans`}
+			className={cx(
+				inter.variable,
+				playfairDisplay.variable,
+				firaCode.variable,
+				unbounded.variable,
+				"font-sans",
+			)}
 		>
 			<body className="min-h-screen">
 				<Background />
 
 				<Navbar className="sticky inset-x-0 top-0 z-10 border-b-4 border-black bg-white">
-					<Logo asLink="/" />
+					<Logo href="/" />
 
 					<div className="flex gap-3">
 						<IconHoverGitHub login={clientEnv.NEXT_PUBLIC_GITHUB_LOGIN} />
-						<IconHoverLinkedIn vanityName={clientEnv.NEXT_PUBLIC_LINKEDIN_VANITYNAME} />
+						<IconHoverLinkedIn accountName={clientEnv.NEXT_PUBLIC_LINKEDIN_VANITYNAME} />
 					</div>
 				</Navbar>
 
@@ -79,6 +87,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 							</span>
 							<span>Mechanical keyboard enthusiast</span>
 							<span>All-round learner</span>
+							<span>
+								Still trying to exit <Code>vim</Code>
+							</span>
 							<span>
 								Improving{" "}
 								<Link

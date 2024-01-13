@@ -9,6 +9,7 @@ export default {
 		"./app/**/*.{ts,tsx}",
 		"./src/**/*.{ts,tsx}",
 	],
+	prefix: "",
 	theme: {
 		container: {
 			center: true,
@@ -61,14 +62,12 @@ export default {
 					"900": "#0303af",
 					"950": "#000577",
 				},
+				muted: "hsl(210 40% 96.1%)",
+				"muted-foreground": "hsl(215.4 16.3% 46.9%)",
 			},
 			backgroundImage: {
-				"grid-pattern": `linear-gradient(currentColor var(--bg-size, 0.25rem), transparent var(--bg-size, 0.25rem)), linear-gradient(to right, currentColor var(--bg-size, 0.25rem), transparent var(--bg-size, 0.25rem))`,
-
-				// background-color: #e5e5f7;
-				// opacity: 0.8;
-				// background-image:  ;
-				// background-size: 80px 80px;
+				"grid-pattern":
+					"linear-gradient(currentColor var(--bg-size, theme(spacing.1)), transparent var(--bg-size, theme(spacing.1))), linear-gradient(to right, currentColor var(--bg-size, theme(spacing.1)), transparent var(--bg-size,theme(spacing.1)))",
 			},
 			keyframes: {
 				"accordion-down": {

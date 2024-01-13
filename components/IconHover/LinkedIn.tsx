@@ -1,19 +1,23 @@
 import Link from "next/link";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { buttonVariants } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { cx } from "@/lib/style/cva.config";
 
-export function IconHoverLinkedIn({ vanityName }: { vanityName: string }) {
+export function IconHoverLinkedIn({
+	accountName,
+	...props
+}: React.ComponentProps<typeof Button> & { accountName: string }) {
 	return (
-		<Link
-			href={`https://linkedin.com/in/${vanityName}`}
-			className={cn(
-				buttonVariants({ size: "icon" }),
-				"border-2 border-black bg-[#0077B5] hover:bg-[#0077B5]",
-			)}
+		<Button
+			as="child"
+			size="icon"
+			{...props}
+			className={cx("border-2 border-black bg-[#0077B5] hover:bg-[#0077B5]", props.className)}
 		>
-			<FontAwesomeIcon icon={faLinkedinIn} className="h-6 w-6" />
-		</Link>
+			<Link href={`https://linkedin.com/in/${accountName}`}>
+				<FontAwesomeIcon icon={faLinkedinIn} className="size-6" />
+			</Link>
+		</Button>
 	);
 }
