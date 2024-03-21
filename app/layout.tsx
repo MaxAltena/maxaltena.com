@@ -109,6 +109,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
 				<Analytics />
 				<Mastodon />
+				<script defer src="/test-script.js"></script>
 			</body>
 		</html>
 	);
