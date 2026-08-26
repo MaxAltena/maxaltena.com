@@ -1,0 +1,73 @@
+---
+import { Image } from 'astro:assets'
+import portrait from '../assets/max.png'
+import { Email } from '../components/Email'
+import { LocalTime } from '../components/LocalTime'
+import Base from '../layouts/Base.astro'
+
+const places = [
+  { name: 'GitHub', host: 'github.com', path: '/MaxAltena' },
+  { name: 'GitLab', host: 'gitlab.com', path: '/MaxAltena' },
+  { name: 'LinkedIn', host: 'linkedin.com', path: '/in/MaxAltena' }
+]
+
+const row = 'flex h-11 items-center gap-3 rounded-control px-2 hover:bg-sunken'
+---
+
+<Base>
+  <main class="mx-auto flex min-h-dvh w-full max-w-[36rem] flex-col justify-center px-6 py-16">
+    <header>
+      <Image
+        src={portrait}
+        alt="Max Altena, smiling, in glasses and a striped shirt"
+        width={128}
+        height={128}
+        densities={[1, 2]}
+        loading="eager"
+        class="size-16 rounded-full bg-sunken ring-1 ring-line"
+      />
+      <p class="mt-6 font-mono text-micro tracking-wider text-fg-3 uppercase">
+        Nijmegen, NL · <LocalTime client:load />
+      </p>
+      <h1 class="mt-3 text-display font-semibold">Max Altena</h1>
+      <p class="mt-2 max-w-[65ch] text-fg-2">
+        Front-end developer at <a
+          href="https://stijlbreuk.nl"
+          class="text-fg underline decoration-line underline-offset-2 hover:decoration-fg"
+          >Stijlbreuk</a
+        >. I build web and mobile interfaces, mostly in TypeScript and React.
+      </p>
+    </header>
+
+    <section class="mt-8 border-t border-line pt-6">
+      <h2 class="font-mono text-micro tracking-wider text-fg-3 uppercase">Elsewhere</h2>
+      <ul class="mt-2 -mx-2">
+        <li class="border-b border-line-2">
+          <Email client:load user="max" domain="maxaltena.com" className={row} />
+        </li>
+        {
+          places.map(({ name, host, path }) => (
+            <li class="border-b border-line-2 last:border-b-0">
+              <a href={`https://${host}${path}`} rel="me" class={row}>
+                <span class="w-20 shrink-0 font-medium">{name}</span>
+                <span class="min-w-0 flex-1 truncate font-mono text-small text-fg-2">
+                  {host}
+                  {path}
+                </span>
+                <span class="font-mono text-small text-fg-3" aria-hidden="true">
+                  ↗
+                </span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <footer
+      class="mt-8 border-t border-line pt-4 font-mono text-micro tracking-wider text-fg-3 uppercase"
+    >
+      <a href="https://github.com/MaxAltena/maxaltena.com" class="hover:text-fg-2">Source</a>
+    </footer>
+  </main>
+</Base>

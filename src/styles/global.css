@@ -1,0 +1,122 @@
+@import 'tailwindcss';
+
+/* ── Design tokens (DESIGN.md §3–5) ───────────────────────────────────────
+   Values live on :root so they swap with the colour scheme; @theme inline
+   exposes them to Tailwind as utilities (bg-canvas, text-fg-2, …). The
+   neutral ramp runs warm — a couple of degrees toward yellow, never blue. */
+
+:root {
+  color-scheme: light dark;
+
+  --c-canvas: #fdfcf7;
+  --c-sunken: #27241c0a;
+  --c-line: #27241c2b;
+  --c-line-2: #27241c14;
+
+  --c-text: #27241c;
+  --c-text-2: #535046;
+  --c-text-3: #a19d91;
+
+  --c-accent: #007aff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --c-canvas: #1d1b15;
+    --c-sunken: #f2efe30d;
+    --c-line: #f2efe324;
+    --c-line-2: #f2efe314;
+
+    --c-text: #efece0;
+    --c-text-2: #aca699;
+    --c-text-3: #787365;
+
+    --c-accent: #0a84ff;
+  }
+}
+
+/* Increase contrast: strengthen the structure rather than the colour. */
+@media (prefers-contrast: more) {
+  :root {
+    --c-line: #27241c61;
+    --c-line-2: #27241c33;
+    --c-text-2: #35322a;
+    --c-text-3: #6e6a5c;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --c-line: #f2efe370;
+      --c-line-2: #f2efe33d;
+      --c-text-2: #d6d2c4;
+      --c-text-3: #a19d91;
+    }
+  }
+}
+
+@theme inline {
+  --color-canvas: var(--c-canvas);
+  --color-sunken: var(--c-sunken);
+  --color-line: var(--c-line);
+  --color-line-2: var(--c-line-2);
+
+  --color-fg: var(--c-text);
+  --color-fg-2: var(--c-text-2);
+  --color-fg-3: var(--c-text-3);
+
+  --color-accent: var(--c-accent);
+
+  --font-sans: -apple-system, 'SF Pro Text', system-ui, sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* Five sizes, no more (DESIGN.md §3) */
+  --text-micro: 11px;
+  --text-micro--line-height: 1.36;
+  --text-small: 12px;
+  --text-small--line-height: 1.4;
+  --text-base: 14px;
+  --text-base--line-height: 1.5;
+  --text-title: 16px;
+  --text-title--line-height: 1.35;
+  --text-display: 22px;
+  --text-display--line-height: 1.25;
+  --text-display--letter-spacing: -0.01em;
+
+  --radius-control: 4px;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background: var(--c-canvas);
+  color: var(--c-text);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Focus is never invisible — an accent halo at every stop. */
+:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--c-accent) 45%, transparent);
+  outline-offset: 1px;
+  border-radius: 4px;
+}
+
+/* Everything the machine produced is tabular, so a clock doesn't jitter. */
+.nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Motion is for state changes, not arrivals (DESIGN.md §9). */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

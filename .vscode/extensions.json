@@ -1,7 +1,3 @@
 {
-	"recommendations": [
-		"esbenp.prettier-vscode", // Prettier
-		"dbaeumer.vscode-eslint" // ESLint
-	],
-	"unwantedRecommendations": []
+  "recommendations": ["astro-build.astro-vscode", "oxc.oxc-vscode", "bradlc.vscode-tailwindcss"]
 }
